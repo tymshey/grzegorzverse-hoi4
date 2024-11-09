@@ -1,0 +1,14 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_spqr"
+		texturefile = "gfx/interface/ideas/spqr.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_spqr_2"
+		texturefile = "gfx/interface/ideas/spqr_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_orthodoxy"
+		texturefile = "gfx/interface/ideas/orthodoxy.dds"
+	}
+}

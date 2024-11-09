@@ -1,0 +1,22 @@
+﻿l_english:
+ 
+ # NATIONAL SPIRITS/LEADERS
+ 
+ spqr:0 "Senatus Populusque Romanus"
+ spqr_desc:0 "Due to the rich history of imperialism, success and domination over others, the will and pride of the Roman people are exceedingly strong, and the ancient giant is unlikely to surrender."
+ constantine_xx:0 "Constantine XX"
+ constantine_xx_desc:0 "Constantine XX is the current Emperor and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
+ strong_orthodoxy:0 "Strong Orthodox Christianity"
+ strong_orthodoxy_desc:0 "Orthodox Christianity is still quite strong among the population."
+ 
+ GRE_constantine_xx:0 "Constantine XX"
+ GRE_constantine_xx_DESC:0 "Constantine XX is the current Emperor and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
+ 
+ # POLITICS
+ 
+ gv_GRE_neutrality_name_long:0 "House Flavius Constantinus"
+ gv_GRE_neutrality_name:0 "House Flavius Constantinus"
+ 
+ # FACTION
+ 
+ gv_imperial_system_faction:0 "Imperial System"

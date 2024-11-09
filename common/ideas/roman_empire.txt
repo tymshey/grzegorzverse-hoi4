@@ -1,0 +1,54 @@
+ideas = {
+
+	country = {
+		spqr = {
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = { always = yes }
+			
+			picture = spqr
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.1
+				surrender_limit = 0.15
+			}
+		}
+		constantine_xx = {
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = { has_government = neutrality }
+			
+			picture = gre_george_ii
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				neutrality_drift = 0.015
+			}
+		}
+		strong_orthodoxy = {
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = { always = yes }
+			
+			picture = orthodoxy
+			
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = 0.05
+				stability_factor = 0.05
+			}
+		}
+	}
+}
