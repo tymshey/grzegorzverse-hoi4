@@ -1,0 +1,25 @@
+
+state={
+	id=1009
+	name="STATE_1009"
+	manpower = 739524
+	
+	state_category = pastoral
+	
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			7916 1
+		}
+		add_core_of = PER
+	}
+
+	provinces={
+		7984 7916 12769 10789 1995
+	}
+
+	local_supplies=0.0
+}
