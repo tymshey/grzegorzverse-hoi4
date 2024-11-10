@@ -17,6 +17,20 @@
  gv_GRE_neutrality_name_long:0 "House Flavius Constantinus"
  gv_GRE_neutrality_name:0 "House Flavius Constantinus"
  
+ # BOP
+ 
+ gv_GRE_emperor_vs_senate_bop:0 "Emperor vs Senate"
+ gv_GRE_emperor_vs_senate_bop_senate:0 "Senate"
+ gv_GRE_emperor_vs_senate_bop_fully_senate:0 "Total Senatorial Control"
+ gv_GRE_emperor_vs_senate_bop_very_senate:0 "Extensive Senatorial Control"
+ gv_GRE_emperor_vs_senate_bop_balanced:0 "Balance of Power"
+ gv_GRE_emperor_vs_senate_bop_very_emperor:0 "Extensive Authority of the Emperor"
+ gv_GRE_emperor_vs_senate_bop_fully_emperor:0 "Absolute Authority of the Emperor"
+ gv_GRE_emperor_vs_senate_bop_emperor:0 "Emperor"
+ 
+ gv_GRE_emperor_vs_senate_bop_increase:0 "Hold a Speech"
+ gv_GRE_emperor_vs_senate_bop_decrease:0 "Denounce the Emperor"
+ 
  # FACTION
  
  gv_imperial_system_faction:0 "Imperial System"

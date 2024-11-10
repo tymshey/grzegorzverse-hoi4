@@ -26,6 +26,7 @@ add_ideas = {
 	spqr
 	constantine_xx
 	strong_orthodoxy
+	gv_great_depression
 	# GRE_depression_1
 	# GRE_shadow_of_1921
 	# GRE_government_crisis
@@ -241,35 +242,21 @@ if = {
 		GRE_agrarian_society
 	}
 	
-	if = {
-		# limit = { has_dlc = "Battle for the Bosporus" } # fuck you paradox
-		set_country_flag = GRE_factions_unlocked
+	set_country_flag = GRE_factions_unlocked
 
-		set_variable = { var = GRE_debt_to_the_ifc_britain_var value = 10 }
-		set_variable = { var = GRE_debt_to_the_ifc_france_var value = 10 }
-		set_variable = { var = GRE_debt_to_the_ifc_italy_var value = 10 }
-		set_variable = { var = GRE_debt_to_the_ifc_paid_var value = 0 }
+	set_variable = { var = GRE_debt_to_the_ifc_britain_var value = 10 }
+	set_variable = { var = GRE_debt_to_the_ifc_france_var value = 10 }
+	set_variable = { var = GRE_debt_to_the_ifc_italy_var value = 10 }
+	set_variable = { var = GRE_debt_to_the_ifc_paid_var value = 0 }
 
-		add_opinion_modifier = { 
-			target = GER
-			modifier = GRE_strong_trading_ties
-		}
-		GER = { 
-			add_opinion_modifier = { 
-				target = GRE
-				modifier = GRE_strong_trading_ties
-			}
-		}
+	add_opinion_modifier = { 
+		target = GER
+		modifier = GRE_strong_trading_ties
 	}
-
-	if = {
-		limit = { NOT = { has_dlc = "Battle for the Bosporus" } }
-		add_ideas = {
-			export_focus
-			limited_conscription
-			civilian_economy
-			spqr
-			constantine_xx
+	GER = { 
+		add_opinion_modifier = { 
+			target = GRE
+			modifier = GRE_strong_trading_ties
 		}
 	}
 }
@@ -506,6 +493,11 @@ if = {
 # CHARACTERS
 
 recruit_character = GRE_constantine_xx
+recruit_character = GRE_aurelius_flavius_adeodatus
+recruit_character = GRE_quinctillius_rullianus_afer
+recruit_character = GRE_ioannes_gregorius
+recruit_character = GRE_caecillius_helvius_vindex
+recruit_character = GRE_gnaeus_gratian_monomachos
 
 if = { 
 	limit = { has_dlc = "Battle for the Bosporus" }
@@ -615,7 +607,7 @@ set_party_name = {
 set_power_balance = {
 	id = gv_GRE_emperor_vs_senate_bop
 	set_default = no  # whether or not to reset the power balance to the initial value, default = no
-	set_value = 1.5
+	set_value = 0.5
 }
 
 set_stability = 0.72

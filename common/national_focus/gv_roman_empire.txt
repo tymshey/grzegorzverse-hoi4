@@ -1,0 +1,59 @@
+#####-----> Grzegorzverse Roman Empire Focus Tree <><> <><> <><>
+focus_tree = {
+	id = gv_roman_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = GRE
+		}
+	}
+
+	continuous_focus_position = { x = 800 y = 1000 }
+
+	default = no
+
+	focus = {
+		id = gv_GRE_starting_focus # The Constantinian Age
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		x = 8
+		y = 0
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_fight_depression # Combat The Great Depression
+		icon = GFX_focus_GRE_Combat_depression
+		prerequisite = { focus = gv_GRE_starting_focus }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_starting_focus
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			
+		}
+	}
+}

@@ -4,10 +4,10 @@ state={
 	provinces={
 		9833 11829 
 	}
-	manpower = 9042276
+	manpower = 10142276
 	resources={
 		#chromium=45 # was: 84
-		steel = 20 # was: 0
+		steel = 20
 	}
 	
 	state_category = megalopolis
@@ -18,7 +18,7 @@ state={
 			9833 75
 		}
 		buildings = {
-			infrastructure = 5 #was: 5
+			infrastructure = 5
 			industrial_complex = 6
 			arms_factory = 4
 			air_base = 8

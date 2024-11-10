@@ -10,9 +10,9 @@ state={
 		owner = GRE
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 3
-			arms_factory = 3
-			air_base = 2
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 4
 
 		}
 		victory_points = {

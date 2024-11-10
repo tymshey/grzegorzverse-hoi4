@@ -16,7 +16,123 @@ characters={
 		}		
 	}
 	
-	###
+	GRE_aurelius_flavius_adeodatus={
+		name="Aurelius Flavius Adeodatus"
+		portraits={
+			civilian={
+				large = GFX_Portrait_GRE_Aurelius_Flavius_Adeodatus
+				small = GFX_Portrait_GRE_Aurelius_Flavius_Adeodatus
+			}
+			army={
+				large = GFX_Portrait_GRE_Aurelius_Flavius_Adeodatus
+				small = GFX_Portrait_GRE_Aurelius_Flavius_Adeodatus
+			}
+		}
+		field_marshal={
+			traits={ career_officer war_hero infantry_officer trait_GRE_stauch_monarchist trait_mountaineer trickster }
+			skill=5
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	
+	GRE_quinctillius_rullianus_afer={
+		name="Quinctillius Rullianus Afer"
+		portraits={
+			civilian={
+				large = GFX_Portrait_GRE_Quinctillius_Rullianus_Afer
+				small = GFX_Portrait_GRE_Quinctillius_Rullianus_Afer
+			}
+			army={
+				large = GFX_Portrait_GRE_Quinctillius_Rullianus_Afer
+				small = GFX_Portrait_GRE_Quinctillius_Rullianus_Afer
+			}
+		}
+		field_marshal={
+			traits={ old_guard war_hero infantry_officer trait_GRE_stauch_monarchist trait_cautious }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	
+	GRE_ioannes_gregorius={
+		name="Ioannes Gregorius"
+		portraits={
+			civilian={
+				large = GFX_Portrait_GRE_Ioannes_Gregorius
+				small = GFX_Portrait_GRE_Ioannes_Gregorius
+			}
+			army={
+				large = GFX_Portrait_GRE_Ioannes_Gregorius
+				small = GFX_Portrait_GRE_Ioannes_Gregorius
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer trickster trait_mountaineer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	
+	GRE_caecillius_helvius_vindex={
+		name="Caecillius Helvius Vindex"
+		portraits={
+			civilian={
+				large = GFX_Portrait_GRE_Caecillius_Helvius_Vindex
+				small = GFX_Portrait_GRE_Caecillius_Helvius_Vindex
+			}
+			army={
+				large = GFX_Portrait_GRE_Caecillius_Helvius_Vindex
+				small = GFX_Portrait_GRE_Caecillius_Helvius_Vindex
+			}
+		}
+		navy_leader={
+			traits={ navy_career_officer aviation_enthusiast superior_tactician }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			maneuvering_skill=3
+			coordination_skill=5
+			legacy_id=983
+		}
+	}
+	
+	GRE_gnaeus_gratian_monomachos={
+		name="Gnaeus Gratian Monomachos"
+		portraits={
+			civilian={
+				large = GFX_Portrait_GRE_Gnaeus_Gratian_Monomachos
+				small = GFX_Portrait_GRE_Gnaeus_Gratian_Monomachos
+			}
+			army={
+				large = GFX_Portrait_GRE_Gnaeus_Gratian_Monomachos
+				small = GFX_Portrait_GRE_Gnaeus_Gratian_Monomachos
+			}
+		}
+		navy_leader={
+			traits = { bold seawolf }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 4
+			legacy_id=-1
+		}
+	}
+	
+	###################
+	
 	GRE_konstantinos_demertzis={
 		name=GRE_konstantinos_demertzis
 		portraits={

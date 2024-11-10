@@ -46,8 +46,28 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				recruitable_population = 0.05
+				conscription_factor = 0.05
 				stability_factor = 0.05
+			}
+		}
+		gv_great_depression = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = 0.4
+				conscription_factor = -0.25
+				local_resources_factor = -0.2
 			}
 		}
 	}
