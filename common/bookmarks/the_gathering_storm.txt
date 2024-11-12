@@ -17,7 +17,7 @@ bookmarks = {
 			ideas = {
 				spqr
 				constantine_xx
-				strong_orthodoxy
+				gv_great_depression
 			}
 			focuses = {
 				# tbd

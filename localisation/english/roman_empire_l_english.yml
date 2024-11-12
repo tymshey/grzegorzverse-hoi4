@@ -8,6 +8,8 @@
  constantine_xx_desc:0 "Constantine XX is the current Emperor and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
  strong_orthodoxy:0 "Strong Orthodox Christianity"
  strong_orthodoxy_desc:0 "Orthodox Christianity is still quite strong among the population."
+ gv_great_depression:0 "The Great Depression"
+ gv_great_depression_desc:0 "The Great Depression was caused by a stock market crash, known as the 1928 Constantinopolitan Market Crash, causing unemployment to skyrocket and the stock prices and tax revenue to plummet. Although the crisis began in Constantinople, it is a worldwide phenomenon, and the Roman government have enough to worry about before going to an another war."
  
  GRE_constantine_xx:0 "Constantine XX"
  GRE_constantine_xx_DESC:0 "Constantine XX is the current Emperor and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
@@ -34,3 +36,29 @@
  # FACTION
  
  gv_imperial_system_faction:0 "Imperial System"
+ 
+ # TECH BONUSES
+ 
+ gv_GRE_invest_in_industry_tech_bonus:0 "Industry Investment"
+ gv_GRE_industrial_revitalization_program_tech_bonus:0 "Industrial Revitalization Program"
+ 
+ # GOALS
+ 
+ gv_GRE_starting_focus:0 "The Constantinian Age"
+ gv_GRE_starting_focus_desc:0 ""
+ gv_GRE_fight_depression:0 "Fight the Depression"
+ gv_GRE_fight_depression_desc:0 ""
+ gv_GRE_invest_in_industry:0 "Industrial Investments"
+ gv_GRE_invest_in_industry_desc:0 ""
+ gv_GRE_raw_resource_exploitation:0 "Raw Resource Exploitation"
+ gv_GRE_raw_resource_exploitation_desc:0 ""
+ gv_GRE_increase_mining_efforts:0 "Increase Mining Efforts"
+ gv_GRE_increase_mining_efforts_desc:0 ""
+ gv_GRE_industrial_revitalization_program:0 "Industrial Revitalization Program"
+ gv_GRE_industrial_revitalization_program_desc:0 ""
+ gv_GRE_anatolian_oil:0 "Anatolian Oil"
+ gv_GRE_anatolian_oil_desc:0 ""
+ gv_GRE_the_imperial_highways:0 "Imperial Highways"
+ gv_GRE_the_imperial_highways_desc:0 ""
+ gv_GRE_attaleia_industrial_park:0 "Attaleia Industrial Park"
+ gv_GRE_attaleia_industrial_park_desc:0 ""

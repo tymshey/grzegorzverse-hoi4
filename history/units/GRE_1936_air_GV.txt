@@ -43,7 +43,7 @@ air_wings = {
 		}
 	}
 	
-	348 = { # Caesarea
+	353 = { # Tephrice
 		# Fighter
 		small_plane_airframe_0 = {
 			owner = "GRE" 

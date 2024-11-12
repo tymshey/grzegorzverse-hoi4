@@ -585,7 +585,7 @@ if = {
 
 ### POLITICS
 
-# THIS IS ALSO IN on_actions BECAUSE IT DOES NOT WORK ON ROAD
+# IF IT DOES NOT WORK, CHECK ROAD's on_actions; ROAD DOES ASSIGN FOCUS TREES AND SET UP POLITICS IN GAME RULES
 
 set_politics = {
 	ruling_party = neutrality
