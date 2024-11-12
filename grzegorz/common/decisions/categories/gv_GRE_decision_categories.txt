@@ -1,0 +1,8 @@
+gv_GRE_emperor_vs_senate_bop_decisions = {
+	priority = 80
+	icon = generic_propaganda
+
+	allowed = {
+		original_tag = GRE
+	}
+}

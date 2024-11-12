@@ -1,0 +1,696 @@
+﻿division_template = {
+	name = "Cohortes Excubitoriae" 				# Excubitor Division
+	division_names_group = GRE_INF_01
+	template_counter = 139
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Cohortes Imperialis" 				# Imperial Division
+	division_names_group = GRE_INF_01
+	# Prior to 1940 mobilization = 3rd, 4th, 5th, 9th, 10, 13th;
+	# 	6th, 7th, 11th, and 12th had 2 regiments; 14th had 1 regiment
+	# Note: sources have all Greek regular infantry as mountain-trained
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Cohortes Montanus" 				# Mountain Division
+	division_names_group = GRE_MNT_01
+	# Prior to 1940 mobilization = 1st, 2nd, 8th
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Cohortes Equitis" 			# Cavalry Division
+	division_names_group = GRE_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Motorized recon inf bn
+	}
+}
+
+division_template = {
+	name = "Cohortes Cataphractus" 				# Armour Division
+
+	division_names_group = GRE_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Cohortes Colonialis"				# Colonial Division
+
+	division_names_group = GRE_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	# Excubitors
+	division = { "Cohortes Excubitoriae"
+		name = "Cohortes Excubitoriae"
+		location = 9833
+		division_template = "Cohortes Excubitoriae"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = { "Cohortes Excubitoriae"
+		name = "Cohortes Excubitoriae"
+		location = 9833
+		division_template = "Cohortes Excubitoriae"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	
+	######## Thema of Moesia ########
+	
+	division = {
+		name = "35. Cohortes Imperialis"
+		location = 3796
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "36. Cohortes Imperialis"
+		location = 9610
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "37. Cohortes Imperialis"
+		location = 9771
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "38. Cohortes Imperialis"
+		location = 9771
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "7. Cohortes Montanus"
+		location = 11857
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "8. Cohortes Montanus"
+		location = 833
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	######## Ellinikó Genikó Epiteleío ########
+	division = { "30. Cohortes Imperialis"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 12058
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = { "31. Cohortes Imperialis"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 8
+		}
+		location = 3914
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "Cohortes Equitis"
+		location = 11818
+		division_template = "Cohortes Equitis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	# A Sóma Stratoú
+	division = { "32. Cohortes Imperialis"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 4109
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = { "33. Cohortes Imperialis"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 4193
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = { "34. Cohortes Imperialis"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 7096
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	# B Sóma Stratoú
+	division = { "35. Cohortes Imperialis"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 863
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = { "36. Cohortes Imperialis"
+		name = "36. Cohortes Imperialis"
+		location = 11767
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	# C Sóma Stratoú
+	division = {
+		name = "37. Cohortes Imperialis"
+		location = 3882
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = { "38. Cohortes Imperialis"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 10
+		}
+		location = 10163
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = { "39. Cohortes Imperialis"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 11
+		}
+		location = 11818
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	# D Sóma Stratoú
+	division = {
+		name = "40. Cohortes Imperialis"
+		location = 6923
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	# E Sóma Stratoú
+	division = {
+		name = "12. Cohortes Imperialis"
+		location = 9902
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	######## LAND UNITS ########
+	##### Türk Ordusu #####
+	division = {
+		name = "14. Cohortes Equitis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 11811
+		division_template = "Cohortes Equitis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## VI. Kolordu ##
+	division = {
+		name = "7. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 11811
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "17. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 11811
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "20. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 11811
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	### Birinci Ordu ###
+	division = {
+		name = "11. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 10122
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "1. Cohortes Cataphractus"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7454
+		division_template = "Cohortes Cataphractus"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	## III. Kolordu ##
+	division = {
+		name = "1. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1005
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "23. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 7454
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "24. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 9893
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## IV. Kolordu ##
+	division = {
+		name = "8. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 9893
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "22. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 9932
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "1. Cohortes Montanus"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9858
+		division_template = "Cohortes Montanus" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+
+	### Ikinci Ordu Ordu ###
+	division = {
+		name = "39. Cohortes Montanus"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 39
+		}
+		location = 947
+		division_template = "Cohortes Montanus" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	## I. Kolordu ##
+	division = {
+		name = "6. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 4112
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "16. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 4112
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Cohortes Hellespontis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 849
+		division_template = "Cohortes Imperialis" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GRE" } }
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+
+	}
+	## II.  Kolordu ##
+	division = {
+		name = "4. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9914
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "18. Cohortes Montanus"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 849
+		division_template = "Cohortes Montanus" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	## V. Kolordu ##
+	division = {
+		name = "5. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 947
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "25. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 947
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	### Üçüncüsü Ordu ###
+	## VIII. Kolordu ##
+	division = {
+		name = "12. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 11881
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "15. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 11881
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## IX. Kolordu ##
+	division = {
+		name = "3. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 10403
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "9. Cohortes Imperialis"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 10472
+		division_template = "Cohortes Imperialis" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	
+	# Malta
+	
+	division= {	
+		name = "Malta Command"
+		location = 12003
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	# Djibuti/Castrum Eritreum
+	
+	division= {	
+		name = "Castrum Eritreum Command"
+		location = 8124
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	# Macau/Macaum
+	
+	division= {	
+		name = "Macaum Command"
+		location = 4189
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GRE"
+		}
+		requested_factories = 6
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GRE" 
+		}
+		requested_factories = 4
+		progress = 0.3
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "GRE"
+		}
+		requested_factories = 5
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_chassis_1
+			creator = "GRE" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 50
+	}
+}

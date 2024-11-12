@@ -1,0 +1,148 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	# RNI - Romae Navis Imperialis
+	fleet = {
+		name = "Classis Imperialis"			
+		naval_base = 9833 # Constantinople
+		task_force = {
+			name = "Potestas Magna"				
+			location = 9833 # Constantinople
+			ship = { name = "RNI Iudex" definition = carrier equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = GRE version_name = "Iudex Class" } } }
+			ship = { name = "RNI Achilles" definition = carrier equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = GRE version_name = "Iudex Class" } } }
+			ship = { name = "RNI Augustus" pride_of_the_fleet = yes definition = battleship start_experience_factor = 1 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
+			ship = { name = "RNI Aurelianus" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
+			ship = { name = "RNI Constantinus Magnus" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
+			ship = { name = "RNI Ioannes Paulus" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
+			ship = { name = "RNI Caesar" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
+			ship = { name = "RNI Pompeius" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
+			ship = { name = "RNI Crassus" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
+			ship = { name = "RNI Chandax" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Heraklion" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Patras" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Pergamon" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Argyroprateia" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Aegeiocastrum" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Korinthos" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Chalcis" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Patras" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			# 1st Destroyer Flotilla
+			ship = { name = "RNI Vasilefs Georgios I" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name =  "Vasilefs Georgios I Class" } } }
+			ship = { name = "RNI Vasilissa Olga" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name =  "Vasilefs Georgios I Class" } } }
+			ship = { name = "RNI Aetos" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Aetos Class" } } }
+			ship = { name = "RNI Ierax" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Aetos Class" } } }
+			ship = { name = "RNI Leon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Aetos Class" } } }
+			ship = { name = "RNI Panthir" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Aetos Class" } } }
+			ship = { name = "RNI Protector" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Aetos Class" } } }
+			ship = { name = "RNI Defensor" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Aetos Class" } } }
+			ship = { name = "RNI Attaleios" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Aetos Class" } } }
+			ship = { name = "RNI Kountouriotis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Hydra Class" } } }
+			ship = { name = "RNI Hydra" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Hydra Class" } } }
+			ship = { name = "RNI Psara" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Hydra Class" } } }
+			ship = { name = "RNI Spetsai" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name =  "Hydra Class" } } }
+			# 2nd Destroyer Flotilla
+			ship = { name = "RNI Lucius Junius Brutus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Lucius Tarquinius Collatinus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Optier Verginius" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Postumus Cominius" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Aebutius Helva" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Sempronius Atratinus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Julius Iullus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Cassius Vecellinus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Manlius Cincinnatus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Aemilius Mamercus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRE version_name = "Aetos Class"} } }
+			ship = { name = "RNI Valerius Corvus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Fulvius Paetinus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Manlius Torquatus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Scipio Barbatus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Postumius Megellus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Papirius Cursor" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Atillius Regulus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+		}
+		task_force = {
+			name = "Potestas Aegeia"			
+			location = 4109 # Athens
+			ship = { name = "RNI Cunctator" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
+			ship = { name = "RNI Callistus" definition = heavy_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name = "Callistus Class" } } }			
+			ship = { name = "RNI Lepidus Major" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Lepidus Minor" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Constanta" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Russium" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Larissa" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Hiskampis" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Argos" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			# Destroyers
+			ship = { name = "RNI Peyk" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Berk" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Kocatepe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Adatepe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Zafer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Tinaztepe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Maximus Gurges" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Cornelius Dolabela" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Caecilius Metellus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Calvinus Maximus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Fabricius Luscinus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Cornelius Rufinus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Quinctius Claudus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Genucius Clepsina" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Sempronius Sophus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Claudius Russus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Claudius Caudex" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+		}
+		task_force = {			
+			name = "Potestas Euxinum"			
+			location = 11881 # Amissus
+			ship = { name = "RNI Rullianus" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
+			ship = { name = "RNI Sinop" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Amissus" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Bithynopolis" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Nicomedia" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Argyropolis" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			# Destroyers
+			ship = { name = "RNI Cornelius Scipio" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Gaius Dullius" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Furius Pacilus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Servilius Geminus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Postumus Albinus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Carvilius Maximus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Gaius Flaminius" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Cornelius Lentulus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Fulvius Nobilior" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+		}
+	}
+	fleet = {
+		name = "Classis Subaqueanum"
+		task_force = {					
+			name = "Potestas Subaqueanum"				
+			location = 1005 # Attaleia
+			ship = { name = "RNI Katsonis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRE version_name =  "Katsonis Class" } } }
+			ship = { name = "RNI Papanikolis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRE version_name =  "Katsonis Class" } } }
+			ship = { name = "RNI Birinci Inönü" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRE version_name = "Katsonis Class" } } }		
+			ship = { name = "RNI Ikinci Inönü" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRE version_name = "Katsonis Class" } } }		
+			ship = { name = "RNI Dumlupinar" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name = "Glafkos Class" } } }
+			ship = { name = "RNI Sakarya" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRE version_name = "Katsonis Class" } } }
+			ship = { name = "RNI Gür" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRE version_name = "Katsonis Class" } } }
+			ship = { name = "RNI Protefs" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "RNI Nirefs" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "RNI Triton" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "RNI Glafkos" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-1" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-2" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-3" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-4" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-5" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-6" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-7" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-8" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-9" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-10" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-11" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-12" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-13" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-14" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-15" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+		}
+	}
+}
