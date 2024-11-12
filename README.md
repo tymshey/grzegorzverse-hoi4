@@ -1,10 +1,17 @@
 # grzegorzverse-hoi4
 grzegorz w hoi no pojebane
 
+================================================
+
 PORADNIK JESLI NIE DZIALA COS:
+
 -> w pliku grzegorz.mod zmien sciezke path="D:/Dokumenty/Paradox Interactive/Hearts of Iron IV/mod/grzegorz" na taką którą masz u siebie do moda w dokumentach (nie w steam!!)
+
 -> odpalaj z Road to 56 i Road to 56 RP w kolejności: 1. road 2. road rp 3. grzegorz
+
 -> jak dalej nie dziala sprawdz czy masz playset dobry wybrany
+
+=================================================
 
 obowiązkowo:
 
