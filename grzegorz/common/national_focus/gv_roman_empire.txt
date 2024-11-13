@@ -11,7 +11,7 @@ focus_tree = {
 		}
 	}
 
-	continuous_focus_position = { x = 800 y = 1000 }
+	continuous_focus_position = { x = 800 y = 2000 }
 
 	default = no
 
@@ -36,8 +36,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = gv_GRE_fight_depression # Combat The Great Depression
-		icon = GFX_focus_GRE_Combat_depression
+		id = gv_GRE_convene_the_senate
+		icon = GFX_focus_ETH_re-convene_the_parliament
 		prerequisite = { focus = gv_GRE_starting_focus }
 		x = 0
 		y = 1
@@ -53,7 +53,36 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_power_balance_value = {
+				id = gv_GRE_emperor_vs_senate_bop
+				value = -0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_fight_depression # Foundation for Recovery
+		icon = GFX_focus_GRE_Combat_depression
+		prerequisite = { focus = gv_GRE_convene_the_senate }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_convene_the_senate
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
 			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = gv_great_depression
+				add_idea = gv_great_depression_2
+			}
 		}
 	}
 	
@@ -214,6 +243,84 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_ikonion_hydroelectric
+		icon = GFX_goal_italy_expand_hydroelectricity_production
+		prerequisite = { focus = gv_GRE_anatolian_oil }
+		prerequisite = { focus = gv_GRE_increase_mining_efforts }
+		relative_position_id = gv_GRE_raw_resource_exploitation
+		x = 0
+		y = 2
+		cost = 5
+
+		available = {
+			has_tech = construction2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			346 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_the_thessaloniki_textile_factories
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		prerequisite = { focus = gv_GRE_invest_in_industry }
+		relative_position_id = gv_GRE_invest_in_industry
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			731 = {			
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_imperial_collegium_of_engineering
+		icon = GFX_goal_ROM_academia_romana
+		prerequisite = { focus = gv_GRE_ikonion_hydroelectric }
+		prerequisite = { focus = gv_GRE_the_thessaloniki_textile_factories }
+		prerequisite = { focus = gv_GRE_attaleia_industrial_park }
+		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
+		x = 0
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
 		id = gv_GRE_industrial_revitalization_program
 		icon = GFX_focus_generic_expansion_of_new_towns
 		prerequisite = { focus = gv_GRE_invest_in_industry }
@@ -352,6 +459,55 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_strengthen_the_denarius
+		icon = GFX_focus_fra_devalue_the_franc
+		prerequisite = { focus = gv_GRE_fight_depression }
+		x = 4
+		y = 1
+		relative_position_id = gv_GRE_fight_depression
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_edict_of_agricultural_recovery
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = gv_GRE_strengthen_the_denarius }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_strengthen_the_denarius
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_great_depression_2
+				add_idea = gv_great_depression_3
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }

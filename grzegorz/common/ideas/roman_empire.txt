@@ -70,5 +70,44 @@ ideas = {
 				local_resources_factor = -0.2
 			}
 		}
+		gv_great_depression_2 = {
+			picture = usa_great_depression_2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.5
+				consumer_goods_factor = 0.2
+				conscription_factor = -0.15
+				local_resources_factor = -0.1
+			}
+		}
+		gv_great_depression_3 = {
+			picture = usa_great_depression
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.25
+				consumer_goods_factor = 0.1
+				conscription_factor = -0.1
+			}
+		}
 	}
 }
