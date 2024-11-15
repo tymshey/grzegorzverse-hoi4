@@ -20,7 +20,9 @@ bookmarks = {
 				gv_great_depression
 			}
 			focuses = {
-				# tbd
+				gv_GRE_starting_focus
+				gv_GRE_imperial_collegium_of_engineering
+				gv_GRE_edict_of_agricultural_recovery
 			}
 		}
 

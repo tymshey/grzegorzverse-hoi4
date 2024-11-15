@@ -14,6 +14,16 @@
  gv_great_depression_2_desc:0 "The Great Depression was caused by a stock market crash, known as the 1928 Constantinopolitan Market Crash, causing unemployment to skyrocket and the stock prices and tax revenue to plummet. Although the crisis began in Constantinople, it is a worldwide phenomenon, and the Roman government have enough to worry about before going to an another war."
  gv_great_depression_3:0 "Steady Progress"
  gv_great_depression_3_desc:0 "The Great Depression was caused by a stock market crash, known as the 1928 Constantinopolitan Market Crash, causing unemployment to skyrocket and the stock prices and tax revenue to plummet. Although the crisis began in Constantinople, it is a worldwide phenomenon, and the Roman government have enough to worry about before going to an another war."
+ gv_foundation_for_recovery:0 "Foundation for Recovery"
+ gv_foundation_for_recovery_desc:0 ""
+ gv_GRE_industrial_revitalization:0 "Industrial Revitalization Program"
+ gv_GRE_industrial_revitalization_desc:0 ""
+ gv_GRE_imperial_industry_1:0 "The Imperial Industry"
+ gv_GRE_imperial_industry_2:0 "The Imperial Industry"
+ gv_GRE_imperial_industry_3:0 "The Imperial Industry"
+ gv_GRE_imperial_industry_4:0 "The Imperial Industry"
+ gv_GRE_imperial_industry_5:0 "The Imperial Industry"
+ gv_GRE_imperial_industry_6:0 "The Imperial Industry"
  
  GRE_constantine_xx:0 "Constantine XX"
  GRE_constantine_xx_DESC:0 "Constantine XX is the current Emperor and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
@@ -45,6 +55,8 @@
  
  gv_GRE_invest_in_industry_tech_bonus:0 "Industry Investment"
  gv_GRE_industrial_revitalization_program_tech_bonus:0 "Industrial Revitalization Program"
+ gv_GRE_mining_tech_bonus:0 "Excavation Investment"
+ gv_GRE_engineering_subsidies_tech_bonus:0 "Engineering Subsidies"
  
  # GOALS
  
@@ -78,3 +90,13 @@
  gv_GRE_ikonion_hydroelectric_desc:0 ""
  gv_GRE_imperial_collegium_of_engineering:0 "Expand the Imperial Collegium of Engineering"
  gv_GRE_imperial_collegium_of_engineering_desc:0 ""
+ gv_GRE_develop_aethiopia:0 "Develop Aethiopia"
+ gv_GRE_develop_aethiopia_desc:0 ""
+ gv_GRE_engineering_subsidies:0 "Engineering Subsidies"
+ gv_GRE_engineering_subsidies_desc:0 ""
+ gv_GRE_high_speed_railways:0 "High-Speed Railways"
+ gv_GRE_high_speed_railways_desc:0 "The Roman High-Speed railway network is a broad-gauge network of trains that can travel 250 km/h between major cities throughout the empire. Thanks to this, travel between Theodosiopolis and Serdica takes only around 8 hours."
+ gv_GRE_begin_rearmament:0 "Begin Rearmament"
+ gv_GRE_begin_rearmament_desc:0 ""
+ gv_GRE_nationalize_seleucia_company:0 "Nationalize the Seleucia Arsenal"
+ gv_GRE_nationalize_seleucia_company_desc:0 ""

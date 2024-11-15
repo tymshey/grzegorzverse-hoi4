@@ -61,6 +61,75 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_develop_aethiopia
+		icon = GFX_focus_ETH_develop_the_horn_of_africa
+		prerequisite = { focus = gv_GRE_convene_the_senate }
+		x = -2
+		y = 1
+		relative_position_id = gv_GRE_convene_the_senate
+		cost = 4
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0 
+				has_war = yes 
+			}
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			271 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			841 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			559 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			835 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = gv_GRE_fight_depression # Foundation for Recovery
 		icon = GFX_focus_GRE_Combat_depression
 		prerequisite = { focus = gv_GRE_convene_the_senate }
@@ -79,9 +148,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.1
-			swap_ideas = {
-				remove_idea = gv_great_depression
-				add_idea = gv_great_depression_2
+			add_timed_idea = {
+				idea = gv_foundation_for_recovery
+				days = 365
 			}
 		}
 	}
@@ -104,6 +173,10 @@ focus_tree = {
 
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_GRE_imperial_industry_1
+				add_idea = gv_GRE_imperial_industry_2
+			}
 			797 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -136,6 +209,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_GRE_imperial_industry_2
+				add_idea = gv_GRE_imperial_industry_3
+			}
 			add_ideas = r56_ROM_raw_resource_exploitation
 			212 = {				
 				add_extra_state_shared_building_slots = 1
@@ -193,6 +270,12 @@ focus_tree = {
 					amount = 55
 				}
 			}
+			add_tech_bonus = {
+				name = gv_GRE_mining_tech_bonus
+				bonus = 1
+				uses = 1
+				category = excavation_tech
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -216,6 +299,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_GRE_imperial_industry_3
+				add_idea = gv_GRE_imperial_industry_4
+			}
 			342 = {			
 				add_resource = {
 					type = oil
@@ -300,11 +387,75 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_high_speed_railways
+		icon = GFX_focus_POL_warsaw_main_station
+		prerequisite = { focus = gv_GRE_the_thessaloniki_textile_factories }
+		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
+		x = 0
+		y = 2
+		cost = 5
+		
+		available = {
+			AND = {
+				controls_state = 48 # Serdica
+				controls_state = 212
+				controls_state = 341
+				controls_state = 797 # Constantinople
+				controls_state = 184
+				controls_state = 731 # Thessaloniki
+				controls_state = 340
+				controls_state = 339 # Smyrna/Ephesus
+				controls_state = 49
+				controls_state = 798
+				controls_state = 348
+				controls_state = 349
+				controls_state = 354 # Trebizond
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 48
+				target_state = 797
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 731
+				target_state = 797
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 797
+				target_state = 339
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 797
+				target_state = 354
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
 		id = gv_GRE_imperial_collegium_of_engineering
 		icon = GFX_goal_ROM_academia_romana
 		prerequisite = { focus = gv_GRE_ikonion_hydroelectric }
-		prerequisite = { focus = gv_GRE_the_thessaloniki_textile_factories }
-		prerequisite = { focus = gv_GRE_attaleia_industrial_park }
+		prerequisite = { focus = gv_GRE_high_speed_railways }
+		prerequisite = { focus = gv_GRE_engineering_subsidies }
 		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
 		x = 0
 		y = 3
@@ -334,6 +485,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = gv_GRE_industrial_revitalization
+				days = 730
+			}
 			339 = {			
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -357,7 +512,7 @@ focus_tree = {
 				category = industry
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
 	
 	focus = {
@@ -465,6 +620,99 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_engineering_subsidies
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = gv_GRE_attaleia_industrial_park }
+		prerequisite = { focus = gv_GRE_the_imperial_highways }
+		relative_position_id = gv_GRE_industrial_revitalization_program
+		x = 0
+		y = 2
+		cost = 5
+
+		available = {
+			has_tech = construction2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = gv_GRE_engineering_subsidies_tech_bonus
+				bonus = 1
+				uses = 1
+				category = construction_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = gv_GRE_begin_rearmament
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
+		relative_position_id = gv_GRE_imperial_collegium_of_engineering
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_GRE_imperial_industry_4
+				add_idea = gv_GRE_imperial_industry_5
+			}
+			339 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			342 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_nationalize_seleucia_company
+		icon = GFX_goal_generic_munitions_factories
+		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
+		relative_position_id = gv_GRE_imperial_collegium_of_engineering
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			345 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
 		id = gv_GRE_strengthen_the_denarius
 		icon = GFX_focus_fra_devalue_the_franc
 		prerequisite = { focus = gv_GRE_fight_depression }
@@ -484,7 +732,7 @@ focus_tree = {
 		completion_reward = {
 			
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { }
 	}
 	
 	focus = {
@@ -506,9 +754,13 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = gv_great_depression_2
-				add_idea = gv_great_depression_3
+				remove_idea = gv_great_depression
+				add_idea = gv_great_depression_2
 			}
+			# swap_ideas = {
+				# remove_idea = gv_great_depression_2
+				# add_idea = gv_great_depression_3
+			# }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}

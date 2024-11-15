@@ -818,54 +818,9 @@ on_actions = {
 					load_focus_tree = turkish_focus
 
 					set_variable = { var = TUR_kemalist_power_variable value = 5 }
-					797 = {
-						add_dynamic_modifier = { modifier = kemalist_loyalties }
-					}
-					341 = {
-						add_dynamic_modifier = { modifier = kemalist_loyalties }
-					}
-					340 = {
-						add_dynamic_modifier = { modifier = kemalist_loyalties }
-					}
-					339 = {
-						add_dynamic_modifier = { modifier = kemalist_loyalties }
-					}
-					354 = {
-						add_dynamic_modifier = { modifier = kemalist_loyalties }
-					}
-					350 = {
-						add_dynamic_modifier = { modifier = kurdish_agitation }
-					}
-					352 = {
-						add_dynamic_modifier = { modifier = kurdish_separatism }
-					}
-					800 = {
-						add_dynamic_modifier = { modifier = kurdish_separatism }
-					}
-					353 = {
-						add_dynamic_modifier = { modifier = kurdish_agitation }
-					}
-					798 = {
-						add_dynamic_modifier = { modifier = islamist_opposition }
-					}
-					349 = {
-						add_dynamic_modifier = { modifier = islamist_sedition }
-					}
-					348 = {
-						add_dynamic_modifier = { modifier = islamist_sedition }
-					}
-					345 = {
-						add_dynamic_modifier = { modifier = islamist_opposition }
-					}
-					344 = {
-						add_dynamic_modifier = { modifier = islamist_opposition }
-					}
-					355 = {
-						add_dynamic_modifier = { modifier = islamist_sedition }
-					}
-					356 = {
-						add_dynamic_modifier = { modifier = islamist_opposition }
-					}
+					
+					# kemalist_loyalties removed
+					
 					add_dynamic_modifier = { modifier = TUR_disorganized_armed_forces_dynamic_modifier }
 					set_variable = { TUR_armed_forces_war_support_factor_var = -0.15 }
 					set_variable = { TUR_armed_forces_army_org_factor_var = -0.1 }

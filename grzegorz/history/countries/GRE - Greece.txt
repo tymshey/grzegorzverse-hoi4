@@ -26,13 +26,8 @@ add_ideas = {
 	spqr
 	constantine_xx
 	strong_orthodoxy
+	gv_GRE_imperial_industry_1
 	gv_great_depression
-	# GRE_depression_1
-	# GRE_shadow_of_1921
-	# GRE_government_crisis
-	# GRE_divided_nation
-	# GRE_naval_industry_rivalary
-	# r56_ROM_balkan_pact
 }
 
 remove_ideas = {
@@ -591,7 +586,7 @@ set_politics = {
 	ruling_party = neutrality
 	last_election = "1935.6.9"
 	election_frequency = 7
-	elections_allowed = yes # none after offset 1
+	elections_allowed = no
 }
 set_popularities = {
 	democratic = 20

@@ -54,7 +54,7 @@ ideas = {
 			picture = usa_great_depression_3
 			
 			allowed = {
-				always = no
+				original_tag = GRE
 			}
 
 			allowed_civil_war = {
@@ -74,7 +74,7 @@ ideas = {
 			picture = usa_great_depression_2
 			
 			allowed = {
-				always = no
+				original_tag = GRE
 			}
 
 			allowed_civil_war = {
@@ -94,7 +94,7 @@ ideas = {
 			picture = usa_great_depression
 			
 			allowed = {
-				always = no
+				original_tag = GRE
 			}
 
 			allowed_civil_war = {
@@ -109,5 +109,152 @@ ideas = {
 				conscription_factor = -0.1
 			}
 		}
+		gv_foundation_for_recovery = {
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		gv_GRE_industrial_revitalization = {
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.25
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		# will be changed to a dynamic modifier
+		gv_GRE_imperial_industry_1 = {
+			picture = SOV_third_five_year_plan_civilian
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_lack_of_resource_penalty_factor = 0.1
+			}
+		}
+		gv_GRE_imperial_industry_2 = {
+			picture = SOV_third_five_year_plan_civilian
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_lack_of_resource_penalty_factor = 0.1
+			}
+		}
+		gv_GRE_imperial_industry_3 = {
+			picture = SOV_third_five_year_plan_civilian
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		gv_GRE_imperial_industry_4 = {
+			picture = SOV_third_five_year_plan_civilian
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fuel_gain_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		gv_GRE_imperial_industry_5 = {
+			picture = SOV_third_five_year_plan_civilian
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				fuel_gain_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		gv_GRE_imperial_industry_6 = {
+			picture = SOV_third_five_year_plan_civilian
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				fuel_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		# dynamic modifier ends here
 	}
 }

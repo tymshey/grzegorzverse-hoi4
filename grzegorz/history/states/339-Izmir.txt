@@ -31,7 +31,8 @@ state={
 			dockyard = 4
 			air_base = 5
 			4112 = {
-				naval_base = 8
+				naval_base = 10
+				naval_facility = 1
 			}
 			7130 = { # Ephesus
 				naval_base = 7

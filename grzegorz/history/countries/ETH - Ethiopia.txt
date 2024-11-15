@@ -261,20 +261,8 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-IF = {
-	limit = { has_dlc = "By Blood Alone" }
-	set_popularities = {
-		neutrality = 70
-		fascism = 20 
-		democratic = 5
-		communism = 5
-	}
-}
-IF = {
-	limit = { NOT = { has_dlc = "By Blood Alone" } }
-	set_popularities = {
-		neutrality = 100
-	}
+set_popularities = {
+	neutrality = 100
 }
 
 if = {
