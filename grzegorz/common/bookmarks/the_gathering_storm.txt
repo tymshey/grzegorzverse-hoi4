@@ -16,7 +16,7 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				spqr
-				constantine_xx
+				gv_GRE_excessive_navy_budget
 				gv_great_depression
 			}
 			focuses = {

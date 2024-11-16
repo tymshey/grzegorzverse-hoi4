@@ -86,10 +86,10 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -112,10 +112,10 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -159,7 +159,7 @@ focus_tree = {
 		id = gv_GRE_invest_in_industry
 		icon = GFX_goal_industrial_investment
 		prerequisite = { focus = gv_GRE_fight_depression }
-		x = 0
+		x = -3
 		y = 1
 		relative_position_id = gv_GRE_fight_depression
 		cost = 5
@@ -173,9 +173,10 @@ focus_tree = {
 
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = gv_GRE_imperial_industry_1
-				add_idea = gv_GRE_imperial_industry_2
+			custom_effect_tooltip = gv_GRE_invest_in_industry_tt
+			add_to_variable = {
+				var = gv_GRE_industrial_capacity_factory_factor
+				value = 0.1
 			}
 			797 = {
 				add_extra_state_shared_building_slots = 2
@@ -209,9 +210,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = gv_GRE_imperial_industry_2
-				add_idea = gv_GRE_imperial_industry_3
+			custom_effect_tooltip = gv_GRE_raw_resource_exploitation_tt
+			add_to_variable = {
+				var = gv_GRE_production_lack_of_resource_penalty_factor
+				value = -0.1
 			}
 			add_ideas = r56_ROM_raw_resource_exploitation
 			212 = {				
@@ -299,9 +301,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = gv_GRE_imperial_industry_3
-				add_idea = gv_GRE_imperial_industry_4
+			custom_effect_tooltip = gv_GRE_anatolian_oil_tt
+			add_to_variable = {
+				var = gv_GRE_fuel_gain_factor
+				value = 0.1
 			}
 			342 = {			
 				add_resource = {
@@ -485,6 +488,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = gv_GRE_industrial_revitalization_program_tt
+			add_to_variable = {
+				var = gv_GRE_production_speed_industrial_complex_factor
+				value = 0.1
+			}
 			add_timed_idea = {
 				idea = gv_GRE_industrial_revitalization
 				days = 730
@@ -662,9 +670,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = gv_GRE_imperial_industry_4
-				add_idea = gv_GRE_imperial_industry_5
+			custom_effect_tooltip = gv_GRE_begin_rearmament_tt
+			add_to_variable = {
+				var = gv_GRE_production_factory_max_efficiency_factor
+				value = 0.1
 			}
 			339 = {
 				add_extra_state_shared_building_slots = 2
@@ -716,7 +725,7 @@ focus_tree = {
 		id = gv_GRE_strengthen_the_denarius
 		icon = GFX_focus_fra_devalue_the_franc
 		prerequisite = { focus = gv_GRE_fight_depression }
-		x = 4
+		x = 3
 		y = 1
 		relative_position_id = gv_GRE_fight_depression
 		cost = 5
@@ -736,7 +745,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = gv_GRE_edict_of_agricultural_recovery
+		id = gv_GRE_edict_of_emergency_employment
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = gv_GRE_strengthen_the_denarius }
 		x = 0
@@ -757,11 +766,131 @@ focus_tree = {
 				remove_idea = gv_great_depression
 				add_idea = gv_great_depression_2
 			}
-			# swap_ideas = {
-				# remove_idea = gv_great_depression_2
-				# add_idea = gv_great_depression_3
-			# }
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
+	}
+	
+	focus = {
+		id = gv_GRE_reform_the_central_bank
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = gv_GRE_edict_of_emergency_employment }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_edict_of_emergency_employment
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			
+		}
+		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_issue_bonds
+		icon = GFX_focus_SWI_issue_war_bonds
+		prerequisite = { focus = gv_GRE_edict_of_emergency_employment }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_edict_of_emergency_employment
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			
+		}
+		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_agreements_with_the_aristocracy
+		icon = GFX_focus_CHL_invite_french_aristocracy
+		prerequisite = { focus = gv_GRE_reform_the_central_bank }
+		prerequisite = { focus = gv_GRE_issue_bonds }
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_edict_of_emergency_employment
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			
+		}
+		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_edict_of_agricultural_recovery
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = gv_GRE_agreements_with_the_aristocracy }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_agreements_with_the_aristocracy
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_great_depression_2
+				add_idea = gv_great_depression_3
+			}
+		}
+		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
+	}
+	
+	focus = {
+		id = gv_GRE_edict_of_economic_amendment
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = gv_GRE_edict_of_agricultural_recovery }
+		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
+		x = -3
+		y = 2
+		relative_position_id = gv_GRE_edict_of_agricultural_recovery
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			remove_ideas = {
+				gv_great_depression
+				gv_great_depression_2
+				gv_great_depression_3
+			}
+		}
+		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
 	}
 }

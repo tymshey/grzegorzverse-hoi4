@@ -1,7 +1,7 @@
 state={
 	id=801
 	name="STATE_801"
-	manpower = 1218780
+	manpower = 1618780
 
 	state_category=city
 
@@ -15,8 +15,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 3
-			arms_factory = 2
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		add_core_of = GRE
 

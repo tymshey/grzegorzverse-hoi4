@@ -4,6 +4,10 @@ state={
 	manpower = 1017600
 	state_category = pastoral
 
+	resources={
+		rubber = 20
+	}
+
 	history={
 		owner = GRE
 		buildings = {

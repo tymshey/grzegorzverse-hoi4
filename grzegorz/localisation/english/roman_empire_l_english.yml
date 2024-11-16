@@ -18,15 +18,22 @@
  gv_foundation_for_recovery_desc:0 ""
  gv_GRE_industrial_revitalization:0 "Industrial Revitalization Program"
  gv_GRE_industrial_revitalization_desc:0 ""
+ gv_GRE_excessive_navy_budget:0 "Excessive Classis Imperialis Budget"
+ gv_GRE_excessive_navy_budget_desc:0 "The Classis Imperialis recieves a much larger budget from the state than the army, causing an imbalance in defence spending and production."
+ 
+ gv_GRE_imperial_industry_dynamic_modifier:0 "The Imperial Industry"
  gv_GRE_imperial_industry_1:0 "The Imperial Industry"
- gv_GRE_imperial_industry_2:0 "The Imperial Industry"
- gv_GRE_imperial_industry_3:0 "The Imperial Industry"
- gv_GRE_imperial_industry_4:0 "The Imperial Industry"
- gv_GRE_imperial_industry_5:0 "The Imperial Industry"
- gv_GRE_imperial_industry_6:0 "The Imperial Industry"
  
  GRE_constantine_xx:0 "Constantine XX"
  GRE_constantine_xx_DESC:0 "Constantine XX is the current Emperor and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
+ 
+ # TOOLTIPS
+ 
+ gv_GRE_invest_in_industry_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+10.0%§!\n\n"
+ gv_GRE_raw_resource_exploitation_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$: §G-10.0%§!\n\n"
+ gv_GRE_anatolian_oil_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_FUEL_GAIN_FACTOR$: §G+10.0%§!\n\n"
+ gv_GRE_industrial_revitalization_program_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_industrial_complex_factor$: §G+10.0%§!\n\n"
+ gv_GRE_begin_rearmament_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+10.0%§!\n\n"
  
  # POLITICS
  
@@ -51,6 +58,21 @@
  
  gv_imperial_system_faction:0 "Imperial System"
  
+ # MILITARY INDUSTRIAL ORGANIZATIONS
+ 
+ gv_GRE_imperial_naval_shipyard:0 "Imperial Naval Shipyard"
+ gv_GRE_aquila_aeronautica:0 "Aquila Aeronautica"
+ gv_GRE_constantinople_arsenal:0 "Constantinople Arsenal"
+ gv_GRE_monsmetallum:0 "Monsmetallum"
+ 
+ gv_GRE_mio_trait_submarine_detectors:0 "Sonic Submarine Detectors"
+ gv_GRE_mio_trait_engine_supercharger:0 "Engine Supercharger"
+ gv_GRE_mio_trait_long_range_fuel_tanks:0 "Longinquus-Model Fuel Tank Placement"
+ 
+ gv_GRE_mio_trait_gladius_automatica:0 "Gladius Automatica Submachine Guns"
+ gv_GRE_mio_trait_sagitta:0 "Sagitta-Model Sniper Rifles"
+ gv_GRE_mio_trait_mercurius:0 "Mercurius-Model Anti-Tank Launchers"
+ 
  # TECH BONUSES
  
  gv_GRE_invest_in_industry_tech_bonus:0 "Industry Investment"
@@ -59,6 +81,8 @@
  gv_GRE_engineering_subsidies_tech_bonus:0 "Engineering Subsidies"
  
  # GOALS
+ 
+ FOCUS_FILTER_GREAT_DEPRESSION:0 "Great Depression"
  
  gv_GRE_starting_focus:0 "The Constantinian Age"
  gv_GRE_starting_focus_desc:0 ""
@@ -80,11 +104,11 @@
  gv_GRE_attaleia_industrial_park_desc:0 ""
  gv_GRE_the_thessaloniki_textile_factories:0 "Thessaloniki Textile Factories"
  gv_GRE_the_thessaloniki_textile_factories_desc:0 ""
- gv_GRE_strengthen_the_denarius:0 "Strengthen The Denarius"
+ gv_GRE_strengthen_the_denarius:0 "Strengthen the Denarius"
  gv_GRE_strengthen_the_denarius_desc:0 ""
- gv_GRE_edict_of_agricultural_recovery:0 "Edict of Agricultural Recovery"
+ gv_GRE_edict_of_agricultural_recovery:0 "Edict of Agricultural Revitalization"
  gv_GRE_edict_of_agricultural_recovery_desc:0 ""
- gv_GRE_convene_the_senate:0 "Convene The Senate"
+ gv_GRE_convene_the_senate:0 "Convene the Senate"
  gv_GRE_convene_the_senate_desc:0 ""
  gv_GRE_ikonion_hydroelectric:0 "Ikonion Hydroelectric"
  gv_GRE_ikonion_hydroelectric_desc:0 ""
@@ -100,3 +124,13 @@
  gv_GRE_begin_rearmament_desc:0 ""
  gv_GRE_nationalize_seleucia_company:0 "Nationalize the Seleucia Arsenal"
  gv_GRE_nationalize_seleucia_company_desc:0 ""
+ gv_GRE_edict_of_economic_amendment:0 "Edict of Economic Amendment"
+ gv_GRE_edict_of_economic_amendment_desc:0 ""
+ gv_GRE_edict_of_emergency_employment:0 "Edict of Emergency Employment"
+ gv_GRE_edict_of_emergency_employment_desc:0 ""
+ gv_GRE_reform_the_central_bank:0 "Reform the Central Bank"
+ gv_GRE_reform_the_central_bank_desc:0 ""
+ gv_GRE_issue_bonds:0 "Issue Bonds"
+ gv_GRE_issue_bonds_desc:0 ""
+ gv_GRE_agreements_with_the_aristocracy:0 "Agreements With the Aristocracy"
+ gv_GRE_agreements_with_the_aristocracy_desc:0 ""

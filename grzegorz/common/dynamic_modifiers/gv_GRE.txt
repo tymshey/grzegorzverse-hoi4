@@ -1,0 +1,12 @@
+gv_GRE_imperial_industry_dynamic_modifier = {
+
+	enable = { always = yes }
+	
+	icon = GFX_idea_SOV_third_five_year_plan_civilian
+	
+	industrial_capacity_factory = gv_GRE_industrial_capacity_factory_factor
+	fuel_gain_factor = gv_GRE_fuel_gain_factor
+	production_factory_max_efficiency_factor = gv_GRE_production_factory_max_efficiency_factor
+	production_lack_of_resource_penalty_factor = gv_GRE_production_lack_of_resource_penalty_factor
+	production_speed_industrial_complex_factor = gv_GRE_production_speed_industrial_complex_factor
+}

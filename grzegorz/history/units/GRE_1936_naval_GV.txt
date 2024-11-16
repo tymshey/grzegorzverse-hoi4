@@ -15,6 +15,7 @@ units= {
 			ship = { name = "RNI Aurelianus" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
 			ship = { name = "RNI Constantinus Magnus" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
 			ship = { name = "RNI Ioannes Paulus" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
+			ship = { name = "RNI Callistus Magnus" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
 			ship = { name = "RNI Caesar" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
 			ship = { name = "RNI Pompeius" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
 			ship = { name = "RNI Crassus" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
@@ -63,6 +64,7 @@ units= {
 		task_force = {
 			name = "Potestas Aegeia"			
 			location = 4109 # Athens
+			ship = { name = "RNI Gaius Magnus" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GRE version_name = "Imperator Class" } } }
 			ship = { name = "RNI Cunctator" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
 			ship = { name = "RNI Callistus" definition = heavy_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name = "Callistus Class" } } }			
 			ship = { name = "RNI Lepidus Major" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
@@ -153,6 +155,26 @@ units= {
 			ship = { name = "NS-23" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
 			ship = { name = "NS-24" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
 			ship = { name = "NS-25" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-26" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-27" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-28" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-29" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-30" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-31" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-32" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-33" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-34" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-35" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-36" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-37" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-38" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-39" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-40" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-41" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-42" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-43" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-44" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-45" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
 		}
 	}
 	fleet = {
@@ -205,6 +227,43 @@ units= {
 			ship = { name = "RNI Anicius Probus Faustus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
 			ship = { name = "RNI Caecina Decius Faustus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
 			ship = { name = "RNI Turcius Rufius Apronianus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+		}
+		task_force = {
+			name = "Potestas Sinica Subaqueanum"
+			location = 4189 # Macau
+			ship = { name = "NS-46" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-47" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-48" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-49" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-50" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-51" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-52" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-53" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-54" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-56" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-57" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-58" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-59" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-60" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-61" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-62" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+		}
+		task_force = {
+			name = "Potestas Atlanticum"
+			location = 2115 # Cabindum
+			ship = { name = "RNI Justinianus" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
+			ship = { name = "RNI Claudius Gothicus" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRE version_name =  "Caesar Class" } } }
+			ship = { name = "RNI Justinus" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			ship = { name = "RNI Heraclius" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GRE version_name =  "Chandax Class" } } }
+			# Destroyers
+			ship = { name = "RNI Decius Volumnius" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Aemilius Regulus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Basilius Achilius" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			ship = { name = "RNI Aurelius Ahenobarbus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GRE version_name = "Aetos Class" } } }
+			# Submarines
+			
+			ship = { name = "NS-63" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
+			ship = { name = "NS-64" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = GRE version_name =  "Glafkos Class" } } }
 		}
 	}
 }

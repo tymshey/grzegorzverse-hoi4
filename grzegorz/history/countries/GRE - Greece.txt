@@ -26,8 +26,28 @@ add_ideas = {
 	spqr
 	constantine_xx
 	strong_orthodoxy
-	gv_GRE_imperial_industry_1
+	# gv_GRE_imperial_industry
+	gv_GRE_excessive_navy_budget
 	gv_great_depression
+}
+
+add_dynamic_modifier = { modifier = gv_GRE_imperial_industry_dynamic_modifier }
+
+set_variable = {
+    var = gv_GRE_industrial_capacity_factory_factor
+    value = -0.1
+}
+set_variable = {
+    var = gv_GRE_production_factory_max_efficiency_factor
+    value = -0.1
+}
+set_variable = {
+    var = gv_GRE_production_lack_of_resource_penalty_factor
+    value = 0.1
+}
+set_variable = {
+    var = gv_GRE_production_speed_industrial_complex_factor
+    value = 0
 }
 
 remove_ideas = {
@@ -44,6 +64,16 @@ remove_ideas = {
 ### TECHNOLOGY
 
 ####################
+
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.5
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.5
+}
 
 set_technology = {
 	infantry_weapons = 1
@@ -66,6 +96,8 @@ set_technology = {
 	radio_detection = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	mountaineers = 1
+	marines = 1
 }
 
 if = {
@@ -176,7 +208,7 @@ if = {
 			icon = "GFX_POR_early_fighter_medium"
 		}
 		create_equipment_variant = { # NAVAL BOMBER
-			name = "CAA. Aerofuriosus B.19"
+			name = "CAA. Aerofuriosus B.19" # Coetus Aerofuriosus Athenae version B project 19
 			type = small_plane_naval_bomber_airframe_0
 			modules = {
 				fixed_main_weapon_slot = torpedo_mounting
@@ -184,6 +216,16 @@ if = {
 				special_type_slot_1 = empty
 			}
 			icon = "GFX_POR_early_bomber_medium"
+		}
+		create_equipment_variant = {
+			name = "CT. Thessalonicae .28" # Coetus Thessalonicae project 28
+			type = medium_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				engine_type_slot = engine_2_2x
+				special_type_slot_1 = lmg_defense_turret
+			}
+			icon = "GFX_TUR_tactical_bomber1_medium"
 		}
 		
 		#

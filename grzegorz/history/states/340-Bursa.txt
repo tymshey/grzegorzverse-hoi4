@@ -2,7 +2,7 @@
 state={
 	id=340
 	name="STATE_340"
-	manpower = 2077853
+	manpower = 3077853
 	resources={
 		chromium=39 # was: 54
 	}
@@ -13,8 +13,8 @@ state={
 		owner = GRE
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 3
-			arms_factory = 3
+			industrial_complex = 2
+			arms_factory = 2
 			dockyard = 2
 		}
 		

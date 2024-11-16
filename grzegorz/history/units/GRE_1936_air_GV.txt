@@ -103,4 +103,21 @@ air_wings = {
 			version_name = "CAA. Aerofuriosus B.19" # Coetus Aerofuriosus Athenae version B project 19
 		}
 	}
+	
+	49 = { # Ancyra
+		# Tactical Bomber
+		
+		medium_plane_airframe_1 = {
+			owner = "GRE" 
+			amount = 100
+			creator = "GRE"
+			version_name = "CT. Thessalonicae .28" # Coetus Thessalonicae project 28
+		}
+		medium_plane_airframe_1 = {
+			owner = "GRE" 
+			amount = 82
+			creator = "GRE"
+			version_name = "CT. Thessalonicae .28" # Coetus Thessalonicae project 28
+		}
+	}
 }

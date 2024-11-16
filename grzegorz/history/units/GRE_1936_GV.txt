@@ -624,9 +624,160 @@ units = {
 
 	}
 	
-	# Malta
+	# eastern border
+	
+	division = {
+		name = "9. Cohortes Montanus"
+		location = 7620
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "10. Cohortes Montanus"
+		location = 9860
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "11. Cohortes Montanus"
+		location = 10399
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "12. Cohortes Montanus"
+		location = 11853
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "13. Cohortes Montanus"
+		location = 12029
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "14. Cohortes Montanus"
+		location = 3950
+		division_template = "Cohortes Montanus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	
+	# Dalmatia
+	
+	division = {
+		name = "41. Cohortes Imperialis"
+		location = 3943
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "42. Cohortes Imperialis"
+		location = 3924
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "43. Cohortes Imperialis"
+		location = 6889
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	### COLONIAL FORCES
+	
+	# Africa
 	
 	division= {	
+		name = "1. Cohortes Colonialis Africanensis"
+		location = 5210
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	division= {	
+		name = "2. Cohortes Colonialis Africanensis"
+		location = 1939
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	division= {	
+		name = "3. Cohortes Colonialis Africanensis"
+		location = 10962
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	# Indochina
+	
+	division= {
+		name = "1. Cohortes Colonialis Indosinae"
+		location = 4401
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {
+		name = "2. Cohortes Colonialis Indosinae"
+		location = 7376
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {
+		name = "3. Cohortes Colonialis Indosinae"
+		location = 7432
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {
+		name = "4. Cohortes Colonialis Indosinae"
+		location = 4405
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {
+		name = "5. Cohortes Colonialis Indosinae"
+		location = 10309
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {
+		name = "6. Cohortes Colonialis Indosinae"
+		location = 12447
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {
+		name = "7. Cohortes Colonialis Indosinae"
+		location = 10177
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	### DEFENSE COMMANDS
+	
+	# Malta
+	
+	division= {
 		name = "Malta Command"
 		location = 12003
 		division_template = "Cohortes Colonialis"
@@ -636,7 +787,7 @@ units = {
 	
 	# Djibuti/Castrum Eritreum
 	
-	division= {	
+	division= {
 		name = "Castrum Eritreum Command"
 		location = 8124
 		division_template = "Cohortes Colonialis"
@@ -646,9 +797,39 @@ units = {
 	
 	# Macau/Macaum
 	
-	division= {	
+	division= {
 		name = "Macaum Command"
 		location = 4189
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	# Cabinda/Cabindum
+	
+	division= {
+		name = "Cabindum Command"
+		location = 2115
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	# Goa
+	
+	division= {
+		name = "Goa Command"
+		location = 1273
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	# Pondicherry
+	
+	division= {
+		name = "Pondicherry Command"
+		location = 10149
 		division_template = "Cohortes Colonialis"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
