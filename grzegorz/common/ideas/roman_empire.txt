@@ -204,5 +204,61 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 			}
 		}
+		
+		gv_GRE_support_from_aristocracy = {
+			picture = AUS_habsburg_monarchy_restored
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		gv_GRE_warbonds = {
+			picture = generic_goods_red_bonus
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		gv_GRE_central_bank = {
+			picture = tur_balkan_central_bank_wealthy_greece
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 3
+				production_speed_buildings_factor = 0.05
+			}
+		}
 	}
 }

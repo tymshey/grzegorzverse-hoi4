@@ -5,7 +5,7 @@
  spqr:0 "Senatus Populusque Romanus"
  spqr_desc:0 "Due to the rich history of imperialism, success and domination over others, the will and pride of the Roman people are exceedingly strong, and the ancient giant is unlikely to surrender."
  constantine_xx:0 "Constantine XX"
- constantine_xx_desc:0 "Constantine XX is the current Emperor and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
+ constantine_xx_desc:0 "Constantine XX is the 203rd and current Emperor, and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
  strong_orthodoxy:0 "Strong Orthodox Christianity"
  strong_orthodoxy_desc:0 "Orthodox Christianity is still quite strong among the population."
  gv_great_depression:0 "The Great Depression"
@@ -20,12 +20,18 @@
  gv_GRE_industrial_revitalization_desc:0 ""
  gv_GRE_excessive_navy_budget:0 "Excessive Classis Imperialis Budget"
  gv_GRE_excessive_navy_budget_desc:0 "The Classis Imperialis recieves a much larger budget from the state than the army, causing an imbalance in defence spending and production."
+ gv_GRE_support_from_aristocracy:0 "Support from the Aristocracy"
+ gv_GRE_support_from_aristocracy_desc:0 "Our government enjoys almost full support from the powerful Roman aristocracy."
+ gv_GRE_warbonds:0 "Issued Warbonds"
+ gv_GRE_warbonds_desc:0 ""
+ gv_GRE_central_bank:0 "The Imperial Central Bank"
+ gv_GRE_central_bank_desc:0 ""
  
  gv_GRE_imperial_industry_dynamic_modifier:0 "The Imperial Industry"
  gv_GRE_imperial_industry_1:0 "The Imperial Industry"
  
  GRE_constantine_xx:0 "Constantine XX"
- GRE_constantine_xx_DESC:0 "Constantine XX is the current Emperor and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
+ GRE_constantine_xx_DESC:0 "Constantine XX is the 203rd and current Emperor, and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
  
  # TOOLTIPS
  
@@ -34,6 +40,9 @@
  gv_GRE_anatolian_oil_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_FUEL_GAIN_FACTOR$: §G+10.0%§!\n\n"
  gv_GRE_industrial_revitalization_program_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_industrial_complex_factor$: §G+10.0%§!\n\n"
  gv_GRE_begin_rearmament_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+10.0%§!\n\n"
+ gv_GRE_strengthen_the_denarius_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+10.0%§!\n\n"
+ gv_GRE_mass_production_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+10.0%§!\n\n"
+ gv_GRE_war_industry_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_arms_factory_factor$: §G+10.0%§!\n\n"
  
  # POLITICS
  
@@ -134,3 +143,13 @@
  gv_GRE_issue_bonds_desc:0 ""
  gv_GRE_agreements_with_the_aristocracy:0 "Agreements With the Aristocracy"
  gv_GRE_agreements_with_the_aristocracy_desc:0 ""
+ gv_GRE_mass_production:0 "Mass Production"
+ gv_GRE_mass_production_desc:0 ""
+ gv_GRE_war_industry:0 "War Industry"
+ gv_GRE_war_industry_desc:0 ""
+ gv_GRE_exercitus_imperialis:0 "Exercitus Imperialis"
+ gv_GRE_exercitus_imperialis_desc:0 ""
+ gv_GRE_aeronautica_imperii:0 "Aeronautica Imperii"
+ gv_GRE_aeronautica_imperii_desc:0 ""
+ gv_GRE_classis_imperialis:0 "Classis Imperialis"
+ gv_GRE_classis_imperialis_desc:0 ""

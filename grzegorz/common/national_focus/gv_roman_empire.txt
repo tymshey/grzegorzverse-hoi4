@@ -293,7 +293,6 @@ focus_tree = {
 
 		available = {
 			has_tech = improved_oil_processing
-			has_tech = excavation3
 		}
 
 		ai_will_do = {
@@ -679,7 +678,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -722,6 +721,61 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_mass_production
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = gv_GRE_begin_rearmament }
+		prerequisite = { focus = gv_GRE_nationalize_seleucia_company }
+		relative_position_id = gv_GRE_imperial_collegium_of_engineering
+		x = 0
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_mass_production_tt
+			add_to_variable = {
+				var = gv_GRE_production_factory_max_efficiency_factor
+				value = 0.1
+			}
+			343 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_war_industry
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = gv_GRE_mass_production }
+		relative_position_id = gv_GRE_mass_production
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_war_industry_tt
+			add_to_variable = {
+				var = gv_GRE_production_speed_arms_factory_factor
+				value = 0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
 		id = gv_GRE_strengthen_the_denarius
 		icon = GFX_focus_fra_devalue_the_franc
 		prerequisite = { focus = gv_GRE_fight_depression }
@@ -739,7 +793,12 @@ focus_tree = {
 
 
 		completion_reward = {
-			
+			custom_effect_tooltip = gv_GRE_strengthen_the_denarius_tt
+			add_to_variable = {
+				var = gv_GRE_production_factory_max_efficiency_factor
+				value = 0.1
+			}
+			add_political_power = 100
 		}
 		search_filters = { }
 	}
@@ -788,7 +847,7 @@ focus_tree = {
 
 
 		completion_reward = {
-			
+			add_ideas = gv_GRE_central_bank
 		}
 		search_filters = { }
 	}
@@ -811,7 +870,18 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_political_power = 100
+			add_ideas = gv_GRE_warbonds
 			
+			# FUCK YOU PARADOX I HATE PARADOX FUCK YOU FUCK YOU
+			# HITLER PLEASE HIT Stockholm, Magnus Ladulasgatan 4 WITH AN ASTEROID PLEASE
+			
+			# add_timed_idea =  = {
+				# idea = gv_GRE_warbonds
+				# days = 365
+			# }
+			
+			# FUCK PARADOX INTERACTIVE STUPID RETARDED NIGGERS
 		}
 		search_filters = { }
 	}
@@ -835,7 +905,7 @@ focus_tree = {
 
 
 		completion_reward = {
-			
+			add_ideas = gv_GRE_support_from_aristocracy
 		}
 		search_filters = { }
 	}
@@ -892,5 +962,65 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
+	}
+	
+	focus = {
+		id = gv_GRE_exercitus_imperialis
+		icon = GFX_focus_DEN_expand_haerens_tekniske_korps
+		x = 20
+		y = 0
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_aeronautica_imperii
+		icon = GFX_focus_DEN_unify_flyvevabnet
+		x = 25
+		y = 0
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			air_experience = 10
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_classis_imperialis
+		icon = GFX_focus_DEN_reorganize_sovaernet
+		x = 30
+		y = 0
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			navy_experience = 10
+		}
 	}
 }
