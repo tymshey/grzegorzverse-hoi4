@@ -12,7 +12,7 @@ bookmarks = {
 		###---> Majors <><> <><> <><>
 		
 		"GRE"={
-			history = "GRE_GATHERING_STORM_DESC"
+			history = "GV_GRE_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				spqr

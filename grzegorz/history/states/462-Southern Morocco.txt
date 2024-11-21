@@ -9,8 +9,10 @@ state={
 	history={
 		owner = MOR
 		buildings = {
-			infrastructure = 1
-			air_base = 1
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 4
 		}
 		victory_points = {
 			4108 5

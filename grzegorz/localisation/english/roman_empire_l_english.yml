@@ -32,6 +32,8 @@
  gv_GRE_desert_warfare_idea_desc:0 ""
  gv_GRE_mountain_warfare_idea:0 "Mountain Warfare"
  gv_GRE_mountain_warfare_idea_desc:0 ""
+ gv_GRE_imperial_strategic_command:0 "Imperial Strategic Command"
+ gv_GRE_imperial_strategic_command_desc:0 ""
  
  gv_GRE_imperial_industry_dynamic_modifier:0 "The Imperial Industry"
  gv_GRE_imperial_industry_1:0 "The Imperial Industry"
@@ -41,6 +43,8 @@
  
  # TOOLTIPS
  
+ GV_GRE_GATHERING_STORM_DESC:0 "The Great War lasted from 1916 all the way to 1922. Difficult trench warfare on the Persian Border, campaign in Scythia and Crimea, naval war with France, Russia and Sus were all magnificent undertakings and proof of endurance and will of the Roman People. After the war had ended, Rome enjoyed a period of relative growth and rapid nation rebuilding, which came to an abrupt end with the Constantinopolitan Market Crash of 1928."
+ 
  gv_GRE_invest_in_industry_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+10.0%§!\n\n"
  gv_GRE_raw_resource_exploitation_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$: §G-10.0%§!\n\n"
  gv_GRE_anatolian_oil_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_FUEL_GAIN_FACTOR$: §G+10.0%§!\n\n"
@@ -49,6 +53,7 @@
  gv_GRE_strengthen_the_denarius_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+10.0%§!\n\n"
  gv_GRE_mass_production_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+10.0%§!\n\n"
  gv_GRE_war_industry_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_arms_factory_factor$: §G+10.0%§!\n\n"
+ gv_GRE_industrial_expansion_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_arms_factory_factor$: §G+5.0%§!\n\n"
  
  # POLITICS
  
@@ -90,12 +95,19 @@
  
  # TECH BONUSES
  
+ roman_research_name:0 "Imperial Research Association"
+ roman_research_desc:0 "Roman Technology Sharing Group"
+ 
  gv_GRE_invest_in_industry_tech_bonus:0 "Industry Investment"
  gv_GRE_industrial_revitalization_program_tech_bonus:0 "Industrial Revitalization Program"
  gv_GRE_mining_tech_bonus:0 "Excavation Investment"
  gv_GRE_engineering_subsidies_tech_bonus:0 "Engineering Subsidies"
  
  # GOALS
+ 
+ gv_GRE_economy_shortcut:0 "Economy"
+ gv_GRE_colonial_shortcut:0 "Interventionism"
+ gv_GRE_army_shortcut:0 "Army Modernization"
  
  FOCUS_FILTER_GREAT_DEPRESSION:0 "Great Depression"
  
@@ -128,7 +140,7 @@
  gv_GRE_ikonion_hydroelectric:0 "Ikonion Hydroelectric"
  gv_GRE_ikonion_hydroelectric_desc:0 ""
  gv_GRE_imperial_collegium_of_engineering:0 "Expand the Imperial Collegium of Engineering"
- gv_GRE_imperial_collegium_of_engineering_desc:0 ""
+ gv_GRE_imperial_collegium_of_engineering_desc:0 "The Imperial Collegium of Engineering was founded by Callistus II in 1772."
  gv_GRE_develop_aethiopia:0 "Develop Aethiopia"
  gv_GRE_develop_aethiopia_desc:0 ""
  gv_GRE_engineering_subsidies:0 "Engineering Subsidies"
@@ -179,3 +191,35 @@
  gv_GRE_coastal_command_focus_desc:0 ""
  gv_GRE_aeronautical_research_institute:0 "Aeronautical Research Institute"
  gv_GRE_aeronautical_research_institute_desc:0 ""
+ gv_GRE_industrial_expansion:0 "Industrial Expansion"
+ gv_GRE_industrial_expansion_desc:0 ""
+ gv_GRE_land_doctrine_focus:0 "Refining the Land Doctrine"
+ gv_GRE_land_doctrine_focus_desc:0 ""
+ gv_GRE_imperial_strategic_command_focus:0 "Imperial Strategic Command"
+ gv_GRE_imperial_strategic_command_focus_desc:0 ""
+ gv_GRE_kickstart_imperial_shipyards:0 "Kickstart Imperial Shipyards"
+ gv_GRE_kickstart_imperial_shipyards_desc:0 ""
+ gv_GRE_edict_of_naval_rearmament:0 "Edict of Naval Rearmament"
+ gv_GRE_edict_of_naval_rearmament_desc:0 ""
+ gv_GRE_black_sea_shipyards:0 "The Black Sea Shipyards"
+ gv_GRE_black_sea_shipyards_desc:0 ""
+ gv_GRE_colonial_army:0 "Imperial Colonial Forces"
+ gv_GRE_colonial_army_desc:0 ""
+ gv_GRE_imperial_prerogative:0 "Imperial Prerogative"
+ gv_GRE_imperial_prerogative_desc:0 ""
+ gv_GRE_align_kurdistan:0 "Align Kurdistan"
+ gv_GRE_align_kurdistan_desc:0 ""
+ gv_GRE_attack_kurdistan:0 "Attack Kurdistan"
+ gv_GRE_attack_kurdistan_desc:0 ""
+ gv_GRE_repair_yards_focus:0 "Expand the Repair Yards"
+ gv_GRE_repair_yards_focus_desc:0 ""
+ gv_GRE_service_overseas_focus:0 "Service Overseas"
+ gv_GRE_service_overseas_focus_desc:0 ""
+ gv_GRE_riches_of_asia:0 "Riches of Asia"
+ gv_GRE_riches_of_asia_desc:0 ""
+ gv_GRE_conquer_siam:0 "Conquer Siam"
+ gv_GRE_conquer_siam_desc:0 ""
+ gv_GRE_develop_indochina:0 "Develop Indochina"
+ gv_GRE_develop_indochina_desc:0 ""
+ gv_GRE_take_suez_focus:0 "Claim Full Suez Canal Ownership"
+ gv_GRE_take_suez_focus_desc:0 ""

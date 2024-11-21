@@ -363,7 +363,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 20
 		}
-		location = 11811
+		location = 657
 		division_template = "Cohortes Imperialis" 
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -528,7 +528,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 9914
+		location = 9780
 		division_template = "Cohortes Imperialis" 
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -830,6 +830,16 @@ units = {
 	division= {
 		name = "Pondicherry Command"
 		location = 10149
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	# Portus Constantinus
+	
+	division= {
+		name = "Portus Constantinus Command"
+		location = 12049
 		division_template = "Cohortes Colonialis"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5

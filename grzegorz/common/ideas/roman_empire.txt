@@ -262,7 +262,7 @@ ideas = {
 		}
 		
 		gv_GRE_legacy_of_roman_persian_wars_idea = {
-			picture = MON_desert_speciliazation
+			picture = BEL_legacy_of_the_great_war
 			
 			allowed = {
 				original_tag = GRE
@@ -315,6 +315,25 @@ ideas = {
 			
 			modifier = {
 				acclimatization_hot_climate_gain_factor = 0.2
+			}
+		}
+		
+		gv_GRE_imperial_strategic_command = {
+			picture = DEN_haerens_tekniske_korps_organization
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning_factor = 0.15
+				planning_speed = 0.2
 			}
 		}
 	}

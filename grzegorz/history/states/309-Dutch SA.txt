@@ -13,6 +13,7 @@ state={
 	history={
 		add_core_of = SUR
 		owner = MOR
+		add_core_of = MOR
 		buildings = {
 			infrastructure = 2 #was 3
 			industrial_complex = 1

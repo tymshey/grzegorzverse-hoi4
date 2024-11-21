@@ -660,9 +660,18 @@ set_autonomy = {
 	freedom_level = 0.35
 }
 
+set_autonomy = {
+	target = FRI
+	autonomy_state = autonomy_colony
+	freedom_level = 0.35
+}
+
+add_to_tech_sharing_group = roman_research
+
 create_faction = gv_imperial_system_faction
 add_to_faction = GRE
 add_to_faction = ETH
+add_to_faction = FRI
 
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }

@@ -1,0 +1,14 @@
+state={
+	id=1098
+	name="STATE_1098"
+	provinces={
+		5008 5214 13339 13393
+	}
+	history = {
+		owner = MOR
+	}
+	manpower=43920
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

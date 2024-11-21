@@ -8,14 +8,15 @@ state={
 
 	history={
 		add_core_of = CAM
-		owner = GRE
+		owner = FRI
 		buildings = {
 			7432 = {
 				naval_base = 1
 
 			}
 			infrastructure = 1
-
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		victory_points = {
 			7376 5
