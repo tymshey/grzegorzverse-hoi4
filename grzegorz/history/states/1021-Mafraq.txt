@@ -8,13 +8,14 @@ state={
 	impassable = yes
 
 	history={
-		owner = ENG
+		owner = EGY
 		buildings = {
 			infrastructure = 1			
 		}
 		victory_points = {
 			1544 1 
 		}
+		add_core_of = EGY
 		add_core_of = JOR
 	}
 

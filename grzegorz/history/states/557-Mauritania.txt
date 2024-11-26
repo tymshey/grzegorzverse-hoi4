@@ -19,6 +19,10 @@ state={
 
 	}
 
+	resources={
+		oil=50
+	}
+
 	provinces={
 		5034 5077 7992 8058 10814
 	}

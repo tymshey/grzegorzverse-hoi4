@@ -1,0 +1,38 @@
+state={
+	id=454
+	name="STATE_454"
+
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			fuel_silo = 2 #end of the Kirkuk Haifa oil Pipeline, while the first refinery was built in 1938 there it also represents the pipeline itself and add significance to the control of the region.
+			air_base = 4
+			4206 = {
+				naval_base = 4
+			}
+			1065 = {
+				naval_base = 1 
+			}
+		}
+		victory_points = {
+			4206 10
+		}
+		victory_points = {
+			1065 2
+		}
+		#Core is added in MPL history file
+		add_core_of = EGY
+		add_core_of = ISR
+	}
+	
+	provinces={
+		1065 1201 4206 
+	}
+	manpower=419773 
+	buildings_max_level_factor=1.000
+	state_category=large_town
+
+	local_supplies=0.0
+}

@@ -79,7 +79,7 @@ TUR = {
 }
 GRE = {
 	color = rgb { 167 10 100 }
-	color_ui = rgb { 121 235 255 }
+	color_ui = rgb { 167 10 100 }
 }
 ALB = {
 	color = rgb { 149 45 102 }
@@ -334,8 +334,8 @@ LBA = {
 }
 
 EGY = {
-	color = rgb { 230 230 70 }
-	color_ui = rgb { 230 230 70 }
+	color = rgb { 211 230 211 }
+	color_ui = rgb { 211 230 211 }
 }
 
 PAL = {

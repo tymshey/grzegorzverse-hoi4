@@ -7,8 +7,16 @@ spriteTypes = {
 		texturefile = "gfx/leaders/GRE/Portrait_GRE_Aurelius_Flavius_Adeodatus.dds"
 	}
 	spriteType = {
+		name = "GFX_Portrait_GRE_Aurelius_Flavius_Adeodatus_small"
+		texturefile = "gfx/interface/ideas/idea_GRE_aurelius_flavius_adeodatus.dds"
+	}
+	spriteType = {
 		name = "GFX_Portrait_GRE_Caecillius_Helvius_Vindex"
 		texturefile = "gfx/leaders/GRE/Portrait_GRE_Caecillius_Helvius_Vindex.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_GRE_Caecillius_Helvius_Vindex_small"
+		texturefile = "gfx/interface/ideas/idea_GRE_caecillius_helvius_vindex.dds"
 	}
 	spriteType = {
 		name = "GFX_Portrait_GRE_Gnaeus_Gratian_Monomachos"
@@ -21,5 +29,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_GRE_Ioannes_Gregorius"
 		texturefile = "gfx/leaders/GRE/Portrait_GRE_Ioannes_Gregorius.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_GRE_Theodosius_Comnenus"
+		texturefile = "gfx/leaders/GRE/Portrait_GRE_Theodosius_Comnenus.dds"
 	}
 }

@@ -533,6 +533,7 @@ recruit_character = GRE_constantine_xx
 recruit_character = GRE_aurelius_flavius_adeodatus
 recruit_character = GRE_quinctillius_rullianus_afer
 recruit_character = GRE_ioannes_gregorius
+recruit_character = GRE_theodosius_comnenus
 recruit_character = GRE_caecillius_helvius_vindex
 recruit_character = GRE_gnaeus_gratian_monomachos
 

@@ -40,6 +40,8 @@
  
  GRE_constantine_xx:0 "Constantine XX"
  GRE_constantine_xx_DESC:0 "Constantine XX is the 203rd and current Emperor, and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
+ GRE_caecillius_helvius_vindex:0 "Caecillius Helvius Vindex"
+ GRE_caecillius_helvius_vindex_desc:0 "Commanding General Admiral of the Imperial Navy"
  
  # TOOLTIPS
  
@@ -54,6 +56,7 @@
  gv_GRE_mass_production_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+10.0%§!\n\n"
  gv_GRE_war_industry_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_arms_factory_factor$: §G+10.0%§!\n\n"
  gv_GRE_industrial_expansion_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_arms_factory_factor$: §G+5.0%§!\n\n"
+ gv_GRE_issue_bonds_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\nConsumer Goods Factories: §Y-10.0%§!\n\n"
  
  # POLITICS
  
@@ -72,7 +75,11 @@
  gv_GRE_emperor_vs_senate_bop_emperor:0 "Emperor"
  
  gv_GRE_emperor_vs_senate_bop_increase:0 "Hold a Speech"
+ gv_GRE_emperor_vs_senate_bop_privileges_for_the_elites:0 "Grant Additional Privileges for the Elite"
  gv_GRE_emperor_vs_senate_bop_decrease:0 "Denounce the Emperor"
+ gv_GRE_emperor_vs_senate_bop_question_the_army:0 "Question the Army's Loyalty"
+ gv_GRE_emperor_vs_senate_bop_question_the_airforce:0 "Question the Airforce's Loyalty"
+ gv_GRE_emperor_vs_senate_bop_question_the_navy:0 "Question the Navy's Loyalty"
  
  # FACTION
  
@@ -106,6 +113,7 @@
  # GOALS
  
  gv_GRE_economy_shortcut:0 "Economy"
+ gv_GRE_politics_shortcut:0 "Politics"
  gv_GRE_colonial_shortcut:0 "Interventionism"
  gv_GRE_army_shortcut:0 "Army Modernization"
  
@@ -223,3 +231,21 @@
  gv_GRE_develop_indochina_desc:0 ""
  gv_GRE_take_suez_focus:0 "Claim Full Suez Canal Ownership"
  gv_GRE_take_suez_focus_desc:0 ""
+ gv_GRE_macau_focus:0 "Macaum Strategy"
+ gv_GRE_macau_focus_desc:0 ""
+ gv_GRE_landward_macau_focus:0 "Landward Macaum Defence"
+ gv_GRE_landward_macau_focus_desc:0 ""
+ gv_GRE_the_fragmented_west_focus:0 "The Fragmented West"
+ gv_GRE_the_fragmented_west_focus_desc:0 ""
+ gv_GRE_the_eastern_frontier_focus:0 "The Eastern Frontier"
+ gv_GRE_the_eastern_frontier_focus_desc:0 ""
+ gv_GRE_break_the_treaty:0 "Break the Treaty"
+ gv_GRE_break_the_treaty_desc:0 ""
+ gv_GRE_address_the_treaty_of_adrianopolis:0 "Address the Treaty of Adrianopolis"
+ gv_GRE_address_the_treaty_of_adrianopolis_desc:0 ""
+ gv_GRE_demand_moesia_superior:0 "Demand Moesia Superior"
+ gv_GRE_demand_moesia_superior_desc:0 ""
+ gv_GRE_align_kingdom_of_moesia:0 "Align Kingdom of Moesia"
+ gv_GRE_align_kingdom_of_moesia_desc:0 ""
+ gv_GRE_dioclea_ultimatum:0 "Dioclea Ultimatum"
+ gv_GRE_dioclea_ultimatum_desc:0 ""

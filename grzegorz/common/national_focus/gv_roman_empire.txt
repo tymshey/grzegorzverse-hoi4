@@ -28,6 +28,12 @@ focus_tree = {
 	}
 	
 	shortcut = {
+		name = gv_GRE_politics_shortcut
+		target = gv_GRE_imperial_prerogative
+		scroll_wheel_factor = 1
+	}
+	
+	shortcut = {
 		name = gv_GRE_economy_shortcut
 		target = gv_GRE_fight_depression
 		scroll_wheel_factor = 0.75
@@ -399,6 +405,27 @@ focus_tree = {
 				fallback = yes
 				start_state = 731
 				target_state = 797
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 797
+				target_state = 49
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 49
+				target_state = 798
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 798
+				target_state = 348
 			}
 			build_railway = {
 				level = 5
@@ -881,7 +908,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
-			add_ideas = gv_GRE_warbonds
+			custom_effect_tooltip = gv_GRE_issue_bonds_tt
+			add_to_variable = {
+				var = gv_GRE_consumer_goods_factor
+				value = -0.1
+			}
+			
+			# add_ideas = gv_GRE_warbonds
 			
 			# FUCK YOU PARADOX I HATE PARADOX FUCK YOU FUCK YOU
 			# HITLER PLEASE HIT Stockholm, Magnus Ladulasgatan 4 WITH AN ASTEROID PLEASE
@@ -974,16 +1007,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
 	}
 	
+	#############################
+	#
+	# POLITICS TREE
+	#
+	#############################
+	
 	focus = {
 		id = gv_GRE_imperial_prerogative
-		icon = GFX_focus_AUS_bring_back_the_habsburg_rule
-		prerequisite = { focus = gv_GRE_edict_of_economic_amendment }
-		x = 0
-		y = 2
-		relative_position_id = gv_GRE_edict_of_economic_amendment
+		icon = GFX_focus_generic_monarchist_sentiment # was GFX_focus_AUS_bring_back_the_habsburg_rule
+		x = 19
+		y = 0
 		cost = 5
 
-
+		available = {
+			has_completed_focus = gv_GRE_edict_of_emergency_employment
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -998,13 +1037,150 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_the_fragmented_west_focus
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = gv_GRE_imperial_prerogative }
+		x = -3
+		y = 1
+		relative_position_id = gv_GRE_imperial_prerogative
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = gv_GRE_break_the_treaty
+		icon = GFX_goal_ENG_reassess_continental_commitments
+		prerequisite = { focus = gv_GRE_the_fragmented_west_focus }
+		mutually_exclusive = { focus = gv_GRE_address_the_treaty_of_adrianopolis }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_the_fragmented_west_focus
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_demand_moesia_superior
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = gv_GRE_break_the_treaty }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_break_the_treaty
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_align_kingdom_of_moesia
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = gv_GRE_break_the_treaty }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_break_the_treaty
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_dioclea_ultimatum
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = gv_GRE_demand_moesia_superior }
+		prerequisite = { focus = gv_GRE_align_kingdom_of_moesia }
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_break_the_treaty
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_address_the_treaty_of_adrianopolis
+		icon = GFX_goal_constitution
+		prerequisite = { focus = gv_GRE_the_fragmented_west_focus }
+		mutually_exclusive = { focus = gv_GRE_break_the_treaty }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_the_fragmented_west_focus
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_the_eastern_frontier_focus
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = gv_GRE_imperial_prerogative }
+
+		x = 3
+		y = 1
+		relative_position_id = gv_GRE_imperial_prerogative
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { }
+	}
+	
+	focus = {
 		id = gv_GRE_align_kurdistan
 		icon = GFX_focus_generic_befriend_kurdistan
-		prerequisite = { focus = gv_GRE_imperial_prerogative }
+		prerequisite = { focus = gv_GRE_the_eastern_frontier_focus }
 		mutually_exclusive = { focus = gv_GRE_attack_kurdistan }
 		x = -1
 		y = 1
-		relative_position_id = gv_GRE_imperial_prerogative
+		relative_position_id = gv_GRE_the_eastern_frontier_focus
 		cost = 5
 
 
@@ -1024,11 +1200,11 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_attack_kurdistan
 		icon = GFX_focus_generic_attack_kurdistan
-		prerequisite = { focus = gv_GRE_imperial_prerogative }
+		prerequisite = { focus = gv_GRE_the_eastern_frontier_focus }
 		mutually_exclusive = { focus = gv_GRE_align_kurdistan }
 		x = 1
 		y = 1
-		relative_position_id = gv_GRE_imperial_prerogative
+		relative_position_id = gv_GRE_the_eastern_frontier_focus
 		cost = 5
 
 
@@ -1060,7 +1236,7 @@ focus_tree = {
 			factor = 1
 		}
 		icon = GFX_goal_generic_position_armies
-		x = 16
+		x = 29
 		y = 0
 		cost = 5
 
@@ -1368,6 +1544,87 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = gv_GRE_macau_focus
+		prerequisite = { focus = gv_GRE_service_overseas_focus }
+		icon = GFX_goal_generic_fortify_city
+		x = 4
+		y = 1
+		relative_position_id = gv_GRE_service_overseas_focus
+		cost = 5
+		ai_will_do = {
+			factor = 0.25
+		}
+		available = { 
+			729 = {
+				controls_or_subject_of = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			729 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 4189
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+	}
+	
+	focus = {
+		id = gv_GRE_landward_macau_focus
+		prerequisite = { focus = gv_GRE_macau_focus }
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_macau_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		available = {
+			729 = {
+				controls_or_subject_of = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			729 = { 
+				free_building_slots = {
+					building = anti_air_building
+					size < 2
+				}
+			}
+		}
+
+		completion_reward = {
+			729 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 4189
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2				
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { }
+	}
+	
 	#############################
 	#
 	# ARMY MODERNIZATION TREE
@@ -1377,7 +1634,7 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_exercitus_imperialis
 		icon = GFX_focus_DEN_expand_haerens_tekniske_korps
-		x = 25
+		x = 38
 		y = 0
 		cost = 5
 
@@ -1687,7 +1944,7 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_aeronautica_imperii
 		icon = GFX_focus_DEN_unify_flyvevabnet
-		x = 29
+		x = 42
 		y = 0
 		cost = 5
 
@@ -1921,7 +2178,7 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_classis_imperialis
 		icon = GFX_focus_DEN_reorganize_sovaernet
-		x = 33
+		x = 46
 		y = 0
 		cost = 5
 

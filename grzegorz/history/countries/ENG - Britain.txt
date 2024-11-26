@@ -274,10 +274,7 @@ add_to_faction = NZL
 add_to_faction = SAF
 give_military_access = RAJ
 add_to_faction = RAJ
-give_military_access = EGY
-add_to_faction = EGY
 add_to_faction = MAL
-give_market_access = IRQ	#1930 Anglo-Iraqi Treaty
 
 #give_guarantee = CZE
 
