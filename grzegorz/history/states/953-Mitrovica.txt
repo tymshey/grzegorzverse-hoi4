@@ -1,0 +1,23 @@
+state={
+	id=953
+	name="STATE_953"
+	provinces={
+		6953 9890 
+	}
+	history={
+		victory_points = {
+			6953 1
+		}
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = GRE
+	}
+	manpower=158016
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,66 @@
+############################
+#
+# NEWS EVENTS
+#
+############################
+
+
+add_namespace = gv_news
+
+news_event = {
+	id = gv_news.1
+	title = gv_news.1.title
+	desc = gv_news.1.desc
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gv_news.1.a
+		trigger = {
+			NOT = {
+				TAG = GRE
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = gv_news.1.b
+		trigger = { TAG = GRE }
+	}
+	option = {
+		name = gv_news.1.c
+		trigger = { TAG = YUG }
+	}
+}
+
+news_event = {
+	id = gv_news.2
+	title = gv_news.2.title
+	desc = gv_news.2.desc
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gv_news.2.a
+		trigger = {
+			NOT = {
+				TAG = GRE
+				TAG = ROM
+			}
+		}
+	}
+	option = {
+		name = gv_news.2.b
+		trigger = { TAG = GRE }
+	}
+	option = {
+		name = gv_news.2.c
+		trigger = { TAG = ROM }
+	}
+}

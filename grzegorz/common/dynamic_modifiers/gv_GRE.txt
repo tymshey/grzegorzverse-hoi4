@@ -11,4 +11,5 @@ gv_GRE_imperial_industry_dynamic_modifier = {
 	production_lack_of_resource_penalty_factor = gv_GRE_production_lack_of_resource_penalty_factor
 	production_speed_industrial_complex_factor = gv_GRE_production_speed_industrial_complex_factor
 	production_speed_arms_factory_factor = gv_GRE_production_speed_arms_factory_factor
+	research_speed_factor = gv_GRE_research_speed_factor
 }

@@ -97,7 +97,7 @@ set_technology = {
 	tech_engineers = 1
 	tech_recon = 1
 	tech_trucks = 1
-    motorised_infantry = 1
+    	motorised_infantry = 1
 	gw_artillery = 1
 	interwar_antitank = 1
 	interwar_antiair = 1
@@ -109,6 +109,9 @@ set_technology = {
 	#butadiene_processing = 1
 	bicycle_infantry = 1
 	basic_train = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	tech_mountaineers = 1
 	marines = 1
 }
 

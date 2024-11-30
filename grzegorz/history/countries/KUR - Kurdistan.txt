@@ -1,9 +1,13 @@
 ﻿capital = 350
 
-oob = "IRQ_1936"
+oob = "KUR_1936"
 
 add_ideas = {
+	tot_economic_mobilisation
+	all_adults_serve
+	closed_economy
 	gv_aftermath_of_the_kurd_rebellion
+	gv_closed_from_outside_world
 }
 
 # Starting tech

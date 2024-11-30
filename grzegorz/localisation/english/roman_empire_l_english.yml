@@ -35,6 +35,8 @@
  gv_GRE_imperial_strategic_command:0 "Imperial Strategic Command"
  gv_GRE_imperial_strategic_command_desc:0 ""
  
+ gv_unethical_mining_idea:0  "Unethical Mining Methods"
+ 
  gv_GRE_imperial_industry_dynamic_modifier:0 "The Imperial Industry"
  gv_GRE_imperial_industry_1:0 "The Imperial Industry"
  
@@ -56,7 +58,10 @@
  gv_GRE_mass_production_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+10.0%§!\n\n"
  gv_GRE_war_industry_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_arms_factory_factor$: §G+10.0%§!\n\n"
  gv_GRE_industrial_expansion_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_arms_factory_factor$: §G+5.0%§!\n\n"
- gv_GRE_issue_bonds_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\nConsumer Goods Factories: §Y-10.0%§!\n\n"
+ gv_GRE_issue_bonds_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-10.0%§!\n\n"
+ gv_GRE_imperial_science_initiative_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+5.0%§!\n\n"
+ gv_GRE_ethiopian_blood_diamonds_tt:0 "Add §G$4§! million to the national reserves."
+ gv_GRE_evacuate_ethiopian_assets_tt:0 "Add §G$8§! million to the national reserves."
  
  # POLITICS
  
@@ -99,6 +104,30 @@
  gv_GRE_mio_trait_gladius_automatica:0 "Gladius Automatica Submachine Guns"
  gv_GRE_mio_trait_sagitta:0 "Sagitta-Model Sniper Rifles"
  gv_GRE_mio_trait_mercurius:0 "Mercurius-Model Anti-Tank Launchers"
+ 
+ # EVENTS
+ 
+ gv_news.1.title:0 "Roman Empire Siezes Moesia Superior"
+ gv_news.1.desc:0 "The Roman Empire has officially annexed Moesia Superior from the nation of Illyria, sparking outrage across the international community. This bold move marks a clear violation of the Treaty of Adrianople (1922), which had firmly established Illyrian sovereignty over the region. Emperor Constantine XX addressed the Roman Senate, declaring, “The Roman people cannot be left divided by unjust borders. Moesia Superior is not a conquest — it is a reunification of our people.”.\n\nWhile the Roman population in the region has enthusiastically welcomed the annexation, the international community views this as a dangerous precedent. Illyria, unable to resist militarily, has issued a formal protest, accusing Rome of undermining peace agreements."
+ gv_news.1.a:0 "Worrying."
+ gv_news.1.b:0 "The Roman people will stand undivided."
+ gv_news.1.c:0 "There is nothing we can do."
+ 
+ gv_news.2.title:0 "Roman Empire Demands Moesian Submission"
+ gv_news.2.desc:0 "The Roman Empire has successfully forced the Kingdom of Moesia into submission, reincorporating the region into imperial control. Moesia, a Roman-aligned rump state established after the Great War, had maintained its independence under the terms of the Treaty of Adrianople (1922). However, this latest development constitutes a clear breach of that agreement.\n\nWhile pro-Roman factions in Moesia have celebrated the move, the annexation has sparked outrage among international observers. The Illyrian government and other Balkan nations have condemned the submission, warning of destabilization across the region. The League of Nations has issued a stern rebuke but has yet to take action."
+ gv_news.2.a:0 "Worrying."
+ gv_news.2.b:0 "Glory to the Emperor!"
+ gv_news.2.c:0 "There is nothing we can do."
+ 
+ gv_roman_empire_events.2.title:0 "Rome Demands Moesia Superior!"
+ gv_roman_empire_events.2.desc:0 "Roman Empire demands we return the province of Moesia Superior to them."
+ gv_roman_empire_events.2.a:0 "We have to accept."
+ gv_roman_empire_events.2.b:0 "We shall not give up our territory."
+ 
+ gv_roman_empire_events.3.title:0 "The Empire Demands Submission!"
+ gv_roman_empire_events.3.desc:0 "The Empire demands we step down as government of the kingdom, and pledge allegiance to the Emperor."
+ gv_roman_empire_events.3.a:0 "We have to accept."
+ gv_roman_empire_events.3.b:0 "We shall defend ourselves."
  
  # TECH BONUSES
  
@@ -249,3 +278,20 @@
  gv_GRE_align_kingdom_of_moesia_desc:0 ""
  gv_GRE_dioclea_ultimatum:0 "Dioclea Ultimatum"
  gv_GRE_dioclea_ultimatum_desc:0 ""
+ gv_GRE_imperial_science_initiative:0 "Imperial Science Initiative"
+ gv_GRE_imperial_science_initiative_desc:0 ""
+ gv_GRE_fund_research_association:0 "Fund the Research Association"
+ gv_GRE_fund_research_association_desc:0 ""
+ gv_GRE_pool_technical_know_how:0 "Pool Technical Know-how"
+ gv_GRE_project_deus_sol_invictus:0 "Project Deus Sol Invictus"
+ gv_GRE_project_deus_sol_invictus_desc:0 ""
+ gv_GRE_attack_persia:0 "The First Snowfall..."
+ gv_GRE_attack_persia_desc:0 "The ancient giants clash once again. Deus Adiuta Romanis..."
+ gv_GRE_ethiopian_blood_diamonds:0 "Blood Diamonds"
+ gv_GRE_ethiopian_blood_diamonds_desc:0 ""
+ gv_GRE_evacuate_ethiopian_assets:0 "Evacuate Aethiopian Assets"
+ gv_GRE_evacuate_ethiopian_assets_desc:0 ""
+ 
+ # OTHER
+ 
+ gv_unethical_mining_opinion_modifier:0 "Unethical Mining Methods"

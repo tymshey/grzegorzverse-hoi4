@@ -65,7 +65,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 1
-				consumer_goods_factor = 0.4
+				consumer_goods_factor = 0.5
 				conscription_factor = -0.25
 				local_resources_factor = -0.2
 			}
@@ -85,7 +85,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.5
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.3
 				conscription_factor = -0.15
 				local_resources_factor = -0.1
 			}
@@ -105,7 +105,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.25
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				conscription_factor = -0.1
 			}
 		}
@@ -334,6 +334,27 @@ ideas = {
 			modifier = {
 				max_planning_factor = 0.1
 				planning_speed = 0.1
+			}
+		}
+		
+		### Aethiopia
+		gv_unethical_mining_idea = {
+			picture = generic_exploit_mines
+			
+			allowed = {
+				original_tag = ETH
+				is_subject_of = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.3
+				monthly_population = -0.01
 			}
 		}
 	}

@@ -2,7 +2,7 @@
 state={
 	id=1049
 	name="STATE_1049"
-	manpower = 129856
+	manpower = 749856
 	
 	state_category = rural
 
@@ -13,6 +13,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		add_core_of = PER
 

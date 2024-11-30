@@ -83,7 +83,7 @@ focus_tree = {
 				value = -0.1
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	
 	focus = {
@@ -1016,7 +1016,7 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_imperial_prerogative
 		icon = GFX_focus_generic_monarchist_sentiment # was GFX_focus_AUS_bring_back_the_habsburg_rule
-		x = 19
+		x = 20
 		y = 0
 		cost = 5
 
@@ -1037,10 +1037,170 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_imperial_science_initiative
+		icon = GFX_focus_generic_university_3
+		prerequisite = { focus = gv_GRE_imperial_prerogative }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_imperial_prerogative
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			random_scientist = {
+				limit = {
+					has_scientist_level = {
+						specialization = specialization_nuclear
+						level > 0
+					}
+				}
+				add_scientist_level = {
+					specialization = specialization_nuclear
+					level = 1
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { 
+				gv_GRE_research_speed_factor = 0.05
+				tooltip = gv_GRE_imperial_science_initiative_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GER_wunderwaffen_special_project_speed_factor = 0.05
+				tooltip = special_project_speed_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = gv_GRE_fund_research_association
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = gv_GRE_imperial_science_initiative }
+
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_imperial_science_initiative
+
+		cost = 10
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_dynamic_modifier = { modifier = GER_rnd_programs_modifier }
+			custom_effect_tooltip = GER_shared_rd_programs_ww_tt
+			
+		}
+	}
+
+	focus = {
+		id = gv_GRE_pool_technical_know_how
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = gv_GRE_imperial_science_initiative }
+
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_imperial_science_initiative
+		cost = 10
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+ 
+		completion_reward = {
+
+			add_ideas = GER_pool_technical_know_how
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = GER_pool_technical_know_how_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = { is_in_faction_with = GRE }
+					add_ideas = GER_pool_technical_know_how
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = gv_GRE_project_deus_sol_invictus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = gv_GRE_fund_research_association }
+		prerequisite = { focus = gv_GRE_pool_technical_know_how }
+
+		dynamic = yes
+
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_imperial_science_initiative
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GER_wunderwaffen_production_speed_nuclear_facility_factor = 0.15
+				tooltip = production_speed_nuclear_facility_factor_tt
+			}
+			add_to_variable = { 
+				GER_wunderwaffen_production_speed_nuclear_reactor_factor = 0.1
+				tooltip = production_speed_nuclear_reactor_factor_tt
+			}
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
+				}
+				add_to_variable = { 
+					GER_wunderwaffen_sp_nuclear_reactor_speed_factor = 0.1
+					tooltip = sp_nuclear_reactor_speed_factor_tt
+				}
+			}
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_commercial_nuclear_reactor }
+				}
+				add_to_variable = { 
+					GER_wunderwaffen_sp_commercial_nuclear_reactor_speed_factor = 0.1
+					tooltip = sp_commercial_nuclear_reactor_speed_factor_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = gv_GRE_the_fragmented_west_focus
 		icon = GFX_focus_generic_balkan_diplomacy
 		prerequisite = { focus = gv_GRE_imperial_prerogative }
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = gv_GRE_imperial_prerogative
 		cost = 5
@@ -1069,10 +1229,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_war_support = 0.1
+			add_threat = 3
 		}
 		
-		search_filters = { }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 	
 	focus = {
@@ -1088,7 +1249,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_threat = 5
+			YUG = {
+				country_event = { id = gv_roman_empire_events.2 }
+			}
 		}
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1107,7 +1271,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_threat = 5
+			ROM = {
+				country_event = { id = gv_roman_empire_events.3 }
+			}
 		}
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1127,7 +1294,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_threat = 5
 		}
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1147,10 +1314,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_stability = 0.1
+			add_threat = -3
 		}
 		
-		search_filters = { }
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 	
 	focus = {
@@ -1158,7 +1326,7 @@ focus_tree = {
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = gv_GRE_imperial_prerogative }
 
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = gv_GRE_imperial_prerogative
 		cost = 5
@@ -1224,6 +1392,33 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	
+	focus = {
+		id = gv_GRE_attack_persia # The First Snows Fall
+		icon = GFX_goal_PER_anglo_soviet_invasion_of_iran
+		prerequisite = { focus = gv_GRE_align_kurdistan focus = gv_GRE_attack_kurdistan }
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_the_eastern_frontier_focus
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_war_support = 0.15
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PER
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
+	}
+	
 	#############################
 	#
 	# COLONIAL INTERVENTION TREE
@@ -1236,7 +1431,7 @@ focus_tree = {
 			factor = 1
 		}
 		icon = GFX_goal_generic_position_armies
-		x = 29
+		x = 32
 		y = 0
 		cost = 5
 
@@ -1266,12 +1461,14 @@ focus_tree = {
 		relative_position_id = gv_GRE_service_overseas_focus
 		cost = 4
 		
+		available = {
+			ETH = {
+				is_subject_of = ROOT
+			}
+		}
+		
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0 
-				has_war = yes 
-			}
 		}
 
 		search_filters = { }
@@ -1327,12 +1524,74 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = gv_GRE_take_suez_focus
-		icon = GFX_focus_generic_the_suez
+		id = gv_GRE_ethiopian_blood_diamonds
+		icon = GFX_focus_CONGO_gold_and_diamonds
 		prerequisite = { focus = gv_GRE_develop_aethiopia }
 		x = 0
 		y = 1
 		relative_position_id = gv_GRE_develop_aethiopia
+		cost = 5
+		
+		available = {
+			ETH = {
+				is_subject_of = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			add_to_variable = { ROOT.si_money_var = 4 }
+			custom_effect_tooltip = gv_GRE_ethiopian_blood_diamonds_tt
+			ETH = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = gv_unethical_mining_opinion_modifier
+				}
+				add_ideas = gv_unethical_mining_idea
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_evacuate_ethiopian_assets
+		prerequisite = { focus = gv_GRE_ethiopian_blood_diamonds }
+		mutually_exclusive = { focus = gv_GRE_take_suez_focus }
+		icon = GFX_goal_generic_gold_money
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_ethiopian_blood_diamonds
+		cost = 10
+		
+		available = {
+			ETH = {
+				is_subject_of = ROOT
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			end_puppet = ETH
+			add_to_variable = { ROOT.si_money_var = 8 }
+			custom_effect_tooltip = gv_GRE_evacuate_ethiopian_assets_tt
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_take_suez_focus
+		icon = GFX_focus_generic_the_suez
+		prerequisite = { focus = gv_GRE_ethiopian_blood_diamonds }
+		mutually_exclusive = { focus = gv_GRE_evacuate_ethiopian_assets }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_ethiopian_blood_diamonds
 		cost = 5
 		
 		ai_will_do = {
@@ -1353,6 +1612,7 @@ focus_tree = {
 				add_claim_by = ROOT
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	
 	focus = {
@@ -1363,6 +1623,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = gv_GRE_service_overseas_focus
 		cost = 5
+		
+		available = {
+			FRI = {
+				is_subject_of = ROOT
+			}
+		}
 		
 		ai_will_do = {
 			base = 1
@@ -1380,6 +1646,7 @@ focus_tree = {
 				target = SIA
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	
 	focus = {
@@ -1390,6 +1657,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = gv_GRE_service_overseas_focus
 		cost = 4
+		
+		available = {
+			FRI = {
+				is_subject_of = ROOT
+			}
+		}
 		
 		ai_will_do = {
 			base = 1
@@ -1476,7 +1749,7 @@ focus_tree = {
 		icon = GFX_focus_GER_south_east_asian_natural_wealth
 		prerequisite = { focus = gv_GRE_develop_indochina }
 		prerequisite = { focus = gv_GRE_conquer_siam }
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = gv_GRE_service_overseas_focus
 		cost = 10
@@ -1542,6 +1815,7 @@ focus_tree = {
 				target = MAL
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	
 	focus = {
@@ -1634,7 +1908,7 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_exercitus_imperialis
 		icon = GFX_focus_DEN_expand_haerens_tekniske_korps
-		x = 38
+		x = 42
 		y = 0
 		cost = 5
 
@@ -1944,8 +2218,9 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_aeronautica_imperii
 		icon = GFX_focus_DEN_unify_flyvevabnet
-		x = 42
+		x = 4
 		y = 0
+		relative_position_id = gv_GRE_exercitus_imperialis
 		cost = 5
 
 
@@ -2178,8 +2453,9 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_classis_imperialis
 		icon = GFX_focus_DEN_reorganize_sovaernet
-		x = 46
+		x = 8
 		y = 0
+		relative_position_id = gv_GRE_exercitus_imperialis
 		cost = 5
 
 

@@ -1,0 +1,5 @@
+opinion_modifiers = {
+
+	gv_unethical_mining_opinion_modifier = { value = -20 }
+	
+}

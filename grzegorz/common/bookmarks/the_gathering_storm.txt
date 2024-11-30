@@ -26,6 +26,36 @@ bookmarks = {
 			}
 		}
 
+		"GER" = {
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				sour_loser
+				general_staff
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_rhineland_vanilla
+				GER_italy_ally
+				GER_danzig_or_war
+			}
+		}
+		
+		"ENG" = {
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				stiff_upper_lip
+				ENG_the_war_to_end_all_wars
+				george_v
+			}
+			focuses = {
+				ENG_decolonization
+				ENG_imperial_federation
+				ENG_enact_the_mosley_manifesto
+			}
+		}
+		
 		"FRA" = {
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -44,7 +74,6 @@ bookmarks = {
 		"USA" = { #If using Man the Guns.
 			history = "USA_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { has_dlc = "Man the Guns" }
 			ideas = {
 				home_of_the_free
 				great_depression
@@ -54,67 +83,6 @@ bookmarks = {
 				USA_union_representation_act
 				USA_cult_of_washington
 				r56_USA_foundation_of_NATO
-			}
-		}
-		"USA" = { #If NOT using Man the Guns.
-			history = "USA_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { NOT = { has_dlc = "Man the Guns" } }
-			ideas = {
-				home_of_the_free
-				great_depression
-				undisturbed_isolation
-			}
-			focuses = {
-				USA_continue_the_new_deal
-				USA_cash_and_carry
-				r56_USA_foundation_of_NATO
-			}
-		}
-
-		"ENG" = { #If using Man the Guns.
-			history = "ENG_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { has_dlc = "Man the Guns" }
-			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				george_v
-			}
-			focuses = {
-				ENG_decolonization
-				ENG_imperial_federation
-				ENG_enact_the_mosley_manifesto
-			}
-		}
-		"ENG" = { #If NOT using Man the Guns.
-			history = "ENG_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { NOT = { has_dlc = "Man the Guns" } }
-			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				george_v
-			}
-			focuses = {
-				limited_rearmament_focus
-				ENG_steady_as_she_goes
-				ENG_cable_street
-			}
-		}
-
-		"GER" = {
-			history = "GER_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				sour_loser
-				general_staff
-				GER_mefo_bills_1
-			}
-			focuses = {
-				GER_rhineland_vanilla
-				GER_italy_ally
-				GER_danzig_or_war
 			}
 		}
 
