@@ -34,6 +34,8 @@
  gv_GRE_mountain_warfare_idea_desc:0 ""
  gv_GRE_imperial_strategic_command:0 "Imperial Strategic Command"
  gv_GRE_imperial_strategic_command_desc:0 ""
+ gv_treaty_of_adrianople:0 "Treaty of Adrianople"
+ gv_treaty_of_adrianople_desc:0 "The Treaty of Adrianopolis was imposed by resurgent nations and warlords of the Balkan Peninsula on the exhausted Empire in 1922 after the great war had ended."
  
  gv_unethical_mining_idea:0  "Unethical Mining Methods"
  
@@ -47,6 +49,8 @@
  
  # TOOLTIPS
  
+ AFTERMATH_NAME:0 "The Aftermath"
+ AFTERMATH_DESC:0 "The world is rebuilding after the Great War of 1916-1922 and the Great Depression, sparked by the Constantinopolitan Market Crash."
  GV_GRE_GATHERING_STORM_DESC:0 "The Great War lasted from 1916 all the way to 1922. Difficult trench warfare on the Persian Border, campaign in Scythia and Crimea, naval war with France, Russia and Sus were all magnificent undertakings and proof of endurance and will of the Roman People. After the war had ended, Rome enjoyed a period of relative growth and rapid nation rebuilding, which came to an abrupt end with the Constantinopolitan Market Crash of 1928."
  
  gv_GRE_invest_in_industry_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+10.0%§!\n\n"
@@ -96,6 +100,8 @@
  gv_GRE_aquila_aeronautica:0 "Aquila Aeronautica"
  gv_GRE_constantinople_arsenal:0 "Constantinople Arsenal"
  gv_GRE_monsmetallum:0 "Monsmetallum"
+ gv_GRE_aegis_fabia:0 "Aegis Fabia"
+ gv_GRE_ventorcaelorum:0 "Ventorcaelorum"
  
  gv_GRE_mio_trait_submarine_detectors:0 "Sonic Submarine Detectors"
  gv_GRE_mio_trait_engine_supercharger:0 "Engine Supercharger"
@@ -119,6 +125,18 @@
  gv_news.2.b:0 "Glory to the Emperor!"
  gv_news.2.c:0 "There is nothing we can do."
  
+ gv_news.3.title:0 "The Naissus Referendum"
+ gv_news.3.desc:0 "In a historic referendum, the predominantly Roman-majority territories held by Illyria under the terms of the Treaty of Adrianople have voted overwhelmingly in favor of reunification with the Empire. Despite Illyrian protests claiming undue influence and pressure, the referendum process was endorsed by international observers as largely fair. However, tensions remain high as Illyria's government issues warnings about further Roman expansion.\n\nDiplomatic reactions have been mixed. While some Balkan states expressed concern, others acknowledged the legitimacy of the vote. The League of Nations has called for restraint on both sides to prevent an escalation of hostilities."
+ gv_news.3.a:0 "Worrying."
+ gv_news.3.b:0 "The Romans have spoken!"
+ gv_news.3.c:0 "So be it."
+ 
+ gv_news.4.title:0 "Roman Empire Annexes Dalmatia"
+ gv_news.4.desc:0 "In a dramatic escalation of regional tensions, the Roman Empire has deployed its military to seize control of Dalmatia, a coastal region held by Illyria since the Treaty of Adrianople after the Great War. The region, home to a sizable ethnic Roman population, has been a point of contention between the two nations for over a decade.\n\nIllyria's government has condemned the occupation, accusing Rome of violating the Treaty of Adrianople and undermining regional stability. Calls for international intervention have been made, but the League of Nations has yet to issue a formal response.\n\nDiplomatic reactions are varied. Some nations have denounced the action as aggressive and destabilizing, while others have expressed cautious support, emphasizing the ethnic ties of Dalmatia’s population to Rome."
+ gv_news.4.a:0 "Worrying."
+ gv_news.4.b:0 "Glory to the Emperor!"
+ gv_news.4.c:0 "There is nothing we can do."
+ 
  gv_roman_empire_events.2.title:0 "Rome Demands Moesia Superior!"
  gv_roman_empire_events.2.desc:0 "Roman Empire demands we return the province of Moesia Superior to them."
  gv_roman_empire_events.2.a:0 "We have to accept."
@@ -128,6 +146,16 @@
  gv_roman_empire_events.3.desc:0 "The Empire demands we step down as government of the kingdom, and pledge allegiance to the Emperor."
  gv_roman_empire_events.3.a:0 "We have to accept."
  gv_roman_empire_events.3.b:0 "We shall defend ourselves."
+ 
+ gv_roman_empire_events.4.title:0 "The Naissus Referendum"
+ gv_roman_empire_events.4.desc:0 "A Referendum is being held for the territories with Roman ethnic majority."
+ gv_roman_empire_events.4.a:0 "The Referendum succeeds."
+ gv_roman_empire_events.4.b:0 "The Referendum fails."
+ 
+ gv_roman_empire_events.5.title:0 "The Empire Demands Dalmatia!"
+ gv_roman_empire_events.5.desc:0 "dupa"
+ gv_roman_empire_events.5.a:0 "We have to accept."
+ gv_roman_empire_events.5.b:0 "We shall defend ourselves."
  
  # TECH BONUSES
  
@@ -142,7 +170,7 @@
  # GOALS
  
  gv_GRE_economy_shortcut:0 "Economy"
- gv_GRE_politics_shortcut:0 "Politics"
+ gv_GRE_politics_monarchism_shortcut:0 "Politics: Monarchism"
  gv_GRE_colonial_shortcut:0 "Interventionism"
  gv_GRE_army_shortcut:0 "Army Modernization"
  
@@ -291,6 +319,14 @@
  gv_GRE_ethiopian_blood_diamonds_desc:0 ""
  gv_GRE_evacuate_ethiopian_assets:0 "Evacuate Aethiopian Assets"
  gv_GRE_evacuate_ethiopian_assets_desc:0 ""
+ gv_GRE_moesian_oil:0 "Expand Moesian Oil Fields"
+ gv_GRE_moesian_oil_desc:0 ""
+ gv_GRE_naissus_referendum:0 "The Naissus Referendum"
+ gv_GRE_naissus_referendum_desc:0 ""
+ gv_GRE_renounce_the_treaty:0 "Renounce The Treaty"
+ gv_GRE_renounce_the_treaty_desc:0 ""
+ gv_GRE_additional_concessions_from_illyria:0 "Demand Additional Territorial Concessions"
+ gv_GRE_additional_concessions_from_illyria_desc:0 ""
  
  # OTHER
  

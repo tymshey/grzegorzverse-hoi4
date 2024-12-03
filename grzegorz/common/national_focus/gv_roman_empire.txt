@@ -16,19 +16,7 @@ focus_tree = {
 	default = no
 	
 	shortcut = {
-		name = gv_GRE_army_shortcut
-		target = gv_GRE_aeronautica_imperii
-		scroll_wheel_factor = 1
-	}
-	
-	shortcut = {
-		name = gv_GRE_colonial_shortcut
-		target = gv_GRE_service_overseas_focus
-		scroll_wheel_factor = 1
-	}
-	
-	shortcut = {
-		name = gv_GRE_politics_shortcut
+		name = gv_GRE_politics_monarchism_shortcut
 		target = gv_GRE_imperial_prerogative
 		scroll_wheel_factor = 1
 	}
@@ -38,1865 +26,17 @@ focus_tree = {
 		target = gv_GRE_fight_depression
 		scroll_wheel_factor = 0.75
 	}
-
-	focus = {
-		id = gv_GRE_starting_focus # The Constantinian Age
-		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
-		x = 8
-		y = 0
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			add_political_power = 150
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+	shortcut = {
+		name = gv_GRE_colonial_shortcut
+		target = gv_GRE_service_overseas_focus
+		scroll_wheel_factor = 1
 	}
 	
-	focus = {
-		id = gv_GRE_convene_the_senate
-		icon = GFX_focus_ETH_re-convene_the_parliament
-		prerequisite = { focus = gv_GRE_starting_focus }
-		x = 0
-		y = 1
-		relative_position_id = gv_GRE_starting_focus
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			add_power_balance_value = {
-				id = gv_GRE_emperor_vs_senate_bop
-				value = -0.1
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	
-	focus = {
-		id = gv_GRE_fight_depression # Foundation for Recovery
-		icon = GFX_focus_GRE_Combat_depression
-		prerequisite = { focus = gv_GRE_convene_the_senate }
-		x = 0
-		y = 1
-		relative_position_id = gv_GRE_convene_the_senate
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			add_stability = 0.1
-			add_timed_idea = {
-				idea = gv_foundation_for_recovery
-				days = 365
-			}
-		}
-	}
-	
-	focus = {
-		id = gv_GRE_invest_in_industry
-		icon = GFX_goal_industrial_investment
-		prerequisite = { focus = gv_GRE_fight_depression }
-		x = -3
-		y = 1
-		relative_position_id = gv_GRE_fight_depression
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_invest_in_industry_tt
-			add_to_variable = {
-				var = gv_GRE_industrial_capacity_factory_factor
-				value = 0.1
-			}
-			797 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				name = gv_GRE_invest_in_industry_tech_bonus
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_raw_resource_exploitation
-		icon = GFX_goal_generic_all_resource
-		prerequisite = { focus = gv_GRE_invest_in_industry }
-		relative_position_id = gv_GRE_invest_in_industry
-		x = -2
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_raw_resource_exploitation_tt
-			add_to_variable = {
-				var = gv_GRE_production_lack_of_resource_penalty_factor
-				value = -0.1
-			}
-			add_ideas = r56_ROM_raw_resource_exploitation
-			212 = {				
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = steel_mill
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				name = ROM_raw_resource_exploitation
-				bonus = 1
-				uses = 1
-				category = steel_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_increase_mining_efforts
-		icon = GFX_goal_generic_mining_iron
-		prerequisite = { focus = gv_GRE_raw_resource_exploitation }
-		relative_position_id = gv_GRE_raw_resource_exploitation
-		x = 1
-		y = 1
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			186 = {
-				add_resource = {
-					type = tungsten
-					amount = 50
-				}
-			}
-			347 = {
-				add_resource = {
-					type = steel
-					amount = 35
-				}
-			}
-			339 = {
-				add_resource = {
-					type = steel
-					amount = 20
-				}
-			}
-			339 = {
-				add_resource = {
-					type = aluminium
-					amount = 55
-				}
-			}
-			add_tech_bonus = {
-				name = gv_GRE_mining_tech_bonus
-				bonus = 1
-				uses = 1
-				category = excavation_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_anatolian_oil
-		icon = GFX_goal_generic_basic_oil
-		prerequisite = { focus = gv_GRE_raw_resource_exploitation }
-		relative_position_id = gv_GRE_raw_resource_exploitation
-		x = -1
-		y = 1
-		cost = 5
-
-		available = {
-			has_tech = improved_oil_processing
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_anatolian_oil_tt
-			add_to_variable = {
-				var = gv_GRE_fuel_gain_factor
-				value = 0.1
-			}
-			342 = {			
-				add_resource = {
-					type = oil
-					amount = 15
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = fuel_silo
-					level = 2
-				}
-			}
-			798 = {			
-				add_resource = {
-					type = oil
-					amount = 20
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = fuel_silo
-					level = 2
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_ikonion_hydroelectric
-		icon = GFX_focus_generic_hydroelectric_energy
-		prerequisite = { focus = gv_GRE_anatolian_oil }
-		prerequisite = { focus = gv_GRE_increase_mining_efforts }
-		relative_position_id = gv_GRE_raw_resource_exploitation
-		x = 0
-		y = 2
-		cost = 5
-
-		available = {
-			has_tech = construction2
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			346 = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
-			custom_effect_tooltip = generic_skip_one_line_tt
-			346 = {
-				add_building_construction = {
-					type = dam
-					level = 1
-					instant_build = yes
-					province = {
-						id = 3547
-					}
-				}
-			}
-			custom_effect_tooltip = {
-				localization_key = building_state_modifier|dam
-				INDENT = "    "
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_the_thessaloniki_textile_factories
-		icon = GFX_focus_CHL_enlarge_the_textile_industries
-		prerequisite = { focus = gv_GRE_invest_in_industry }
-		relative_position_id = gv_GRE_invest_in_industry
-		x = 0
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			731 = {			
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_high_speed_railways
-		icon = GFX_focus_POL_warsaw_main_station
-		prerequisite = { focus = gv_GRE_the_thessaloniki_textile_factories }
-		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
-		x = 0
-		y = 2
-		cost = 5
-		
-		available = {
-			AND = {
-				controls_state = 48 # Serdica
-				controls_state = 212
-				controls_state = 341
-				controls_state = 797 # Constantinople
-				controls_state = 184
-				controls_state = 731 # Thessaloniki
-				controls_state = 340
-				controls_state = 339 # Smyrna/Ephesus
-				controls_state = 49
-				controls_state = 798
-				controls_state = 348
-				controls_state = 349
-				controls_state = 354 # Trebizond
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			build_railway = {
-				level = 5
-				build_only_on_allied = yes
-				fallback = yes
-				start_state = 48
-				target_state = 797
-			}
-			build_railway = {
-				level = 5
-				build_only_on_allied = yes
-				fallback = yes
-				start_state = 731
-				target_state = 797
-			}
-			build_railway = {
-				level = 5
-				build_only_on_allied = yes
-				fallback = yes
-				start_state = 797
-				target_state = 49
-			}
-			build_railway = {
-				level = 5
-				build_only_on_allied = yes
-				fallback = yes
-				start_state = 49
-				target_state = 798
-			}
-			build_railway = {
-				level = 5
-				build_only_on_allied = yes
-				fallback = yes
-				start_state = 798
-				target_state = 348
-			}
-			build_railway = {
-				level = 5
-				build_only_on_allied = yes
-				fallback = yes
-				start_state = 797
-				target_state = 339
-			}
-			build_railway = {
-				level = 5
-				build_only_on_allied = yes
-				fallback = yes
-				start_state = 797
-				target_state = 354
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_imperial_collegium_of_engineering
-		icon = GFX_goal_ROM_academia_romana
-		prerequisite = { focus = gv_GRE_ikonion_hydroelectric }
-		prerequisite = { focus = gv_GRE_high_speed_railways }
-		prerequisite = { focus = gv_GRE_engineering_subsidies }
-		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
-		x = 0
-		y = 3
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	
-	focus = {
-		id = gv_GRE_industrial_revitalization_program
-		icon = GFX_focus_generic_expansion_of_new_towns
-		prerequisite = { focus = gv_GRE_invest_in_industry }
-		relative_position_id = gv_GRE_invest_in_industry
-		x = 2
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_industrial_revitalization_program_tt
-			add_to_variable = {
-				var = gv_GRE_production_speed_industrial_complex_factor
-				value = 0.1
-			}
-			add_timed_idea = {
-				idea = gv_GRE_industrial_revitalization
-				days = 730
-			}
-			339 = {			
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			347 = {			
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				name = gv_GRE_industrial_revitalization_program_tech_bonus
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-	
-	focus = {
-		id = gv_GRE_the_imperial_highways
-		icon = GFX_goal_generic_road2
-		prerequisite = { focus = gv_GRE_industrial_revitalization_program }
-		relative_position_id = gv_GRE_industrial_revitalization_program
-		x = 1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			340 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			211 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			212 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			48 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			731 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			47 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			345 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			344 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_attaleia_industrial_park
-		icon = GFX_goal_generic_light_industry
-		prerequisite = { focus = gv_GRE_industrial_revitalization_program }
-		relative_position_id = gv_GRE_industrial_revitalization_program
-		x = -1
-		y = 1
-		cost = 5
-
-		available = {
-			has_tech = construction2
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			342 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_engineering_subsidies
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = gv_GRE_attaleia_industrial_park }
-		prerequisite = { focus = gv_GRE_the_imperial_highways }
-		relative_position_id = gv_GRE_industrial_revitalization_program
-		x = 0
-		y = 2
-		cost = 5
-
-		available = {
-			has_tech = construction2
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = gv_GRE_engineering_subsidies_tech_bonus
-				bonus = 1
-				uses = 1
-				category = construction_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-	
-	focus = {
-		id = gv_GRE_begin_rearmament
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
-		relative_position_id = gv_GRE_imperial_collegium_of_engineering
-		x = -1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_begin_rearmament_tt
-			add_to_variable = {
-				var = gv_GRE_production_factory_max_efficiency_factor
-				value = 0.1
-			}
-			339 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			342 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_nationalize_seleucia_company
-		icon = GFX_goal_generic_munitions_factories
-		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
-		relative_position_id = gv_GRE_imperial_collegium_of_engineering
-		x = 1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			345 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_industrial_expansion
-		icon = GFX_focus_generic_modernize_industry
-		prerequisite = { focus = gv_GRE_begin_rearmament }
-		relative_position_id = gv_GRE_begin_rearmament
-		x = -1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_industrial_expansion_tt
-			add_to_variable = {
-				var = gv_GRE_production_speed_arms_factory_factor
-				value = 0.05
-			}
-			339 = { # Thrakesion
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_mass_production
-		icon = GFX_focus_generic_military_industry
-		prerequisite = { focus = gv_GRE_begin_rearmament }
-		prerequisite = { focus = gv_GRE_nationalize_seleucia_company }
-		relative_position_id = gv_GRE_imperial_collegium_of_engineering
-		x = 0
-		y = 2
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_mass_production_tt
-			add_to_variable = {
-				var = gv_GRE_production_factory_max_efficiency_factor
-				value = 0.1
-			}
-			343 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_war_industry
-		icon = GFX_focus_generic_mass_production
-		prerequisite = { focus = gv_GRE_mass_production }
-		relative_position_id = gv_GRE_mass_production
-		x = 0
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_war_industry_tt
-			add_to_variable = {
-				var = gv_GRE_production_speed_arms_factory_factor
-				value = 0.1
-			}
-			797 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_strengthen_the_denarius
-		icon = GFX_focus_fra_devalue_the_franc
-		prerequisite = { focus = gv_GRE_fight_depression }
-		x = 3
-		y = 1
-		relative_position_id = gv_GRE_fight_depression
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			custom_effect_tooltip = gv_GRE_strengthen_the_denarius_tt
-			add_to_variable = {
-				var = gv_GRE_production_factory_max_efficiency_factor
-				value = 0.1
-			}
-			add_political_power = 100
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_edict_of_emergency_employment
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = gv_GRE_strengthen_the_denarius }
-		x = 0
-		y = 1
-		relative_position_id = gv_GRE_strengthen_the_denarius
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = gv_great_depression
-				add_idea = gv_great_depression_2
-			}
-		}
-		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
-	}
-	
-	focus = {
-		id = gv_GRE_reform_the_central_bank
-		icon = GFX_focus_generic_improve_the_administration
-		prerequisite = { focus = gv_GRE_edict_of_emergency_employment }
-		x = -1
-		y = 1
-		relative_position_id = gv_GRE_edict_of_emergency_employment
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			add_ideas = gv_GRE_central_bank
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_issue_bonds
-		icon = GFX_focus_SWI_issue_war_bonds
-		prerequisite = { focus = gv_GRE_edict_of_emergency_employment }
-		x = 1
-		y = 1
-		relative_position_id = gv_GRE_edict_of_emergency_employment
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			add_political_power = 100
-			custom_effect_tooltip = gv_GRE_issue_bonds_tt
-			add_to_variable = {
-				var = gv_GRE_consumer_goods_factor
-				value = -0.1
-			}
-			
-			# add_ideas = gv_GRE_warbonds
-			
-			# FUCK YOU PARADOX I HATE PARADOX FUCK YOU FUCK YOU
-			# HITLER PLEASE HIT Stockholm, Magnus Ladulasgatan 4 WITH AN ASTEROID PLEASE
-			
-			# add_timed_idea =  = {
-				# idea = gv_GRE_warbonds
-				# days = 365
-			# }
-			
-			# FUCK PARADOX INTERACTIVE STUPID RETARDED NIGGERS
-		}
-		search_filters = { }
-	}
-	
-	focus = {
-		id = gv_GRE_agreements_with_the_aristocracy
-		icon = GFX_focus_CHL_invite_french_aristocracy
-		prerequisite = { focus = gv_GRE_reform_the_central_bank }
-		prerequisite = { focus = gv_GRE_issue_bonds }
-		x = 0
-		y = 2
-		relative_position_id = gv_GRE_edict_of_emergency_employment
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			add_ideas = gv_GRE_support_from_aristocracy
-		}
-		search_filters = { }
-	}
-	
-	focus = {
-		id = gv_GRE_edict_of_agricultural_recovery
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = gv_GRE_agreements_with_the_aristocracy }
-		x = 0
-		y = 1
-		relative_position_id = gv_GRE_agreements_with_the_aristocracy
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = gv_great_depression_2
-				add_idea = gv_great_depression_3
-			}
-		}
-		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
-	}
-	
-	focus = {
-		id = gv_GRE_edict_of_economic_amendment
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = gv_GRE_edict_of_agricultural_recovery }
-		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
-		x = -3
-		y = 2
-		relative_position_id = gv_GRE_edict_of_agricultural_recovery
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			remove_ideas = {
-				gv_great_depression
-				gv_great_depression_2
-				gv_great_depression_3
-			}
-		}
-		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
-	}
-	
-	#############################
-	#
-	# POLITICS TREE
-	#
-	#############################
-	
-	focus = {
-		id = gv_GRE_imperial_prerogative
-		icon = GFX_focus_generic_monarchist_sentiment # was GFX_focus_AUS_bring_back_the_habsburg_rule
-		x = 20
-		y = 0
-		cost = 5
-
-		available = {
-			has_completed_focus = gv_GRE_edict_of_emergency_employment
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			add_political_power = 150
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		id = gv_GRE_imperial_science_initiative
-		icon = GFX_focus_generic_university_3
-		prerequisite = { focus = gv_GRE_imperial_prerogative }
-		x = 0
-		y = 1
-		relative_position_id = gv_GRE_imperial_prerogative
-		cost = 5
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			random_scientist = {
-				limit = {
-					has_scientist_level = {
-						specialization = specialization_nuclear
-						level > 0
-					}
-				}
-				add_scientist_level = {
-					specialization = specialization_nuclear
-					level = 1
-				}
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_to_variable = { 
-				gv_GRE_research_speed_factor = 0.05
-				tooltip = gv_GRE_imperial_science_initiative_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GER_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GER_wunderwaffen_special_project_speed_factor = 0.05
-				tooltip = special_project_speed_factor_tt
-			}
-		}
-	}
-
-	focus = {
-		id = gv_GRE_fund_research_association
-		icon = GFX_goal_tfv_generic_tech_sharing
-		prerequisite = { focus = gv_GRE_imperial_science_initiative }
-
-		x = -1
-		y = 1
-		relative_position_id = gv_GRE_imperial_science_initiative
-
-		cost = 10
-
-		available = {
-			is_faction_leader = yes
-		}
-
-		bypass = {
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-
-			add_dynamic_modifier = { modifier = GER_rnd_programs_modifier }
-			custom_effect_tooltip = GER_shared_rd_programs_ww_tt
-			
-		}
-	}
-
-	focus = {
-		id = gv_GRE_pool_technical_know_how
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = gv_GRE_imperial_science_initiative }
-
-		x = 1
-		y = 1
-		relative_position_id = gv_GRE_imperial_science_initiative
-		cost = 10
-		available = {
-			is_faction_leader = yes
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
- 
-		completion_reward = {
-
-			add_ideas = GER_pool_technical_know_how
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = GER_pool_technical_know_how_tt
-			hidden_effect = {
-				every_other_country = {
-					limit = { is_in_faction_with = GRE }
-					add_ideas = GER_pool_technical_know_how
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = gv_GRE_project_deus_sol_invictus
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = gv_GRE_fund_research_association }
-		prerequisite = { focus = gv_GRE_pool_technical_know_how }
-
-		dynamic = yes
-
-		x = 0
-		y = 2
-		relative_position_id = gv_GRE_imperial_science_initiative
-		cost = 10
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.5
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GER_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GER_wunderwaffen_production_speed_nuclear_facility_factor = 0.15
-				tooltip = production_speed_nuclear_facility_factor_tt
-			}
-			add_to_variable = { 
-				GER_wunderwaffen_production_speed_nuclear_reactor_factor = 0.1
-				tooltip = production_speed_nuclear_reactor_factor_tt
-			}
-			if = {
-				limit = {
-					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
-				}
-				add_to_variable = { 
-					GER_wunderwaffen_sp_nuclear_reactor_speed_factor = 0.1
-					tooltip = sp_nuclear_reactor_speed_factor_tt
-				}
-			}
-			if = {
-				limit = {
-					NOT = { is_special_project_completed = sp:sp_commercial_nuclear_reactor }
-				}
-				add_to_variable = { 
-					GER_wunderwaffen_sp_commercial_nuclear_reactor_speed_factor = 0.1
-					tooltip = sp_commercial_nuclear_reactor_speed_factor_tt
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = gv_GRE_the_fragmented_west_focus
-		icon = GFX_focus_generic_balkan_diplomacy
-		prerequisite = { focus = gv_GRE_imperial_prerogative }
-		x = -4
-		y = 1
-		relative_position_id = gv_GRE_imperial_prerogative
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			
-		}
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		id = gv_GRE_break_the_treaty
-		icon = GFX_goal_ENG_reassess_continental_commitments
-		prerequisite = { focus = gv_GRE_the_fragmented_west_focus }
-		mutually_exclusive = { focus = gv_GRE_address_the_treaty_of_adrianopolis }
-		x = -1
-		y = 1
-		relative_position_id = gv_GRE_the_fragmented_west_focus
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_war_support = 0.1
-			add_threat = 3
-		}
-		
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	
-	focus = {
-		id = gv_GRE_demand_moesia_superior
-		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = gv_GRE_break_the_treaty }
-		x = -1
-		y = 1
-		relative_position_id = gv_GRE_break_the_treaty
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_threat = 5
-			YUG = {
-				country_event = { id = gv_roman_empire_events.2 }
-			}
-		}
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-	focus = {
-		id = gv_GRE_align_kingdom_of_moesia
-		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = gv_GRE_break_the_treaty }
-		x = 1
-		y = 1
-		relative_position_id = gv_GRE_break_the_treaty
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_threat = 5
-			ROM = {
-				country_event = { id = gv_roman_empire_events.3 }
-			}
-		}
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-	focus = {
-		id = gv_GRE_dioclea_ultimatum
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = gv_GRE_demand_moesia_superior }
-		prerequisite = { focus = gv_GRE_align_kingdom_of_moesia }
-		x = 0
-		y = 2
-		relative_position_id = gv_GRE_break_the_treaty
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_threat = 5
-		}
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-	focus = {
-		id = gv_GRE_address_the_treaty_of_adrianopolis
-		icon = GFX_goal_constitution
-		prerequisite = { focus = gv_GRE_the_fragmented_west_focus }
-		mutually_exclusive = { focus = gv_GRE_break_the_treaty }
-		x = 1
-		y = 1
-		relative_position_id = gv_GRE_the_fragmented_west_focus
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-			add_threat = -3
-		}
-		
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-	
-	focus = {
-		id = gv_GRE_the_eastern_frontier_focus
-		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = gv_GRE_imperial_prerogative }
-
-		x = 4
-		y = 1
-		relative_position_id = gv_GRE_imperial_prerogative
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-			
-		}
-		
-		search_filters = { }
-	}
-	
-	focus = {
-		id = gv_GRE_align_kurdistan
-		icon = GFX_focus_generic_befriend_kurdistan
-		prerequisite = { focus = gv_GRE_the_eastern_frontier_focus }
-		mutually_exclusive = { focus = gv_GRE_attack_kurdistan }
-		x = -1
-		y = 1
-		relative_position_id = gv_GRE_the_eastern_frontier_focus
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			puppet = KUR
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-	focus = {
-		id = gv_GRE_attack_kurdistan
-		icon = GFX_focus_generic_attack_kurdistan
-		prerequisite = { focus = gv_GRE_the_eastern_frontier_focus }
-		mutually_exclusive = { focus = gv_GRE_align_kurdistan }
-		x = 1
-		y = 1
-		relative_position_id = gv_GRE_the_eastern_frontier_focus
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = KUR
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-	focus = {
-		id = gv_GRE_attack_persia # The First Snows Fall
-		icon = GFX_goal_PER_anglo_soviet_invasion_of_iran
-		prerequisite = { focus = gv_GRE_align_kurdistan focus = gv_GRE_attack_kurdistan }
-		x = 0
-		y = 2
-		relative_position_id = gv_GRE_the_eastern_frontier_focus
-		cost = 5
-
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-
-
-		completion_reward = {
-			add_war_support = 0.15
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = PER
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
-	}
-	
-	#############################
-	#
-	# COLONIAL INTERVENTION TREE
-	#
-	#############################
-	
-	focus = {
-		id = gv_GRE_service_overseas_focus
-		ai_will_do = {
-			factor = 1
-		}
-		icon = GFX_goal_generic_position_armies
-		x = 32
-		y = 0
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 10
-			navy_experience = 10
-			air_experience = 10
-			add_ideas = ENG_service_overseas_idea
-			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				bonus = 1
-				uses = 1
-				category = summer_clothing_tech
-			}			
-		}
-		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
-	}
-	
-	focus = {
-		id = gv_GRE_develop_aethiopia
-		icon = GFX_focus_ETH_develop_the_horn_of_africa
-		prerequisite = { focus = gv_GRE_service_overseas_focus }
-		x = -2
-		y = 1
-		relative_position_id = gv_GRE_service_overseas_focus
-		cost = 4
-		
-		available = {
-			ETH = {
-				is_subject_of = ROOT
-			}
-		}
-		
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { }
-
-		completion_reward = {
-			271 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			841 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			559 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			835 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = gv_GRE_ethiopian_blood_diamonds
-		icon = GFX_focus_CONGO_gold_and_diamonds
-		prerequisite = { focus = gv_GRE_develop_aethiopia }
-		x = 0
-		y = 1
-		relative_position_id = gv_GRE_develop_aethiopia
-		cost = 5
-		
-		available = {
-			ETH = {
-				is_subject_of = ROOT
-			}
-		}
-		
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { }
-
-		completion_reward = {
-			add_to_variable = { ROOT.si_money_var = 4 }
-			custom_effect_tooltip = gv_GRE_ethiopian_blood_diamonds_tt
-			ETH = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = gv_unethical_mining_opinion_modifier
-				}
-				add_ideas = gv_unethical_mining_idea
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_evacuate_ethiopian_assets
-		prerequisite = { focus = gv_GRE_ethiopian_blood_diamonds }
-		mutually_exclusive = { focus = gv_GRE_take_suez_focus }
-		icon = GFX_goal_generic_gold_money
-		x = -1
-		y = 1
-		relative_position_id = gv_GRE_ethiopian_blood_diamonds
-		cost = 10
-		
-		available = {
-			ETH = {
-				is_subject_of = ROOT
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			end_puppet = ETH
-			add_to_variable = { ROOT.si_money_var = 8 }
-			custom_effect_tooltip = gv_GRE_evacuate_ethiopian_assets_tt
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = {
-		id = gv_GRE_take_suez_focus
-		icon = GFX_focus_generic_the_suez
-		prerequisite = { focus = gv_GRE_ethiopian_blood_diamonds }
-		mutually_exclusive = { focus = gv_GRE_evacuate_ethiopian_assets }
-		x = 1
-		y = 1
-		relative_position_id = gv_GRE_ethiopian_blood_diamonds
-		cost = 5
-		
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0 
-				has_war = yes 
-			}
-		}
-
-		search_filters = { }
-
-		completion_reward = {
-			911 = {
-				add_claim_by = ROOT
-			}
-			995 = {
-				add_claim_by = ROOT
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-	focus = {
-		id = gv_GRE_conquer_siam
-		icon = GFX_goal_generic_attack_allies
-		prerequisite = { focus = gv_GRE_service_overseas_focus }
-		x = 0
-		y = 1
-		relative_position_id = gv_GRE_service_overseas_focus
-		cost = 5
-		
-		available = {
-			FRI = {
-				is_subject_of = ROOT
-			}
-		}
-		
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0 
-				has_war = yes 
-			}
-		}
-
-		search_filters = { }
-
-		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = SIA
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-	focus = {
-		id = gv_GRE_develop_indochina
-		icon = GFX_focus_generic_railroad
-		prerequisite = { focus = gv_GRE_service_overseas_focus }
-		x = 2
-		y = 1
-		relative_position_id = gv_GRE_service_overseas_focus
-		cost = 4
-		
-		available = {
-			FRI = {
-				is_subject_of = ROOT
-			}
-		}
-		
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0 
-				has_war = yes 
-			}
-		}
-
-		search_filters = { }
-
-		completion_reward = {
-			671 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			670 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			928 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			927 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			741 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			868 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = gv_GRE_riches_of_asia
-		icon = GFX_focus_GER_south_east_asian_natural_wealth
-		prerequisite = { focus = gv_GRE_develop_indochina }
-		prerequisite = { focus = gv_GRE_conquer_siam }
-		x = 1
-		y = 2
-		relative_position_id = gv_GRE_service_overseas_focus
-		cost = 10
-		
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0 
-				has_war = yes 
-			}
-		}
-
-		search_filters = { }
-
-		completion_reward = {
-			335 = {
-				add_claim_by = ROOT
-			}
-			976 = {
-				add_claim_by = ROOT
-			}
-			446 = {
-				add_claim_by = ROOT
-			}
-			672 = {
-				add_claim_by = ROOT
-			}
-			974 = {
-				add_claim_by = ROOT
-			}
-			951 = {
-				add_claim_by = ROOT
-			}
-			915 = {
-				add_claim_by = ROOT
-			}
-			960 = {
-				add_claim_by = ROOT
-			}
-			914 = {
-				add_claim_by = ROOT
-			}
-			336 = {
-				add_claim_by = ROOT
-			}
-			909 = {
-				add_claim_by = ROOT
-			}
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = GXC
-			}
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = YUN
-			}
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = PHI
-			}
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = MAL
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
-	focus = {
-		id = gv_GRE_macau_focus
-		prerequisite = { focus = gv_GRE_service_overseas_focus }
-		icon = GFX_goal_generic_fortify_city
-		x = 4
-		y = 1
-		relative_position_id = gv_GRE_service_overseas_focus
-		cost = 5
-		ai_will_do = {
-			factor = 0.25
-		}
-		available = { 
-			729 = {
-				controls_or_subject_of = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			navy_experience = 25
-			729 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = coastal_bunker
-					level = 3
-					province = 4189
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_NAVY_XP }
-	}
-	
-	focus = {
-		id = gv_GRE_landward_macau_focus
-		prerequisite = { focus = gv_GRE_macau_focus }
-		icon = GFX_goal_generic_construct_military
-		x = 0
-		y = 1
-		relative_position_id = gv_GRE_macau_focus
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}	
-		available = {
-			729 = {
-				controls_or_subject_of = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		bypass = {
-			729 = { 
-				free_building_slots = {
-					building = anti_air_building
-					size < 2
-				}
-			}
-		}
-
-		completion_reward = {
-			729 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 4189
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 2				
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { }
+	shortcut = {
+		name = gv_GRE_army_shortcut
+		target = gv_GRE_aeronautica_imperii
+		scroll_wheel_factor = 1
 	}
 	
 	#############################
@@ -1908,7 +48,7 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_exercitus_imperialis
 		icon = GFX_focus_DEN_expand_haerens_tekniske_korps
-		x = 42
+		x = 0
 		y = 0
 		cost = 5
 
@@ -2641,5 +781,1970 @@ focus_tree = {
 			add_ideas = ENG_expand_the_repair_yards
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	#############################
+	#
+	# ECONOMY TREE
+	#
+	#############################
+	
+	focus = {
+		id = gv_GRE_starting_focus # The Constantinian Age
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		x = 26
+		y = 0
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_political_power = 150
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = gv_GRE_convene_the_senate
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		prerequisite = { focus = gv_GRE_starting_focus }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_starting_focus
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = gv_GRE_emperor_vs_senate_bop
+				value = -0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	
+	focus = {
+		id = gv_GRE_fight_depression # Foundation for Recovery
+		icon = GFX_focus_GRE_Combat_depression
+		prerequisite = { focus = gv_GRE_convene_the_senate }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_convene_the_senate
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_stability = 0.1
+			add_timed_idea = {
+				idea = gv_foundation_for_recovery
+				days = 365
+			}
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_invest_in_industry
+		icon = GFX_goal_industrial_investment
+		prerequisite = { focus = gv_GRE_fight_depression }
+		x = -3
+		y = 1
+		relative_position_id = gv_GRE_fight_depression
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_invest_in_industry_tt
+			add_to_variable = {
+				var = gv_GRE_industrial_capacity_factory_factor
+				value = 0.1
+			}
+			797 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = gv_GRE_invest_in_industry_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_raw_resource_exploitation
+		icon = GFX_goal_generic_all_resource
+		prerequisite = { focus = gv_GRE_invest_in_industry }
+		relative_position_id = gv_GRE_invest_in_industry
+		x = -2
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_raw_resource_exploitation_tt
+			add_to_variable = {
+				var = gv_GRE_production_lack_of_resource_penalty_factor
+				value = -0.1
+			}
+			add_ideas = r56_ROM_raw_resource_exploitation
+			212 = {				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_mill
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ROM_raw_resource_exploitation
+				bonus = 1
+				uses = 1
+				category = steel_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESOURCES }
+	}
+	
+	focus = {
+		id = gv_GRE_increase_mining_efforts
+		icon = GFX_goal_generic_mining_iron
+		prerequisite = { focus = gv_GRE_raw_resource_exploitation }
+		relative_position_id = gv_GRE_raw_resource_exploitation
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			186 = {
+				add_resource = {
+					type = tungsten
+					amount = 50
+				}
+			}
+			347 = {
+				add_resource = {
+					type = steel
+					amount = 35
+				}
+			}
+			339 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+			339 = {
+				add_resource = {
+					type = aluminium
+					amount = 55
+				}
+			}
+			add_tech_bonus = {
+				name = gv_GRE_mining_tech_bonus
+				bonus = 1
+				uses = 1
+				category = excavation_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESOURCES }
+	}
+	
+	focus = {
+		id = gv_GRE_anatolian_oil
+		icon = GFX_goal_generic_basic_oil
+		prerequisite = { focus = gv_GRE_raw_resource_exploitation }
+		relative_position_id = gv_GRE_raw_resource_exploitation
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			has_tech = improved_oil_processing
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_anatolian_oil_tt
+			add_to_variable = {
+				var = gv_GRE_fuel_gain_factor
+				value = 0.1
+			}
+			342 = {			
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+				}
+			}
+			798 = {			
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESOURCES }
+	}
+	
+	focus = {
+		id = gv_GRE_ikonion_hydroelectric
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = gv_GRE_anatolian_oil focus = gv_GRE_increase_mining_efforts }
+		relative_position_id = gv_GRE_raw_resource_exploitation
+		x = 0
+		y = 2
+		cost = 5
+
+		available = {
+			has_tech = construction2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			346 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			346 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3547
+					}
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = building_state_modifier|dam
+				INDENT = "    "
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_the_thessaloniki_textile_factories
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		prerequisite = { focus = gv_GRE_invest_in_industry }
+		relative_position_id = gv_GRE_invest_in_industry
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			731 = {			
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_high_speed_railways
+		icon = GFX_focus_POL_warsaw_main_station
+		prerequisite = { focus = gv_GRE_the_thessaloniki_textile_factories }
+		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
+		x = 0
+		y = 2
+		cost = 5
+		
+		available = {
+			AND = {
+				controls_state = 48 # Serdica
+				controls_state = 212
+				controls_state = 341
+				controls_state = 797 # Constantinople
+				controls_state = 184
+				controls_state = 731 # Thessaloniki
+				controls_state = 340
+				controls_state = 339 # Smyrna/Ephesus
+				controls_state = 49
+				controls_state = 798
+				controls_state = 348
+				controls_state = 349
+				controls_state = 354 # Trebizond
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 48
+				target_state = 797
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 731
+				target_state = 797
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 797
+				target_state = 49
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 49
+				target_state = 798
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 798
+				target_state = 348
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 797
+				target_state = 339
+			}
+			build_railway = {
+				level = 5
+				build_only_on_allied = yes
+				fallback = yes
+				start_state = 797
+				target_state = 354
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_imperial_collegium_of_engineering
+		icon = GFX_goal_ROM_academia_romana
+		prerequisite = { focus = gv_GRE_ikonion_hydroelectric }
+		prerequisite = { focus = gv_GRE_high_speed_railways }
+		prerequisite = { focus = gv_GRE_engineering_subsidies }
+		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
+		x = 0
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = gv_GRE_industrial_revitalization_program
+		icon = GFX_focus_generic_expansion_of_new_towns
+		prerequisite = { focus = gv_GRE_invest_in_industry }
+		relative_position_id = gv_GRE_invest_in_industry
+		x = 2
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_industrial_revitalization_program_tt
+			add_to_variable = {
+				var = gv_GRE_production_speed_industrial_complex_factor
+				value = 0.1
+			}
+			add_timed_idea = {
+				idea = gv_GRE_industrial_revitalization
+				days = 730
+			}
+			339 = {			
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			347 = {			
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = gv_GRE_industrial_revitalization_program_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = gv_GRE_the_imperial_highways
+		icon = GFX_goal_generic_road2
+		prerequisite = { focus = gv_GRE_industrial_revitalization_program }
+		relative_position_id = gv_GRE_industrial_revitalization_program
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			340 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			211 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			212 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			48 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			731 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			47 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			345 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			344 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_attaleia_industrial_park
+		icon = GFX_goal_generic_light_industry
+		prerequisite = { focus = gv_GRE_industrial_revitalization_program }
+		relative_position_id = gv_GRE_industrial_revitalization_program
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			has_tech = construction2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			342 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_engineering_subsidies
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = gv_GRE_attaleia_industrial_park }
+		prerequisite = { focus = gv_GRE_the_imperial_highways }
+		relative_position_id = gv_GRE_industrial_revitalization_program
+		x = 0
+		y = 2
+		cost = 5
+
+		available = {
+			has_tech = construction2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = gv_GRE_engineering_subsidies_tech_bonus
+				bonus = 1
+				uses = 1
+				category = construction_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = gv_GRE_begin_rearmament
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
+		relative_position_id = gv_GRE_imperial_collegium_of_engineering
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_begin_rearmament_tt
+			add_to_variable = {
+				var = gv_GRE_production_factory_max_efficiency_factor
+				value = 0.1
+			}
+			339 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			342 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_nationalize_seleucia_company
+		icon = GFX_goal_generic_munitions_factories
+		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
+		relative_position_id = gv_GRE_imperial_collegium_of_engineering
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			345 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_industrial_expansion
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = gv_GRE_begin_rearmament }
+		relative_position_id = gv_GRE_begin_rearmament
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_industrial_expansion_tt
+			add_to_variable = {
+				var = gv_GRE_production_speed_arms_factory_factor
+				value = 0.05
+			}
+			339 = { # Thrakesion
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_mass_production
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = gv_GRE_begin_rearmament }
+		prerequisite = { focus = gv_GRE_nationalize_seleucia_company }
+		relative_position_id = gv_GRE_imperial_collegium_of_engineering
+		x = 0
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_mass_production_tt
+			add_to_variable = {
+				var = gv_GRE_production_factory_max_efficiency_factor
+				value = 0.1
+			}
+			343 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_war_industry
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = gv_GRE_mass_production }
+		relative_position_id = gv_GRE_mass_production
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_war_industry_tt
+			add_to_variable = {
+				var = gv_GRE_production_speed_arms_factory_factor
+				value = 0.1
+			}
+			797 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_strengthen_the_denarius
+		icon = GFX_focus_fra_devalue_the_franc
+		prerequisite = { focus = gv_GRE_fight_depression }
+		x = 3
+		y = 1
+		relative_position_id = gv_GRE_fight_depression
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_strengthen_the_denarius_tt
+			add_to_variable = {
+				var = gv_GRE_production_factory_max_efficiency_factor
+				value = 0.1
+			}
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_edict_of_emergency_employment
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = gv_GRE_strengthen_the_denarius }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_strengthen_the_denarius
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_great_depression
+				add_idea = gv_great_depression_2
+			}
+		}
+		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
+	}
+	
+	focus = {
+		id = gv_GRE_reform_the_central_bank
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = gv_GRE_edict_of_emergency_employment }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_edict_of_emergency_employment
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_ideas = gv_GRE_central_bank
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_issue_bonds
+		icon = GFX_focus_SWI_issue_war_bonds
+		prerequisite = { focus = gv_GRE_edict_of_emergency_employment }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_edict_of_emergency_employment
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = gv_GRE_issue_bonds_tt
+			add_to_variable = {
+				var = gv_GRE_consumer_goods_factor
+				value = -0.1
+			}
+			
+			# add_ideas = gv_GRE_warbonds
+			
+			# FUCK YOU PARADOX I HATE PARADOX FUCK YOU FUCK YOU
+			# HITLER PLEASE HIT Stockholm, Magnus Ladulasgatan 4 WITH AN ASTEROID PLEASE
+			
+			# add_timed_idea =  = {
+				# idea = gv_GRE_warbonds
+				# days = 365
+			# }
+			
+			# FUCK PARADOX INTERACTIVE STUPID RETARDED NIGGERS
+		}
+		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_agreements_with_the_aristocracy
+		icon = GFX_focus_CHL_invite_french_aristocracy
+		prerequisite = { focus = gv_GRE_reform_the_central_bank }
+		prerequisite = { focus = gv_GRE_issue_bonds }
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_edict_of_emergency_employment
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_ideas = gv_GRE_support_from_aristocracy
+		}
+		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_edict_of_agricultural_recovery
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = gv_GRE_agreements_with_the_aristocracy }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_agreements_with_the_aristocracy
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_great_depression_2
+				add_idea = gv_great_depression_3
+			}
+		}
+		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
+	}
+	
+	focus = {
+		id = gv_GRE_edict_of_economic_amendment
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = gv_GRE_edict_of_agricultural_recovery }
+		prerequisite = { focus = gv_GRE_imperial_collegium_of_engineering }
+		x = -3
+		y = 2
+		relative_position_id = gv_GRE_edict_of_agricultural_recovery
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			remove_ideas = {
+				gv_great_depression
+				gv_great_depression_2
+				gv_great_depression_3
+			}
+		}
+		search_filters = { FOCUS_FILTER_GREAT_DEPRESSION }
+	}
+	
+	#############################
+	#
+	# POLITICS: MONARCHISM TREE
+	#
+	#############################
+	
+	focus = {
+		id = gv_GRE_imperial_prerogative
+		icon = GFX_focus_generic_monarchist_sentiment # was GFX_focus_AUS_bring_back_the_habsburg_rule
+		x = 42
+		y = 0
+		cost = 5
+
+		available = {
+			has_completed_focus = gv_GRE_edict_of_emergency_employment
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_political_power = 150
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = gv_GRE_imperial_science_initiative
+		icon = GFX_focus_generic_university_3
+		prerequisite = { focus = gv_GRE_imperial_prerogative }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_imperial_prerogative
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			random_scientist = {
+				limit = {
+					has_scientist_level = {
+						specialization = specialization_nuclear
+						level > 0
+					}
+				}
+				add_scientist_level = {
+					specialization = specialization_nuclear
+					level = 1
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { 
+				gv_GRE_research_speed_factor = 0.05
+				tooltip = gv_GRE_imperial_science_initiative_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GER_wunderwaffen_special_project_speed_factor = 0.05
+				tooltip = special_project_speed_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = gv_GRE_fund_research_association
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = gv_GRE_imperial_science_initiative }
+
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_imperial_science_initiative
+
+		cost = 10
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_dynamic_modifier = { modifier = GER_rnd_programs_modifier }
+			custom_effect_tooltip = GER_shared_rd_programs_ww_tt
+			
+		}
+	}
+
+	focus = {
+		id = gv_GRE_pool_technical_know_how
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = gv_GRE_imperial_science_initiative }
+
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_imperial_science_initiative
+		cost = 10
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+ 
+		completion_reward = {
+
+			add_ideas = GER_pool_technical_know_how
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = GER_pool_technical_know_how_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = { is_in_faction_with = GRE }
+					add_ideas = GER_pool_technical_know_how
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = gv_GRE_project_deus_sol_invictus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = gv_GRE_fund_research_association }
+		prerequisite = { focus = gv_GRE_pool_technical_know_how }
+
+		dynamic = yes
+
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_imperial_science_initiative
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GER_wunderwaffen_production_speed_nuclear_facility_factor = 0.15
+				tooltip = production_speed_nuclear_facility_factor_tt
+			}
+			add_to_variable = { 
+				GER_wunderwaffen_production_speed_nuclear_reactor_factor = 0.1
+				tooltip = production_speed_nuclear_reactor_factor_tt
+			}
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
+				}
+				add_to_variable = { 
+					GER_wunderwaffen_sp_nuclear_reactor_speed_factor = 0.1
+					tooltip = sp_nuclear_reactor_speed_factor_tt
+				}
+			}
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_commercial_nuclear_reactor }
+				}
+				add_to_variable = { 
+					GER_wunderwaffen_sp_commercial_nuclear_reactor_speed_factor = 0.1
+					tooltip = sp_commercial_nuclear_reactor_speed_factor_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_the_fragmented_west_focus
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = gv_GRE_imperial_prerogative }
+		x = -6
+		y = 1
+		relative_position_id = gv_GRE_imperial_prerogative
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = gv_GRE_break_the_treaty
+		icon = GFX_goal_ENG_reassess_continental_commitments
+		prerequisite = { focus = gv_GRE_the_fragmented_west_focus }
+		mutually_exclusive = { focus = gv_GRE_address_the_treaty_of_adrianopolis }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_the_fragmented_west_focus
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			remove_ideas = gv_treaty_of_adrianople
+			add_war_support = 0.1
+			add_threat = 3
+		}
+		
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+	
+	focus = {
+		id = gv_GRE_demand_moesia_superior
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = gv_GRE_break_the_treaty }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_break_the_treaty
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			add_threat = 5
+			YUG = {
+				country_event = { id = gv_roman_empire_events.2 }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_naissus_referendum
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = gv_GRE_address_the_treaty_of_adrianopolis }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_address_the_treaty_of_adrianopolis
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			add_threat = 5
+			YUG = {
+				country_event = { id = gv_roman_empire_events.4 }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_align_kingdom_of_moesia
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = gv_GRE_break_the_treaty focus = gv_GRE_address_the_treaty_of_adrianopolis }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_break_the_treaty
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			add_threat = 5
+			ROM = {
+				country_event = { id = gv_roman_empire_events.3 }
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_moesian_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = gv_GRE_align_kingdom_of_moesia }
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_align_kingdom_of_moesia
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			46 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_RESOURCES }
+	}
+	
+	focus = {
+		id = gv_GRE_renounce_the_treaty
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = gv_GRE_align_kingdom_of_moesia }
+		prerequisite = { focus = gv_GRE_naissus_referendum }
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_address_the_treaty_of_adrianopolis
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			remove_ideas = gv_treaty_of_adrianople
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_additional_concessions_from_illyria
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = gv_GRE_renounce_the_treaty }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_renounce_the_treaty
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			YUG = {
+				country_event = { id = gv_roman_empire_events.5 }
+			}
+			add_threat = 5
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_dioclea_ultimatum
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = gv_GRE_demand_moesia_superior }
+		prerequisite = { focus = gv_GRE_align_kingdom_of_moesia }
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_break_the_treaty
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			105 = {
+				add_claim_by = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = YUG
+			}
+			add_threat = 5
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_address_the_treaty_of_adrianopolis
+		icon = GFX_goal_constitution
+		prerequisite = { focus = gv_GRE_the_fragmented_west_focus }
+		mutually_exclusive = { focus = gv_GRE_break_the_treaty }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_the_fragmented_west_focus
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_threat = -3
+		}
+		
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	
+	focus = {
+		id = gv_GRE_the_eastern_frontier_focus
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = gv_GRE_imperial_prerogative }
+
+		x = 4
+		y = 1
+		relative_position_id = gv_GRE_imperial_prerogative
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			
+		}
+		
+		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_align_kurdistan
+		icon = GFX_focus_generic_befriend_kurdistan
+		prerequisite = { focus = gv_GRE_the_eastern_frontier_focus }
+		mutually_exclusive = { focus = gv_GRE_attack_kurdistan }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_the_eastern_frontier_focus
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			puppet = KUR
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_attack_kurdistan
+		icon = GFX_focus_generic_attack_kurdistan
+		prerequisite = { focus = gv_GRE_the_eastern_frontier_focus }
+		mutually_exclusive = { focus = gv_GRE_align_kurdistan }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_the_eastern_frontier_focus
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = KUR
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_attack_persia # The First Snows Fall
+		icon = GFX_goal_PER_anglo_soviet_invasion_of_iran
+		prerequisite = { focus = gv_GRE_align_kurdistan focus = gv_GRE_attack_kurdistan }
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_the_eastern_frontier_focus
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+
+		completion_reward = {
+			add_war_support = 0.15
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PER
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
+	}
+	
+	#############################
+	#
+	# COLONIAL INTERVENTION TREE
+	#
+	#############################
+	
+	focus = {
+		id = gv_GRE_service_overseas_focus
+		ai_will_do = {
+			factor = 1
+		}
+		icon = GFX_goal_generic_position_armies
+		x = 15
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+			add_ideas = ENG_service_overseas_idea
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1
+				uses = 1
+				category = summer_clothing_tech
+			}			
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
+	}
+	
+	focus = {
+		id = gv_GRE_develop_aethiopia
+		icon = GFX_focus_ETH_develop_the_horn_of_africa
+		prerequisite = { focus = gv_GRE_service_overseas_focus }
+		x = -2
+		y = 1
+		relative_position_id = gv_GRE_service_overseas_focus
+		cost = 4
+		
+		available = {
+			ETH = {
+				is_subject_of = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			271 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			841 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			559 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			835 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_ethiopian_blood_diamonds
+		icon = GFX_focus_CONGO_gold_and_diamonds
+		prerequisite = { focus = gv_GRE_develop_aethiopia }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_develop_aethiopia
+		cost = 5
+		
+		available = {
+			ETH = {
+				is_subject_of = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			add_to_variable = { ROOT.si_money_var = 4 }
+			custom_effect_tooltip = gv_GRE_ethiopian_blood_diamonds_tt
+			ETH = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = gv_unethical_mining_opinion_modifier
+				}
+				add_ideas = gv_unethical_mining_idea
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_evacuate_ethiopian_assets
+		prerequisite = { focus = gv_GRE_ethiopian_blood_diamonds }
+		mutually_exclusive = { focus = gv_GRE_take_suez_focus }
+		icon = GFX_goal_generic_gold_money
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_ethiopian_blood_diamonds
+		cost = 10
+		
+		available = {
+			ETH = {
+				is_subject_of = ROOT
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			end_puppet = ETH
+			add_to_variable = { ROOT.si_money_var = 8 }
+			custom_effect_tooltip = gv_GRE_evacuate_ethiopian_assets_tt
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_take_suez_focus
+		icon = GFX_focus_generic_the_suez
+		prerequisite = { focus = gv_GRE_ethiopian_blood_diamonds }
+		mutually_exclusive = { focus = gv_GRE_evacuate_ethiopian_assets }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_ethiopian_blood_diamonds
+		cost = 5
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0 
+				has_war = yes 
+			}
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			911 = {
+				add_claim_by = ROOT
+			}
+			995 = {
+				add_claim_by = ROOT
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_conquer_siam
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = gv_GRE_service_overseas_focus }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_service_overseas_focus
+		cost = 5
+		
+		available = {
+			FRI = {
+				is_subject_of = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0 
+				has_war = yes 
+			}
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SIA
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_develop_indochina
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = gv_GRE_service_overseas_focus }
+		x = 2
+		y = 1
+		relative_position_id = gv_GRE_service_overseas_focus
+		cost = 4
+		
+		available = {
+			FRI = {
+				is_subject_of = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0 
+				has_war = yes 
+			}
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			671 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			670 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			928 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			927 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			741 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			868 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_riches_of_asia
+		icon = GFX_focus_GER_south_east_asian_natural_wealth
+		prerequisite = { focus = gv_GRE_develop_indochina }
+		prerequisite = { focus = gv_GRE_conquer_siam }
+		x = 1
+		y = 2
+		relative_position_id = gv_GRE_service_overseas_focus
+		cost = 10
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0 
+				has_war = yes 
+			}
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			335 = {
+				add_claim_by = ROOT
+			}
+			976 = {
+				add_claim_by = ROOT
+			}
+			446 = {
+				add_claim_by = ROOT
+			}
+			672 = {
+				add_claim_by = ROOT
+			}
+			974 = {
+				add_claim_by = ROOT
+			}
+			951 = {
+				add_claim_by = ROOT
+			}
+			915 = {
+				add_claim_by = ROOT
+			}
+			960 = {
+				add_claim_by = ROOT
+			}
+			914 = {
+				add_claim_by = ROOT
+			}
+			336 = {
+				add_claim_by = ROOT
+			}
+			909 = {
+				add_claim_by = ROOT
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GXC
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YUN
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PHI
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MAL
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_macau_focus
+		prerequisite = { focus = gv_GRE_service_overseas_focus }
+		icon = GFX_goal_generic_fortify_city
+		x = 4
+		y = 1
+		relative_position_id = gv_GRE_service_overseas_focus
+		cost = 5
+		ai_will_do = {
+			factor = 0.25
+		}
+		available = { 
+			729 = {
+				controls_or_subject_of = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			729 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 4189
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+	}
+	
+	focus = {
+		id = gv_GRE_landward_macau_focus
+		prerequisite = { focus = gv_GRE_macau_focus }
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_macau_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		available = {
+			729 = {
+				controls_or_subject_of = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			729 = { 
+				free_building_slots = {
+					building = anti_air_building
+					size < 2
+				}
+			}
+		}
+
+		completion_reward = {
+			729 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 4189
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2				
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { }
 	}
 }

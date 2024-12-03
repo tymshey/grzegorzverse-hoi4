@@ -64,3 +64,61 @@ news_event = {
 		trigger = { TAG = ROM }
 	}
 }
+
+news_event = {
+	id = gv_news.3
+	title = gv_news.3.title
+	desc = gv_news.3.desc
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gv_news.3.a
+		trigger = {
+			NOT = {
+				TAG = GRE
+				TAG = ROM
+			}
+		}
+	}
+	option = {
+		name = gv_news.3.b
+		trigger = { TAG = GRE }
+	}
+	option = {
+		name = gv_news.3.c
+		trigger = { TAG = YUG }
+	}
+}
+
+news_event = {
+	id = gv_news.4
+	title = gv_news.4.title
+	desc = gv_news.4.desc
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gv_news.4.a
+		trigger = {
+			NOT = {
+				TAG = GRE
+				TAG = ROM
+			}
+		}
+	}
+	option = {
+		name = gv_news.4.b
+		trigger = { TAG = GRE }
+	}
+	option = {
+		name = gv_news.4.c
+		trigger = { TAG = YUG }
+	}
+}

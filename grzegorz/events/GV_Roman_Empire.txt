@@ -126,7 +126,7 @@ country_event = { # Demand Moesian Submission
 		news_event = gv_news.2
 	}
 	option = {
-		name = gv_roman_empire_events.2.b
+		name = gv_roman_empire_events.3.b
 		ai_chance = {
 			base = 0
 		}
@@ -134,6 +134,98 @@ country_event = { # Demand Moesian Submission
 			create_wargoal = {
 				type = puppet_wargoal_focus
 				target = ROM
+			}
+		}
+	}
+}
+
+country_event = { # Naissus Referendum
+	id = gv_roman_empire_events.4
+	title = gv_roman_empire_events.4.title
+	desc = gv_roman_empire_events.4.desc
+	picture = GFX_report_event_gre_parade
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = gv_roman_empire_events.4.a
+		ai_chance = {
+			base = 100
+		}
+		802 = {
+			transfer_state_to = GRE
+		}
+		953 = {
+			transfer_state_to = GRE
+		}
+		108 = {
+			transfer_state_to = GRE
+		}
+		news_event = gv_news.3
+	}
+	option = {
+		name = gv_roman_empire_events.4.b
+		ai_chance = {
+			base = 0
+		}
+		GRE = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YUG
+			}
+		}
+	}
+}
+
+country_event = { # Demand Dalmatia
+	id = gv_roman_empire_events.5
+	title = gv_roman_empire_events.5.title
+	desc = gv_roman_empire_events.5.desc
+	picture = GFX_report_event_gre_parade
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = gv_roman_empire_events.5.a
+		ai_chance = {
+			base = 100
+		}
+		105 = {
+			transfer_state_to = GRE
+		}
+		963 = {
+			transfer_state_to = GRE
+		}
+		107 = {
+			transfer_state_to = GRE
+		}
+		952 = {
+			transfer_state_to = GRE
+		}
+		104 = {
+			transfer_state_to = GRE
+		}
+		news_event = gv_news.4
+	}
+	option = {
+		name = gv_roman_empire_events.5.b
+		ai_chance = {
+			base = 0
+		}
+		GRE = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YUG
 			}
 		}
 	}

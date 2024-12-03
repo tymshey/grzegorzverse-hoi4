@@ -29,6 +29,7 @@ add_ideas = {
 	# gv_GRE_imperial_industry
 	gv_GRE_excessive_navy_budget
 	gv_great_depression
+	gv_treaty_of_adrianople
 }
 
 add_dynamic_modifier = { modifier = gv_GRE_imperial_industry_dynamic_modifier }

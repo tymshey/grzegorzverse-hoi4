@@ -1076,30 +1076,12 @@ characters={
 			name = GRE_napoleon_zervas
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
-				OR = {
-					custom_trigger_tooltip = {
-						tooltip = GRE_republicans_friendly_or_loyal
-						check_variable = {
-							var = GRE_republican_loyalty
-							value = 1.000
-							compare = greater_than_or_equals
-					}
-					}
-					custom_trigger_tooltip = {
-						tooltip = GRE_fascists_friendly_or_loyal
-						check_variable = {
-							var = GRE_fascist_loyalty
-							value = 1.000
-							compare = greater_than_or_equals
-						}
-					}
-				}
+				tag = GRE
 			}
 			visible = {
-				has_global_flag = gre_bftb_focus_tree
+				always = yes
 			}
 			traits = {
 				army_infantry_2
@@ -1253,14 +1235,7 @@ characters={
 				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = GRE_communists_friendly_or_loyal
-					check_variable = {
-						var = GRE_communist_loyalty
-						value = 1.000
-						compare = greater_than_or_equals
-					}
-				}
+				tag = GRE
 			}
 			visible = {
 				has_global_flag = gre_bftb_focus_tree

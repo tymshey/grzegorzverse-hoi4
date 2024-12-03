@@ -337,6 +337,25 @@ ideas = {
 			}
 		}
 		
+		gv_treaty_of_adrianople = {
+			picture = HUN_treaty_of_triannon
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = -0.1
+				experience_gain_air_factor = -0.1
+			}
+		}
+		
 		### Aethiopia
 		gv_unethical_mining_idea = {
 			picture = generic_exploit_mines
