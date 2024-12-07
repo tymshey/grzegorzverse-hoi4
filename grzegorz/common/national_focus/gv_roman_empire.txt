@@ -591,6 +591,101 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_strategic_bomber_designs
+		prerequisite = { focus = gv_GRE_aeronautical_research_institute }
+		icon = GFX_goal_generic_air_strategic_bomber_new
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_aeronautical_research_institute
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "By Blood Alone" }
+				}
+				add_tech_bonus = {
+					name = bomber_command_focus
+					bonus = 1.0
+					uses = 2
+					category = cat_strategic_bomber
+				}
+			}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = bomber_command_focus
+					bonus = 1.0
+					uses = 1
+					category = heavy_air
+				}
+				add_doctrine_cost_reduction = {
+					name = bomber_command_focus #land_doc_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			mio:gv_GRE_ventorcaelorum = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = gv_GRE_jet_focus
+		prerequisite = { focus = gv_GRE_strategic_bomber_designs }
+		icon = GFX_goal_generic_air_jet_new
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_strategic_bomber_designs
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = uk_jet_focus
+				bonus = 1.0
+				uses = 4
+				category = jet_technology
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			mio:gv_GRE_aquila_aeronautica = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
 		id = gv_GRE_classis_imperialis
 		icon = GFX_focus_DEN_reorganize_sovaernet
 		x = 8
@@ -722,7 +817,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			335 = {
+			355 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -781,6 +876,127 @@ focus_tree = {
 			add_ideas = ENG_expand_the_repair_yards
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = gv_GRE_carrier_focus
+		prerequisite = { focus = gv_GRE_repair_yards_focus }
+		mutually_exclusive = { focus = gv_GRE_battleship_focus }
+		icon = GFX_goal_generic_navy_carrier
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_repair_yards_focus
+		cost = 5
+		ai_will_do = {
+			factor = 0.25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = uk_carrier_focus
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
+			
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = gv_GRE_battleship_focus
+		prerequisite = { focus = gv_GRE_repair_yards_focus }
+		mutually_exclusive = { focus = gv_GRE_carrier_focus }
+		icon = GFX_goal_generic_navy_battleship
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_repair_yards_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = uk_battleship_focus
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = gv_GRE_flagship_focus
+		prerequisite = { focus = gv_GRE_carrier_focus focus = gv_GRE_battleship_focus }
+		icon = GFX_goal_liberty_ships
+		x = 0
+		y = 2
+		relative_position_id = gv_GRE_repair_yards_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					not = { has_tech = ship_hull_super_heavy }
+				}
+				set_technology = {
+					ship_hull_super_heavy = 1
+				}
+			}
+			create_equipment_variant = {
+				name = "Augustus Class"
+				type = ship_hull_super_heavy_1
+				name_group = GRE_BB_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_super_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_shbb
+					front_1_custom_slot = ship_anti_air_1
+					front_2_custom_slot = empty
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = ship_secondaries_2
+					mid_3_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_super_heavy_battery_1
+					rear_2_custom_slot = ship_airplane_launcher_1
+				}
+			}
+			custom_effect_tooltip = gv_GRE_neptunus_tt
+			hidden_effect = {
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_super_heavy_1
+						creator = "GRE"
+						version_name = "Augustus Class"
+					}
+					name = "RNI Neptunus"
+					requested_factories = 1
+					progress = 0.75
+					amount = 1
+				}
+			}
+		}
 	}
 	
 	#############################
@@ -1071,7 +1287,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 					province = {
-						id = 3547
+						id = 9811
 					}
 				}
 			}
@@ -1111,7 +1327,7 @@ focus_tree = {
 	
 	focus = {
 		id = gv_GRE_high_speed_railways
-		icon = GFX_focus_POL_warsaw_main_station
+		icon = GFX_focus_BEL_engine_of_the_economy
 		prerequisite = { focus = gv_GRE_the_thessaloniki_textile_factories }
 		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
 		x = 0
@@ -1958,10 +2174,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_war_support = 0.05
 		}
 		
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 	
 	focus = {
@@ -2032,7 +2248,7 @@ focus_tree = {
 	
 	focus = {
 		id = gv_GRE_align_kingdom_of_moesia
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_generic_risky_deal
 		prerequisite = { focus = gv_GRE_break_the_treaty focus = gv_GRE_address_the_treaty_of_adrianopolis }
 		x = 1
 		y = 1
@@ -2150,6 +2366,39 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_thessaloniki_conference
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = gv_GRE_dioclea_ultimatum }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_dioclea_ultimatum
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			764 = {
+				add_claim_by = ROOT
+			}
+			45 = {
+				add_claim_by = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = TRA
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = HUN
+			}
+			add_threat = 5
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
 		id = gv_GRE_address_the_treaty_of_adrianopolis
 		icon = GFX_goal_constitution
 		prerequisite = { focus = gv_GRE_the_fragmented_west_focus }
@@ -2171,6 +2420,130 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = gv_GRE_consolidate_our_reconquests
+		icon = GFX_focus_BUL_free_balkan_states # GFX_focus_AUS_bring_back_the_habsburg_rule
+		prerequisite = { focus = gv_GRE_thessaloniki_conference focus = gv_GRE_additional_concessions_from_illyria }
+		x = 0
+		y = 5
+		relative_position_id = gv_GRE_the_fragmented_west_focus
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			107 = {
+				add_core_of = ROOT
+			}
+			963 = {
+				add_core_of = ROOT
+			}
+			105 = {
+				add_core_of = ROOT
+			}
+			104 = {
+				add_core_of = ROOT
+			}
+			952 = {
+				add_core_of = ROOT
+			}
+			764 = {
+				add_core_of = ROOT
+			}
+			45 = {
+				add_core_of = ROOT
+			}
+			804 = {
+				add_core_of = ROOT
+			}
+			962 = {
+				add_core_of = ROOT
+			}
+			959 = {
+				add_core_of = ROOT
+			}
+			961 = {
+				add_core_of = ROOT
+			}
+			109 = {
+				add_core_of = ROOT
+			}
+			958 = {
+				add_core_of = ROOT
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	
+	focus = {
+		id = gv_GRE_attack_italy
+		icon = GFX_focus_attack_italy
+		prerequisite = { focus = gv_GRE_consolidate_our_reconquests }
+		x = -2
+		y = 1
+		relative_position_id = gv_GRE_consolidate_our_reconquests
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ITA
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_attack_germany
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = gv_GRE_consolidate_our_reconquests }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_consolidate_our_reconquests
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GER
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_attack_russia
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = gv_GRE_consolidate_our_reconquests }
+		x = 2
+		y = 1
+		relative_position_id = gv_GRE_consolidate_our_reconquests
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SOV
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
 		id = gv_GRE_the_eastern_frontier_focus
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = gv_GRE_imperial_prerogative }
@@ -2184,10 +2557,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_war_support = 0.05
 		}
 		
-		search_filters = { }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 	
 	focus = {
@@ -2299,6 +2672,35 @@ focus_tree = {
 			}			
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
+	}
+	
+	focus = {
+		id = gv_GRE_send_volunteers
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = gv_GRE_service_overseas_focus }
+		x = -4
+		y = 1
+		relative_position_id = gv_GRE_service_overseas_focus
+		cost = 3
+
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_service_overseas_idea
+				add_idea = gv_GRE_service_overseas_2
+			}
+			
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = CHI
+				value = 250
+			}	
+		}
 	}
 	
 	focus = {

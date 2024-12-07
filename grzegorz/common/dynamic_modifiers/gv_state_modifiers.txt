@@ -1,0 +1,7 @@
+gv_front_of_the_great_war = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_tur_kurdish_agitation
+	
+	max_dig_in_factor = 0.1
+}

@@ -1,0 +1,30 @@
+on_actions = {
+	on_startup = {
+		KUR = {
+			350 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = KUR
+					}
+					add_dynamic_modifier = { modifier = gv_front_of_the_great_war }
+				}
+			}
+			352 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = KUR
+					}
+					add_dynamic_modifier = { modifier = gv_front_of_the_great_war }
+				}
+			}
+			800 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = KUR
+					}
+					add_dynamic_modifier = { modifier = gv_front_of_the_great_war }
+				}
+			}
+		}
+	}
+}

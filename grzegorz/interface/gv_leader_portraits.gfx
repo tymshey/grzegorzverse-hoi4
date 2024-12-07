@@ -34,4 +34,16 @@ spriteTypes = {
 		name = "GFX_Portrait_GRE_Theodosius_Comnenus"
 		texturefile = "gfx/leaders/GRE/Portrait_GRE_Theodosius_Comnenus.dds"
 	}
+	spriteType = {
+		name = "GFX_Portrait_GRE_Gaius_Corvinus"
+		texturefile = "gfx/leaders/GRE/Portrait_GRE_Gaius_Corvinus.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_GRE_Constantinus_Antoninus"
+		texturefile = "gfx/leaders/GRE/Portrait_GRE_Constantinus_Antoninus.dds"
+	}
+	spriteType = {
+		name = "GFX_GRE_Portrait_Constantinus_Aemilius_Cursor"
+		texturefile = "gfx/leaders/GRE/GRE_Portrait_Constantinus_Aemilius_Cursor.png"
+	}
 }

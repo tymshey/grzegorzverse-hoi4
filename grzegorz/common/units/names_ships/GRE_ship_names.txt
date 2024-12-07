@@ -1,0 +1,123 @@
+##### GREECE NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+GRE_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { GRE }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "RNI "
+	fallback_name = "Navis Armatus %s"					
+
+	unique = {											
+		"Vasilefs Georgios I" "Vasilissa Olga" "Salamis" "Navarinon" "Aspis" "Kimon" "Lonchi" "Nearchos" "Sfendoni" "Theyella" "Themistocles" "Kriti" 
+		"Aetos" "Ierax" "Leon" "Panthir" "Kountouriotis" "Hydra" "Psara" "Spetsai" "Pindos" "Adrias" "Hastings" "Kanaris" "Miaoulis"
+		"Themistokles" "Astings" "Kriti" "Aigaion" "Aetos" "Ierax" "Leon" "Panthir" "Irene" "Romanos" "Alexios"
+	}
+}
+
+### LIGHT CRUISER NAMES###
+GRE_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { GRE }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "RNI "
+	fallback_name = "Navis Celox %s"
+
+	unique = {
+		"Elli" "Apostolis" "Kriezis" "Sakhtouris" "Tompazis" "Ellis" "Piraievs" "Kikladhes" "Alexandros" "Pátrai" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+GRE_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { GRE }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "RNI "
+	fallback_name = "Navis Media %s"
+
+	unique = {
+		"Georgios Averof" "Piraievs" "Kikladhes" "Alexandros" "Pátrai" "Kríti" "Nísoi Aiyaíou" "Kithira" "Kefallinia" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+GRE_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { GRE }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "RNI "
+	fallback_name = "Navis Loricatus %s"		
+
+	unique = {
+		"Kilkis" "Athinai" "Thessalia" "Ipiros" "Peloponnisos" "Konstantinou"  "Iostaninou"
+	}
+}
+
+### BATTLECRUISER NAMES ###
+GRE_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { GRE }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "RNI "
+	fallback_name = "Navis Loricacelox %s"		
+
+	unique = {
+		"Athinai" "Thessalia" "Ipiros" "Peloponnisos" "Kilkis" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+GRE_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { GRE }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "RNI "
+	fallback_name = "Navis Aeronauticus %s"	
+
+	unique = {
+		"Ellas" "Socrates" "Vasilefs Georgios" "Vasilissa Olga" "Hydra" "Spetsai" "Psara" 
+	}
+}
+
+### SUBMARINES ###
+GRE_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { GRE }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "RNI "
+	fallback_name = "NS-%s"
+	
+	unique = {
+		"Katsonis" "Papanikolis" "Protefs" "Nirefs" "Triton" "Glafkos" "Mastrozos" "Pipinos" "Delfin" "Argonautis" "Triaina" "Amfitriti" "Xifias" 
+		"Poseidon" "Okeanos" 
+	}
+}

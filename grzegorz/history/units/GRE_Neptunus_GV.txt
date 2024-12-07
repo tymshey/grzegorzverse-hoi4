@@ -1,0 +1,12 @@
+﻿units = {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "RNI Neptunus"			
+		naval_base = 9833 # Constantinople
+		task_force = {
+			name = "RNI Neptunus"
+			location = 9833 # Constantinople
+			ship = { name = "RNI Neptunus" definition = battleship equipment = { ship_hull_heavy_4 = { amount = 1 owner = GRE version_name = "Augustus" } } }
+		}
+	}
+}

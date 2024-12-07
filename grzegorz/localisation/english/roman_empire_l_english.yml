@@ -36,6 +36,8 @@
  gv_GRE_imperial_strategic_command_desc:0 ""
  gv_treaty_of_adrianople:0 "Treaty of Adrianople"
  gv_treaty_of_adrianople_desc:0 "The Treaty of Adrianopolis was imposed by resurgent nations and warlords of the Balkan Peninsula on the exhausted Empire in 1922 after the great war had ended."
+ gv_GRE_service_overseas_2:0 "Service Overseas"
+ gv_GRE_service_overseas_2_desc:0 "The Empire's forces are trained and perfected in many parts of the world, and thus are suited to fight in almost all climates of the Earth."
  
  gv_unethical_mining_idea:0  "Unethical Mining Methods"
  
@@ -66,6 +68,7 @@
  gv_GRE_imperial_science_initiative_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+5.0%§!\n\n"
  gv_GRE_ethiopian_blood_diamonds_tt:0 "Add §G$4§! million to the national reserves."
  gv_GRE_evacuate_ethiopian_assets_tt:0 "Add §G$8§! million to the national reserves."
+ gv_GRE_neptunus_tt:0 "Adds one §YAugustus Class§! Super Heavy Battleship to the production queue, at 75% complete."
  
  # POLITICS
  
@@ -327,6 +330,28 @@
  gv_GRE_renounce_the_treaty_desc:0 ""
  gv_GRE_additional_concessions_from_illyria:0 "Demand Additional Territorial Concessions"
  gv_GRE_additional_concessions_from_illyria_desc:0 ""
+ gv_GRE_thessaloniki_conference:0 "The Thessaloniki Conference"
+ gv_GRE_thessaloniki_conference_desc:0 ""
+ gv_GRE_consolidate_our_reconquests:0 "Consolidate the Empire"
+ gv_GRE_consolidate_our_reconquests_desc:0 ""
+ gv_GRE_attack_italy:0 "Reconquer Old Rome"
+ gv_GRE_attack_italy_desc:0 ""
+ gv_GRE_attack_germany:0 "Avenge 410"
+ gv_GRE_attack_germany_desc:0 ""
+ gv_GRE_attack_russia:0 "Return to the Scythian Front"
+ gv_GRE_attack_russia_desc:0 ""
+ gv_GRE_send_volunteers:0 "Imperial Volunteer Legion"
+ gv_GRE_send_volunteers_desc:0 ""
+ gv_GRE_carrier_focus:0 "Carrier Focus"
+ gv_GRE_carrier_focus_desc:0 ""
+ gv_GRE_battleship_focus:0 "Battleship Focus"
+ gv_GRE_battleship_focus_desc:0 ""
+ gv_GRE_flagship_focus:0 "The Pride of Classis Imperialis"
+ gv_GRE_flagship_focus_desc:0 ""
+ gv_GRE_strategic_bomber_designs:0 "Strategic Bomber Designs"
+ gv_GRE_strategic_bomber_designs_desc:0 ""
+ gv_GRE_jet_focus:0 "Experimental Jet Aircraft"
+ gv_GRE_jet_focus_desc:0 ""
  
  # OTHER
  

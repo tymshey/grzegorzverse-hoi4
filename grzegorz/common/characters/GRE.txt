@@ -1,6 +1,8 @@
 characters={
 	### GRZEGORZVERSE EXCLUSIVE
 	
+	# EMPERORS
+	
 	GRE_constantine_xx = {
 		name="Constantine XX"
 		portraits={
@@ -15,6 +17,8 @@ characters={
 			id=-1
 		}		
 	}
+	
+	# GENERALS
 	
 	GRE_aurelius_flavius_adeodatus={
 		name="Aurelius Flavius Adeodatus"
@@ -121,6 +125,77 @@ characters={
 			legacy_id=-1
 		}
 	}
+	
+	GRE_gaius_corvinus={
+		name="Gaius Corvinus"
+		portraits={
+			civilian={
+				large = GFX_Portrait_GRE_Gaius_Corvinus
+				small = GFX_Portrait_GRE_Gaius_Corvinus
+			}
+			army={
+				large = GFX_Portrait_GRE_Gaius_Corvinus
+				small = GFX_Portrait_GRE_Gaius_Corvinus
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer old_guard }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	
+	GRE_constantinus_antoninus={
+		name="Constantinus Antoninus"
+		portraits={
+			civilian={
+				large = GFX_Portrait_GRE_Constantinus_Antoninus
+				small = GFX_Portrait_GRE_Constantinus_Antoninus
+			}
+			army={
+				large = GFX_Portrait_GRE_Constantinus_Antoninus
+				small = GFX_Portrait_GRE_Constantinus_Antoninus
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	
+	GRE_constantinus_aemilius_cursor={
+		name="Constantinus Aemilius Cursor"
+		portraits={
+			civilian={
+				large = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor
+				small = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor
+			}
+			army={
+				large = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor
+				small = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	
+	# ADMIRALS
 	
 	GRE_caecillius_helvius_vindex={
 		name="Caecillius Helvius Vindex"
@@ -651,14 +726,7 @@ characters={
 				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
-				custom_trigger_tooltip = {
-				tooltip = GRE_communists_friendly_or_loyal
-					check_variable = {
-						var = GRE_communist_loyalty
-						value = 1.000
-						compare = greater_than_or_equals 
-					}
-				}
+				
 			}
 			visible = {
 				has_global_flag = gre_bftb_focus_tree
@@ -684,8 +752,7 @@ characters={
 				original_tag = GRE
 			}
 			available = {
-        		has_government = communism
-				has_completed_focus = GRE_restaff_the_army_command
+				
 			}
 			visible = {
 				NOT = {
@@ -1235,13 +1302,12 @@ characters={
 				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
-				tag = GRE
 			}
 			visible = {
 				has_global_flag = gre_bftb_focus_tree
 			}
 			traits = {
-				army_regrouping_2
+				army_regrouping_3
 			}
 			cost = 100
 			ai_will_do = {
@@ -2246,10 +2312,6 @@ characters={
 				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
-				OR = {
-					has_government = fascism 
-					has_completed_focus = GRE_recruit_the_fascists 
-				}
 			}
 			visible = {
 				has_global_flag = gre_bftb_focus_tree

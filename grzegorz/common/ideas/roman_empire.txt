@@ -356,6 +356,27 @@ ideas = {
 			}
 		}
 		
+		gv_GRE_service_overseas_2 = {
+			picture = eng_service_overseas
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.1
+				send_volunteers_tension = -0.25
+				send_volunteer_size = 2
+				air_volunteer_cap = 1
+			}
+		}
+		
 		### Aethiopia
 		gv_unethical_mining_idea = {
 			picture = generic_exploit_mines

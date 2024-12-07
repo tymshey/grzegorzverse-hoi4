@@ -537,6 +537,9 @@ recruit_character = GRE_ioannes_gregorius
 recruit_character = GRE_theodosius_comnenus
 recruit_character = GRE_caecillius_helvius_vindex
 recruit_character = GRE_gnaeus_gratian_monomachos
+recruit_character = GRE_gaius_corvinus
+recruit_character = GRE_constantinus_antoninus
+recruit_character = GRE_constantinus_aemilius_cursor
 
 if = { 
 	limit = { has_dlc = "Battle for the Bosporus" }
@@ -705,14 +708,14 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Glafkos Class"				
+		name = "Umbra Class"				
 		type = ship_hull_submarine_2
 		name_group = GRE_SS_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_sub_1
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_torpedo_sub_2
 		}
 	}
 	# Destroyers #
