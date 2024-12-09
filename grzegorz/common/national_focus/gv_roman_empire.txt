@@ -1413,7 +1413,7 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_imperial_collegium_of_engineering
 		icon = GFX_goal_ROM_academia_romana
-		prerequisite = { focus = gv_GRE_ikonion_hydroelectric }
+		# prerequisite = { focus = gv_GRE_ikonion_hydroelectric }
 		prerequisite = { focus = gv_GRE_high_speed_railways }
 		prerequisite = { focus = gv_GRE_engineering_subsidies }
 		relative_position_id = gv_GRE_the_thessaloniki_textile_factories
@@ -1813,15 +1813,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = gv_GRE_strengthen_the_denarius
 		cost = 5
-
-
+		
 		ai_will_do = {
 			factor = 10
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-
-
+		
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = gv_great_depression
@@ -1926,15 +1924,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = gv_GRE_agreements_with_the_aristocracy
 		cost = 5
-
+		
+		available = {
+			date > 1937.1.1
+		}
 
 		ai_will_do = {
 			factor = 10
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-
-
+		
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = gv_great_depression_2

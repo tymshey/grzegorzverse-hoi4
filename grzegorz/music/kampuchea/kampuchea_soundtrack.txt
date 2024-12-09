@@ -1,0 +1,205 @@
+
+music_station = "kampuchea"
+
+music = {
+	song = "Sat Tee Touy - Cambodian Cassette Archives"
+}
+
+music = {
+	song = "Srey No (Lady Name No) - Khmer folk songs"
+}
+music = {
+	song = "L a b o r w a v e Killing Fields"
+}
+music = {
+	song = "Song of the Salt Workers od Kampuchea"
+}
+music = {
+	song = "National Anthem of Kampuchea - Dap Prampi Mesa Chokchey"
+}
+music = {
+	song = "Holiday in Cambodia - The Dead Kennedys"
+}
+music = {
+	song = "Holiday in Cambodia - Desctrucion"
+}
+music = {
+	song = "Pol Pot did nothing wrong"
+}
+music = {
+	song = "Our prosperous soldiers - Khmer Rouge song"
+}
+music = {
+	song = "Zakochałem się w libertariance - hubithekid"
+}
+music = {
+	song = "Counter-Strike Global Offensive Trailer"
+}
+music = {
+	song = "Mother Anarchy Loves Her Sons"
+}
+music = {
+	song = "MODERN VERSION Red Sun in the Sky"
+}
+music = {
+	song = "Red Sun In The Sky Rock Version"
+}
+music = {
+	song = "Mao Zedong propaganda, Sailing the Seas Depends on the Helmsman"
+}
+music = {
+	song = "Czerwona Hołota - polska pieśń antykomunistyczna"
+}
+music = {
+	song = "Gruby wieprz z Konfederacji"
+}
+music = {
+	song = "Hołodomor to jest ściema"
+}
+music = {
+	song = "Victory song WWII - chinese song"
+}
+music = {
+	song = "Hej Sokoły (nightcore)"
+}
+music = {
+	song = "Chcę mieszkać w klatce dla psa"
+}
+music = {
+	song = "Kuki Upa Disco Sumertime"
+}
+music = {
+	song = "A song about Yuri Gagarin"
+}
+music = {
+	song = "Battle Beast - The Golden Horde"
+}
+music = {
+	song = "Amorphis - Amongst Stars"
+}
+music = {
+	song = "Bosanska Artiljerijaa"
+}
+music = {
+	song = "Tachanka polish version"
+}
+music = {
+	song = "Dixie Land"
+}
+music = {
+	song = "Monika HIT Lata"
+}
+music = {
+	song = "Rhodesian Never Die"
+}
+music = {
+	song = "Sabaton - Kingdom Come Deliverance Manowar"
+}
+music = {
+	song = "Song of the United Front"
+}
+music = {
+	song= "Die arbeiter von Wien - austrian workers song"
+}
+music = {
+	song = "Kelthuz HOT16"
+}
+music = {
+	song = "Longinus Zerwimycka - Bubel Band"
+}
+music = {
+	song = "In praise of Genghis Khan - mongolian traditional song"
+}
+music = {
+	song = "Children of the Revolution"
+}
+music = {
+	song = "Angola e Nossa - portuguese nationalist song"
+}
+music = {
+	song = "Degeneration - Quebecois traditionalist song"
+}
+music = {
+	song = "National Anthem od Slovakia 1939-1945"
+}
+music = {
+	song = "National Anthem of Nepal"
+}
+music = {
+	song = "Anthem of Tatarstan"
+}
+music = {
+	song = "National Anthem of Kazakhstan"
+}
+music = {
+	song = "National Anthem of Buryatia"
+}
+music = {
+	song = "National Anthem of Tuva"
+}
+music = {
+	song = "Mengjiang Anthem Komby 1936-1945"
+}
+music = {
+	song = "Chinese Empireqing Dynasty 1636-1912 Anthem Cup of Soling Gold Medley"
+}
+music = {
+	song = "Night Raid - chinese nationalist song alternate version"
+}
+music = {
+	song = "Heroic Warriors - china nationalist military song 1912-1945"
+}
+music = {
+	song = "Defent the Yellow River - chinese patriotic war song"
+}
+music = {
+	song = "The anti-communist and anti-russian aggression song"
+}
+music = {
+	song = "Karpatia Horthy Miklos Katonaja Vagyok (nightcore)"
+}
+music = {
+	song = "Magnag Usgtei Tuf Banner od Revolution - mongolian revolutionary song"
+}
+music = {
+	song = "Tug Banner of Revolution - Mongolian revolutionary"
+}
+music = {
+	song = "Celebration Parade - mongolian army song"
+}
+music = {
+	song = "Xalx Gol Khalkzn Gol - mongolian communist song"
+}
+music = {
+	song = "My country is the best"
+}
+music = {
+	song = "Traiasca Romanica - romanian patriotic song"
+}
+music = {
+	song = "Soldatenlieder - Erika Version 7"
+}
+music = {
+	song = "The Millard Fillmore Song"
+}
+music = {
+	song = "Sing for me"
+}
+music = {
+	song = "55 days at Peking"
+}
+music = {
+	song = "Daicyn Ayany - Duu soldiers marching song"
+}
+music = {
+	song = "Liberia - Land of Liberty"
+}
+music = {
+	song = "Pan African patriotic song"
+}
+music = {
+	song = "Oro se do bheatha bhaile Irish Civil War song"
+}
+music = {
+	song = "Varsavjanka - Warszawianka in norwegian"
+}
