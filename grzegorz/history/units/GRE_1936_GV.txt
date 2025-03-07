@@ -103,8 +103,8 @@ division_template = {
 division_template = {
 	name = "Cohortes Colonialis"				# Colonial Division
 
-	division_names_group = GRE_ARM_01
-
+	division_names_group = GRE_INF_01
+	template_counter = 373
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -116,35 +116,60 @@ division_template = {
 	priority = 0
 }
 
+division_template = {
+	name = "Castrum Colonialis"				# Defense Command Division
+
+	division_names_group = GRE_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 0
+}
+
 units = {
-	# Excubitors
-	division = { "Cohortes Excubitoriae"
-		name = "Cohortes Excubitoriae"
+	
+	### COHORTES EXCUBITORIAE - Excubitors
+	
+	division = {
+		name = "1. Cohortes Excubitoriae"
 		location = 9833
 		division_template = "Cohortes Excubitoriae"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
-	division = { "Cohortes Excubitoriae"
-		name = "Cohortes Excubitoriae"
+	division = {
+		name = "2. Cohortes Excubitoriae"
 		location = 9833
 		division_template = "Cohortes Excubitoriae"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
+	
+	### EXERCITUS OCCIDENTALIS ### WESTERN FRONT
 	
 	######## Thema of Moesia ########
 	
 	division = {
 		name = "35. Cohortes Imperialis"
-		location = 3796
+		location = 6667
 		division_template = "Cohortes Imperialis"
 		start_experience_factor = 0.33
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "36. Cohortes Imperialis"
-		location = 9610
+		location = 6695
 		division_template = "Cohortes Imperialis"
 		start_experience_factor = 0.33
 		start_equipment_factor = 0.75
@@ -158,24 +183,69 @@ units = {
 	}
 	division = {
 		name = "38. Cohortes Imperialis"
-		location = 9771
+		location = 9602
 		division_template = "Cohortes Imperialis"
 		start_experience_factor = 0.33
 		start_equipment_factor = 0.75
 	}
 	division = {
+		name = "46. Cohortes Imperialis"
+		location = 3796
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.33
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "47. Cohortes Imperialis"
+		location = 687
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.33
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "48. Cohortes Imperialis"
+		location = 9651
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.33
+		start_equipment_factor = 0.75
+	}
+	
+	######## Thema of Illyria ########
+	
+	division = {
 		name = "7. Cohortes Montanus"
-		location = 11857
+		location = 11858
 		division_template = "Cohortes Montanus"
 		start_experience_factor = 0.33
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "8. Cohortes Montanus"
-		location = 833
+		location = 937
 		division_template = "Cohortes Montanus"
 		start_experience_factor = 0.33
 		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "43. Cohortes Imperialis"
+		location = 11586
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.33
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "44. Cohortes Imperialis"
+		location = 3609
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.33
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "45. Cohortes Imperialis"
+		location = 3922
+		division_template = "Cohortes Imperialis"
+		start_experience_factor = 0.33
+		start_equipment_factor = 0.8
 	}
 	
 	######## Ellinikó Genikó Epiteleío ########
@@ -298,7 +368,7 @@ units = {
 
 	}
 
-	# D Sóma Stratoú
+	# Macedonian Thrace
 	division = {
 		name = "40. Cohortes Imperialis"
 		location = 6923
@@ -308,7 +378,7 @@ units = {
 
 	}
 
-	# E Sóma Stratoú
+	# Capitoline Thrace
 	division = {
 		name = "12. Cohortes Imperialis"
 		location = 9902
@@ -318,8 +388,8 @@ units = {
 
 	}
 
-	######## LAND UNITS ########
-	##### Türk Ordusu #####
+	### EXERCITUS ORIENTALIS ### EASTERN FRONT
+	
 	division = {
 		name = "14. Cohortes Equitis"
 		division_name = {    # New syntax for compatibility with name lists
@@ -686,24 +756,17 @@ units = {
 		location = 3943
 		division_template = "Cohortes Imperialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "42. Cohortes Imperialis"
-		location = 3924
+		location = 3943
 		division_template = "Cohortes Imperialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "43. Cohortes Imperialis"
-		location = 6889
-		division_template = "Cohortes Imperialis"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 	
-	### COLONIAL FORCES
+	### EXERCITUS COLONIALIS ###
 	
 	# Africa
 	
@@ -726,6 +789,46 @@ units = {
 	division= {	
 		name = "3. Cohortes Colonialis Africanensis"
 		location = 10962
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	division= {	
+		name = "4. Cohortes Colonialis Africanensis"
+		location = 2096
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	division= {	
+		name = "5. Cohortes Colonialis Africanensis"
+		location = 10877
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	division= {	
+		name = "6. Cohortes Colonialis Africanensis"
+		location = 1914
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	division= {	
+		name = "7. Cohortes Colonialis Africanensis"
+		location = 10743
+		division_template = "Cohortes Colonialis"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	division= {	
+		name = "8. Cohortes Colonialis Africanensis"
+		location = 2088
 		division_template = "Cohortes Colonialis"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -790,9 +893,9 @@ units = {
 	division= {
 		name = "Malta Command"
 		location = 12003
-		division_template = "Cohortes Colonialis"
+		division_template = "Castrum Colonialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 	
 	# Djibuti/Castrum Eritreum
@@ -800,9 +903,9 @@ units = {
 	division= {
 		name = "Castrum Eritreum Command"
 		location = 8124
-		division_template = "Cohortes Colonialis"
+		division_template = "Castrum Colonialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 	
 	# Macau/Macaum
@@ -810,9 +913,9 @@ units = {
 	division= {
 		name = "Macaum Command"
 		location = 4189
-		division_template = "Cohortes Colonialis"
+		division_template = "Castrum Colonialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 	
 	# Cabinda/Cabindum
@@ -820,9 +923,9 @@ units = {
 	division= {
 		name = "Cabindum Command"
 		location = 2115
-		division_template = "Cohortes Colonialis"
+		division_template = "Castrum Colonialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 	
 	# Goa
@@ -830,9 +933,9 @@ units = {
 	division= {
 		name = "Goa Command"
 		location = 1273
-		division_template = "Cohortes Colonialis"
+		division_template = "Castrum Colonialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 	
 	# Pondicherry
@@ -840,9 +943,9 @@ units = {
 	division= {
 		name = "Pondicherry Command"
 		location = 10149
-		division_template = "Cohortes Colonialis"
+		division_template = "Castrum Colonialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 	
 	# Portus Constantinus
@@ -850,9 +953,9 @@ units = {
 	division= {
 		name = "Portus Constantinus Command"
 		location = 12049
-		division_template = "Cohortes Colonialis"
+		division_template = "Castrum Colonialis"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 1
 	}
 }
 

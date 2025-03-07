@@ -46,4 +46,8 @@ spriteTypes = {
 		name = "GFX_GRE_Portrait_Constantinus_Aemilius_Cursor"
 		texturefile = "gfx/leaders/GRE/GRE_Portrait_Constantinus_Aemilius_Cursor.png"
 	}
+	spriteType = {
+		name = "GFX_GRE_Portrait_Constantinus_Aemilius_Cursor_small"
+		texturefile = "gfx/interface/ideas/idea_GRE_constantinus_aemilius_cursor.dds"
+	}
 }

@@ -8,11 +8,10 @@ state={
 		victory_points = {
 			6953 1
 		}
-		owner = YUG
+		owner = GRE
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = YUG
 		add_core_of = GRE
 	}
 	manpower=158016

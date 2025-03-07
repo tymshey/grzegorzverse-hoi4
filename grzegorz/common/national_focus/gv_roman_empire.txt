@@ -16,6 +16,12 @@ focus_tree = {
 	default = no
 	
 	shortcut = {
+		name = gv_GRE_defence_shortcut
+		target = gv_GRE_defending_the_empire
+		scroll_wheel_factor = 1
+	}
+	
+	shortcut = {
 		name = gv_GRE_politics_monarchism_shortcut
 		target = gv_GRE_imperial_prerogative
 		scroll_wheel_factor = 1
@@ -817,14 +823,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			355 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 	}
 	
@@ -1427,6 +1425,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 1
+			country_event = { id = gv_roman_empire_events.6 }
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -2108,8 +2107,7 @@ focus_tree = {
 	focus = {
 		id = gv_GRE_project_deus_sol_invictus
 		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = gv_GRE_fund_research_association }
-		prerequisite = { focus = gv_GRE_pool_technical_know_how }
+		prerequisite = { focus = gv_GRE_fund_research_association focus = gv_GRE_pool_technical_know_how }
 
 		dynamic = yes
 
@@ -2247,7 +2245,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = gv_GRE_align_kingdom_of_moesia
+		id = gv_GRE_align_kingdom_of_moesia # Dacia actually
 		icon = GFX_goal_generic_risky_deal
 		prerequisite = { focus = gv_GRE_break_the_treaty focus = gv_GRE_address_the_treaty_of_adrianopolis }
 		x = 1
@@ -2260,7 +2258,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_threat = 5
-			ROM = {
+			TRA = {
 				country_event = { id = gv_roman_empire_events.3 }
 			}
 		}
@@ -2352,7 +2350,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			105 = {
+			103 = {
 				add_claim_by = ROOT
 			}
 			create_wargoal = {
@@ -2541,6 +2539,47 @@ focus_tree = {
 		}
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	
+	focus = {
+		id = gv_GRE_militaristic_society
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = gv_GRE_imperial_prerogative }
+		x = -3
+		y = 1
+		relative_position_id = gv_GRE_imperial_prerogative
+		cost = 5
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_ideas = gv_GRE_militaristic_society_idea
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_glory_of_the_imperial_army
+		icon = GFX_focus_generic_advanced_military_studies
+		prerequisite = { focus = gv_GRE_militaristic_society }
+		x = 0
+		y = 1
+		relative_position_id = gv_GRE_militaristic_society
+		cost = 5
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gv_GRE_militaristic_society_idea
+				add_idea = gv_GRE_militaristic_society_idea_2
+			}
+		}
 	}
 	
 	focus = {
@@ -3148,5 +3187,233 @@ focus_tree = {
 			}
 		}
 		search_filters = { }
+	}
+	
+	focus = {
+		id = gv_GRE_defending_the_empire
+		icon = GFX_goal_manpower
+		
+		x = 10
+		y = 7
+		cost = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_war_with_major = yes
+			OR = {
+				surrender_progress > 0.01
+				casualties_k > 2000
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_defending_the_empire_tt
+			add_to_variable = {
+				var = gv_GRE_defense_army_core_defence_factor
+				value = 0.05
+			}
+			add_to_variable = {
+				var = gv_GRE_defense_mobilization_speed
+				value = 0.05
+			}
+			add_to_variable = {
+				var = gv_GRE_defense_minimum_training_level
+				value = -0.05
+			}
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = gv_GRE_defending_the_empire_modifier
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_found_the_citizen_militia
+		icon = GFX_focus_focus_fra_maquis
+		prerequisite = { focus = gv_GRE_defending_the_empire }
+		x = -1
+		y = 1
+		relative_position_id = gv_GRE_defending_the_empire
+		cost = 4
+		available = {
+			has_war_with_major = yes
+			OR = {
+				surrender_progress > 0.01
+				casualties_k > 2500
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_found_the_citizen_militia_tt
+			add_to_variable = {
+				var = gv_GRE_defense_mobilization_speed
+				value = 0.1
+			}
+			add_to_variable = {
+				var = gv_GRE_defense_minimum_training_level
+				value = -0.05
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_forming_defence_lines
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = gv_GRE_defending_the_empire }
+		x = 1
+		y = 1
+		relative_position_id = gv_GRE_defending_the_empire
+		cost = 4
+		available = {
+			has_war_with_major = yes
+			OR = {
+				surrender_progress > 0.01
+				casualties_k > 2500
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_forming_defence_lines_tt
+			add_to_variable = {
+				var = gv_GRE_defense_max_dig_in_factor
+				value = 0.1
+			}
+			add_to_variable = {
+				var = gv_GRE_defense_dig_in_speed_factor
+				value = 0.1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_fight_for_every_house
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = gv_GRE_found_the_citizen_militia focus = gv_GRE_forming_defence_lines }
+		x = 1
+		y = 2
+		relative_position_id = gv_GRE_defending_the_empire
+		cost = 4
+		available = {
+			has_war_with_major = yes
+			OR = {
+				surrender_progress > 0.05
+				casualties_k > 4000
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_fight_for_every_house_tt
+			add_to_variable = {
+				var = gv_GRE_defense_army_core_defence_factor
+				value = 0.1
+			}
+			add_to_variable = {
+				var = gv_GRE_defense_dig_in_speed_factor
+				value = 0.1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_resource_austerity
+		icon = GFX_focus_GER_autarky_ambitions
+		prerequisite = { focus = gv_GRE_found_the_citizen_militia focus = gv_GRE_forming_defence_lines }
+		x = -1
+		y = 2
+		relative_position_id = gv_GRE_defending_the_empire
+		cost = 4
+		available = {
+			has_war_with_major = yes
+			OR = {
+				surrender_progress > 0.05
+				casualties_k > 4000
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = gv_GRE_resource_austerity_tt
+			add_to_variable = {
+				var = gv_GRE_defense_production_lack_of_resource_penalty_factor
+				value = -0.2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	
+	focus = {
+		id = gv_GRE_totaler_krieg
+		icon = GFX_focus_generic_total_war
+		prerequisite = { focus = gv_GRE_resource_austerity }
+		prerequisite = { focus = gv_GRE_fight_for_every_house }
+
+		x = 0
+		y = 3
+		relative_position_id = gv_GRE_defending_the_empire
+		cost = 5
+		available = {
+			has_war_with_major = yes
+			OR = {
+				has_war_support > 0.89
+				surrender_progress > 0
+			}
+			any_enemy_country = {
+				ic_ratio = {
+					tag = ROOT
+					ratio > 0.5
+				}
+			}
+		}
+
+		continue_if_invalid = yes
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_war_support = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = GER_gain_totaler_krieg_remove_total_mob_tt
+			add_ideas = totaler_krieg_economy
+
+			if = {
+				limit = {
+					NOT = {
+						has_decision = women_in_the_workforce 
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				unlock_decision_tooltip = {
+					decision = women_in_the_workforce
+					show_effect_tooltip = yes # default is no
+					show_modifiers = yes # default is no
+				} 
+				activate_decision = women_in_the_workforce
+			}
+		}
 	}
 }

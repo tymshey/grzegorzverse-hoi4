@@ -564,17 +564,17 @@ set_war_support = 0.3
 
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	democratic = 35
-	fascism = 40
-	communism = 10
-	neutrality = 15
+	democratic = 10
+	fascism = 10
+	communism = 0
+	neutrality = 80
 }
 
 #Diplo
@@ -746,7 +746,7 @@ recruit_character = GER_rudolf_herrnstadt	#commie journalist
 recruit_character = GER_johannes_becher		#commie poet
 
 #WUW characters introduced by PDX
-recruit_character = GER_eva_braun
+recruit_character = GER_eva_braun							#DOES NOT HAVE PORTRAIT, CHECK IF VANILLA HAS CHANGED BEFORE RELEASE
 recruit_character = GER_otto_strasser
 recruit_character = GER_oberste_heeresleitung_character
 recruit_character = GER_werner_von_blomberg
@@ -756,7 +756,7 @@ recruit_character = GER_jurgen_von_blumenthal
 recruit_character = GER_paul_von_lettow_vorbeck
 recruit_character = GER_walther_nehring
 recruit_character = GER_helmuth_wilberg
-recruit_character = GER_robert_knauss						#r56: used to be a strong theorist, now a high command, that could be reversed if wanted
+recruit_character = GER_robert_knauss
 recruit_character = GER_josef_kammhuber
 recruit_character = GER_alfred_becker
 recruit_character = GER_walter_dornberger
@@ -808,25 +808,11 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-	#GER_enigma_machine0 See below
+	GER_enigma_machine0
 	r56_ger_naval_treaty
-	r56_GER_economic_uncertainty
 	#konstantin_von_neurath	#Main advocate of Rhineland gamble - foreign minister in 1936
 }
 
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	add_ideas = {
-		GER_enigma_machine0
-	}
-	else = {
-		add_ideas = {
-			GER_enigma_machine0_no_lar
-		}
-	}
-}
 
 country_event = { id = wtt_germany.26 days = 1982 }		#Wilhelm II dies		#it would be funnier if it was 1984 days
 
@@ -884,7 +870,6 @@ if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
-
 	create_operative_leader = {
 		name = "Otto Skorzeny"
 		GFX = GFX_portrait_otto_skorenzy
@@ -894,14 +879,14 @@ if = {
 		nationalities = { GER }
 	}
 
-	# create_operative_leader = {
-	# 	name = "Nikolaus Ritter"
-	# 	GFX = GFX_portrait_nikolaus_ritter
-	# 	traits = { operative_safe_cracker }
-	# 	bypass_recruitment = no
-	# 	available_to_spy_master = yes
-	# 	nationalities = { GER }
-	# }
+	create_operative_leader = {
+		name = "Nikolaus Ritter"
+		GFX = GFX_portrait_nikolaus_ritter
+		traits = { operative_safe_cracker }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { GER }
+	}
 	create_operative_leader = {
 		name = "Seán Russell"
 		gfx = GFX_portrait_europe_generic_operative_m_17
@@ -1018,10 +1003,6 @@ if = {
 		available_to_spy_master = yes
 		nationalities = { GER BAY USA }
 	}
-
-	GER_create_operative_nikolaus_ritter = yes
-	GER_create_operative_erich_gimpel = yes
-	GER_create_operative_fritz_duquesne = yes
 }
 
 

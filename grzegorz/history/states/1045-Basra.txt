@@ -3,10 +3,10 @@ state={
 	name="STATE_1045"
 	manpower = 5123899
 	
-	state_category = town
+	state_category = metropolis
 
 	resources={
-		oil=2 #not fully discovered
+		oil=4 #was: 2 #not fully discovered
 	}
 
 	history={
@@ -21,11 +21,12 @@ state={
 			12726 3
 		}
 		buildings = {
-			infrastructure = 3 
+			infrastructure = 4
 			industrial_complex = 1
-			air_base = 1
+			air_base = 3
+			dockyard = 3
 			2089 = {
-				naval_base = 1
+				naval_base = 7
 			}
 		}
 		add_core_of = PER

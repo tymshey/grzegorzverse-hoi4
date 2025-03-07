@@ -3,12 +3,12 @@ state={
 	name="STATE_107"
 
 	history={
-		owner = YUG
+		owner = GRE
 		buildings = {
 			infrastructure = 4
-			arms_factory = 4
-			industrial_complex = 3
-			air_base = 3
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 8
 		}
 		victory_points = {
 			11586 20
@@ -17,7 +17,7 @@ state={
 			3984 5
 		}
 		add_core_of = YUG
-		add_core_of = SER
+		add_core_of = GRE
 	}
 
 	provinces={

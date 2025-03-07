@@ -38,11 +38,17 @@
  gv_treaty_of_adrianople_desc:0 "The Treaty of Adrianopolis was imposed by resurgent nations and warlords of the Balkan Peninsula on the exhausted Empire in 1922 after the great war had ended."
  gv_GRE_service_overseas_2:0 "Service Overseas"
  gv_GRE_service_overseas_2_desc:0 "The Empire's forces are trained and perfected in many parts of the world, and thus are suited to fight in almost all climates of the Earth."
+ gv_GRE_militaristic_society_idea:0 "Militaristic Society"
+ gv_GRE_militaristic_society_idea_desc:0 ""
+ gv_GRE_militaristic_society_idea_2:0 "Militaristic Society"
+ gv_GRE_militaristic_society_idea_2_desc:0 ""
  
  gv_unethical_mining_idea:0  "Unethical Mining Methods"
  
  gv_GRE_imperial_industry_dynamic_modifier:0 "The Imperial Industry"
  gv_GRE_imperial_industry_1:0 "The Imperial Industry"
+ gv_GRE_defending_the_empire_modifier:0 "Ad Victoriam"
+ gv_GRE_defending_the_empire_modifier_desc:0 "Pro Imperio, Deo et Imperatore!"
  
  GRE_constantine_xx:0 "Constantine XX"
  GRE_constantine_xx_DESC:0 "Constantine XX is the 203rd and current Emperor, and commands the respect an office of such magnitude is due. The Emperor is a shining symbol of endless endurance, unlimited capabilites and exceedingly rich history of the Roman people."
@@ -66,6 +72,13 @@
  gv_GRE_industrial_expansion_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$modifier_production_speed_arms_factory_factor$: §G+5.0%§!\n\n"
  gv_GRE_issue_bonds_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-10.0%§!\n\n"
  gv_GRE_imperial_science_initiative_tt:0 "Modify §Y$gv_GRE_imperial_industry_dynamic_modifier$§! by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+5.0%§!\n\n"
+ 
+ gv_GRE_defending_the_empire_tt:0 "Add §Y$gv_GRE_defending_the_empire_modifier$§! which grants:\nDivison Defense on Core Territory: §G+5.0%§!\n$MODIFIER_MOBILIZATION_SPEED$: §G+5.0%§!\n$MODIFIER_MINIMUM_TRAINING_LEVEL$: §G-5.0%§!\n\n"
+ gv_GRE_found_the_citizen_militia_tt:0 "Modify §Y$gv_GRE_defending_the_empire_modifier$§! by:\n$MODIFIER_MOBILIZATION_SPEED$: §G+10.0%§!\n$MODIFIER_MINIMUM_TRAINING_LEVEL$: §G-5.0%§!\n\n"
+ gv_GRE_forming_defence_lines_tt:0 "Modify §Y$gv_GRE_defending_the_empire_modifier$§! by:\n$MODIFIER_MAX_DIG_IN_FACTOR$: §G+10.0%§!\n$MODIFIER_DIG_IN_SPEED_FACTOR$: §G+10.0%§!\n\n"
+ gv_GRE_resource_austerity_tt:0 "Modify §Y$gv_GRE_defending_the_empire_modifier$§! by:\n$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$: §G-20.0%§!\n\n"
+ gv_GRE_fight_for_every_house_tt:0 "Modify §Y$gv_GRE_defending_the_empire_modifier$§! by:\nDivison Defense on Core Territory: §G+10.0%§!\n$MODIFIER_DIG_IN_SPEED_FACTOR$: §G+10.0%§!\n\n"
+
  gv_GRE_ethiopian_blood_diamonds_tt:0 "Add §G$4§! million to the national reserves."
  gv_GRE_evacuate_ethiopian_assets_tt:0 "Add §G$8§! million to the national reserves."
  gv_GRE_neptunus_tt:0 "Adds one §YAugustus Class§! Super Heavy Battleship to the production queue, at 75% complete."
@@ -160,6 +173,10 @@
  gv_roman_empire_events.5.a:0 "We have to accept."
  gv_roman_empire_events.5.b:0 "We shall defend ourselves."
  
+ gv_roman_empire_events.6.title:0 "Pro Veritas"
+ gv_roman_empire_events.6.desc:0 "The Imperial Collegium of Engineering founded by emperor Callistus III in 1772 is a temple of Roman ingenuity, science and progress. Estabilished as an elite institution for educating the empire's brightest minds, it has produced generations of engineers, architects and industrialists. In such uncertain times, with rapid advancements in electrical engineeringm aeronautics and modern infrastructure, the current facilities are deemed insufficient for the empire’s growing needs.\n\nIn a grand proclamation, the Emperor has announced a massive expansion and modernization program for the Collegium, aiming to transform it into the world’s leading center for technological innovation. The university was greatly expanded, renovated and officially reopened as the Imperial Institute of Engineering, becoming the intellectual and industrial powerhouse of the modern age."
+ gv_roman_empire_events.6.a:0 "Magnificent!"
+ 
  # TECH BONUSES
  
  roman_research_name:0 "Imperial Research Association"
@@ -176,6 +193,7 @@
  gv_GRE_politics_monarchism_shortcut:0 "Politics: Monarchism"
  gv_GRE_colonial_shortcut:0 "Interventionism"
  gv_GRE_army_shortcut:0 "Army Modernization"
+ gv_GRE_defence_shortcut:0 "Defence"
  
  FOCUS_FILTER_GREAT_DEPRESSION:0 "Great Depression"
  
@@ -208,13 +226,13 @@
  gv_GRE_ikonion_hydroelectric:0 "Ikonion Hydroelectric"
  gv_GRE_ikonion_hydroelectric_desc:0 ""
  gv_GRE_imperial_collegium_of_engineering:0 "Expand the Imperial Collegium of Engineering"
- gv_GRE_imperial_collegium_of_engineering_desc:0 "The Imperial Collegium of Engineering was founded by Callistus II in 1772."
+ gv_GRE_imperial_collegium_of_engineering_desc:0 "The Imperial Collegium of Engineering was founded by Callistus III in 1772."
  gv_GRE_develop_aethiopia:0 "Develop Aethiopia"
  gv_GRE_develop_aethiopia_desc:0 ""
  gv_GRE_engineering_subsidies:0 "Engineering Subsidies"
  gv_GRE_engineering_subsidies_desc:0 ""
  gv_GRE_high_speed_railways:0 "High-Speed Railways"
- gv_GRE_high_speed_railways_desc:0 "The Roman High-Speed railway network is a broad-gauge network of trains that can travel 250 km/h between major cities throughout the empire. Thanks to this, travel between Theodosiopolis and Serdica takes only around 8 hours."
+ gv_GRE_high_speed_railways_desc:0 "The Roman High-Speed railway network is a nonstandard 3000mm broad-gauge network of trains that can travel 250 km/h between major cities throughout the empire. Thanks to this magnificent marvel of engineering, a travel between Theodosiopolis and Singidunum takes only around 9 hours."
  gv_GRE_begin_rearmament:0 "Begin Rearmament"
  gv_GRE_begin_rearmament_desc:0 ""
  gv_GRE_nationalize_seleucia_company:0 "Nationalize the Seleucia Arsenal"
@@ -305,7 +323,7 @@
  gv_GRE_address_the_treaty_of_adrianopolis_desc:0 ""
  gv_GRE_demand_moesia_superior:0 "Demand Moesia Superior"
  gv_GRE_demand_moesia_superior_desc:0 ""
- gv_GRE_align_kingdom_of_moesia:0 "Align Kingdom of Moesia"
+ gv_GRE_align_kingdom_of_moesia:0 "Align Kingdom of Dacia"
  gv_GRE_align_kingdom_of_moesia_desc:0 ""
  gv_GRE_dioclea_ultimatum:0 "Dioclea Ultimatum"
  gv_GRE_dioclea_ultimatum_desc:0 ""
@@ -352,6 +370,22 @@
  gv_GRE_strategic_bomber_designs_desc:0 ""
  gv_GRE_jet_focus:0 "Experimental Jet Aircraft"
  gv_GRE_jet_focus_desc:0 ""
+ gv_GRE_militaristic_society:0 "Militaristic Society"
+ gv_GRE_militaristic_society_desc:0 ""
+ gv_GRE_glory_of_the_imperial_army:0 "Glory of the Imperial Army"
+ gv_GRE_glory_of_the_imperial_army_desc:0 ""
+ gv_GRE_defending_the_empire:0 "In Defensionem Imperii"
+ gv_GRE_defending_the_empire_desc:0 ""
+ gv_GRE_found_the_citizen_militia:0 "Found the Citizen Militia"
+ gv_GRE_found_the_citizen_militia_desc:0 ""
+ gv_GRE_forming_defence_lines:0 "Forming the Defence Lines"
+ gv_GRE_forming_defence_lines_desc:0 ""
+ gv_GRE_resource_austerity:0 "Resource Austerity"
+ gv_GRE_resource_austerity_desc:0 ""
+ gv_GRE_fight_for_every_house:0 "Fight for Every House"
+ gv_GRE_fight_for_every_house_desc:0 ""
+ gv_GRE_totaler_krieg:0 "Totaler Krieg"
+ gv_GRE_totaler_krieg_desc:0 ""
  
  # OTHER
  

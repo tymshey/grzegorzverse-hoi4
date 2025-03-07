@@ -2,11 +2,22 @@
 	##### NAVAL UNITS #####
 
 	fleet = {
-		name = "Khalij-e Fârs Nâvgân"			
+		name = "Khalij-e Fârs Nâvgân"
 		naval_base = 5005 # Bandar Shahpur
-		task_force = {				
-			name = "1-Kâr"			
-			location = 5005 # Bandar Shahpur	
+		task_force = {
+			name = "1-Kâr"
+			location = 5005 # Bandar Shahpur
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
 			
 			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
 			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
@@ -23,18 +34,86 @@
 			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
 			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
 			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
-		}							
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+		}
+	}
+	
+	fleet = {
+		name = "Zirab Nâvgân"
+		naval_base = 7982 # Bandar-e Abbas
+		task_force = {
+			name = "1-Kâr"
+			location = 7982 # Bandar-e Abbas
+			
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+		}
 	}
 
 	fleet = {
-		name = "Khalij-e Kaspian Nâvgân"			
+		name = "Khalij-e Kaspian Nâvgân"
 		naval_base = 4637 # Rasht
-		task_force = {				
-			name = "1-Kâr"			
+		task_force = {
+			name = "1-Kâr"
 			location = 4637 # Rasht	
 			
 			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
 			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }	
-		}							
+		}
+	}
+
+	fleet = {
+		name = "Khalij-e Madagaskar Nâvgân"
+		naval_base = 5222 # Madagaskar
+		task_force = {
+			name = "1-Kâr"
+			location = 5222 # Madagaskar
+			
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+			ship = { definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PER version_name = "Shahrvaraz Class" } } }
+
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			ship = { definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "Babr Class" } } }
+			
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+			ship = { definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PER version_name = "Shab Class" } } }
+		}
 	}
 }

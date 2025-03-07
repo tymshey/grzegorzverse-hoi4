@@ -177,11 +177,11 @@ characters={
 		portraits={
 			civilian={
 				large = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor
-				small = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor
+				small = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor_small
 			}
 			army={
 				large = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor
-				small = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor
+				small = GFX_GRE_Portrait_Constantinus_Aemilius_Cursor_small
 			}
 		}
 		corps_commander={
@@ -192,6 +192,20 @@ characters={
 			planning_skill=6
 			logistics_skill=4
 			legacy_id=-1
+		}
+		advisor={
+			slot = air_chief
+			idea_token = idea_GRE_constantinus_aemilius_cursor
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				air_chief_ground_support_3
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	

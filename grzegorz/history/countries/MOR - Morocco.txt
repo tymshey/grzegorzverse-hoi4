@@ -1,0 +1,145 @@
+﻿capital = 461
+
+# Starting tech
+set_technology = {
+	# Extended Technologies
+    etax_doctrine = 1
+    camo = 1
+
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	tech_trucks = 1
+    	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antitank = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	#mechanised_infantry = 1
+	#butadiene_processing = 1
+	bicycle_infantry = 1
+	basic_train = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	tech_mountaineers = 1
+	marines = 1
+	camelry = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_submarine = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_depth_charges = 1
+		improved_depth_charges = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		#basic_secondary_battery = 1
+		damage_control_1 = 1
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+	}
+	if = {
+		limit = {
+			NOT = { has_dlc = "No Step Back" }
+		}
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+	}
+}
+
+set_convoys = 20
+
+add_ideas = {
+	low_economic_mobilisation
+	gv_lone_bastion_of_sunnism
+	gv_mor_resurgent_interventionism
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 20
+	communism = 5
+	neutrality = 50
+}
+
+recruit_character = MOR_mbarek_bekkai		#advisor, wouldnt load later in list
+recruit_character = MOR_mohammed_v
+recruit_character = MOR_allal_al_fassi
+recruit_character = MOR_leon_sultan
+recruit_character = MOR_mekki_naciri
+recruit_character = MOR_malika_al_fassi
+recruit_character = MOR_mohammed_bouhout
+recruit_character = MOR_mbarek_bekkay
+recruit_character = MOR_assou_oubasslam
+recruit_character = MOR_mohamed_bachir_el_bouhali
+recruit_character = MOR_ibn_zaydan
+recruit_character = MOR_haddou_lakhal
+recruit_character = MOR_navy_chief
+recruit_character = MOR_abdellatif_sbihi
+recruit_character = MOR_ali_yata 
+recruit_character = MOR_thami_el_glaoui
+recruit_character = MOR_ahmed_balafrej
+recruit_character = MOR_abdelkhaleq_torres
+recruit_character = MOR_mohamed_lyazidi
+recruit_character = MOR_mohamed_belhassan_wazzani
+recruit_character = MOR_abdallah_layachi	#wasnt recruited, presumed accidental
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	# set_air_oob = "PER_1936_air_bba"
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+		iw_small_airframe = 1
+	}
+	else = {
+		# set_air_oob = "PER_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}

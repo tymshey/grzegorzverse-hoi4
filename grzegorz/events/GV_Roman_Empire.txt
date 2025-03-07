@@ -73,13 +73,10 @@ country_event = { # Demand Moesia Superior
 		ai_chance = {
 			base = 100
 		}
-		802 = {
+		104 = {
 			transfer_state_to = GRE
 		}
-		953 = {
-			transfer_state_to = GRE
-		}
-		108 = {
+		952 = {
 			transfer_state_to = GRE
 		}
 		news_event = gv_news.1
@@ -98,7 +95,7 @@ country_event = { # Demand Moesia Superior
 	}
 }
 
-country_event = { # Demand Moesian Submission
+country_event = { # Demand Dacian Submission
 	id = gv_roman_empire_events.3
 	title = gv_roman_empire_events.3.title
 	desc = gv_roman_empire_events.3.desc
@@ -117,9 +114,9 @@ country_event = { # Demand Moesian Submission
 			base = 100
 		}
 		GRE = {
-			puppet = ROM
+			puppet = TRA
 			set_autonomy = {
-				target = ROM
+				target = TRA
 				autonomous_state = autonomy_integrated_puppet
 			}
 		}
@@ -133,7 +130,7 @@ country_event = { # Demand Moesian Submission
 		GRE = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
-				target = ROM
+				target = TRA
 			}
 		}
 	}
@@ -200,19 +197,10 @@ country_event = { # Demand Dalmatia
 		ai_chance = {
 			base = 100
 		}
-		105 = {
+		103 = {
 			transfer_state_to = GRE
 		}
-		963 = {
-			transfer_state_to = GRE
-		}
-		107 = {
-			transfer_state_to = GRE
-		}
-		952 = {
-			transfer_state_to = GRE
-		}
-		104 = {
+		804 = {
 			transfer_state_to = GRE
 		}
 		news_event = gv_news.4
@@ -228,5 +216,24 @@ country_event = { # Demand Dalmatia
 				target = YUG
 			}
 		}
+	}
+}
+
+country_event = { # Imperial Institute of Engineering
+	id = gv_roman_empire_events.6
+	title = gv_roman_empire_events.6.title
+	desc = gv_roman_empire_events.6.desc
+	picture = GFX_report_event_gre_parade
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = gv_roman_empire_events.6.a
+		# news_event = gv_news.5 # not finished
 	}
 }

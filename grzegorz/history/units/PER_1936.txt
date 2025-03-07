@@ -94,6 +94,22 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Estemari Nezâm"				# Colonial Division
+
+	division_names_group = PER_INF_01
+	template_counter = 373
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
 
 units = {
 	
@@ -107,7 +123,7 @@ units = {
 			name_order = 1
 		}
 		location = 10837
-		division_template = "Sarbâzân Piyâde-Nezâm"		
+		division_template = "Sarbâzân Piyâde-Nezâm"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
 	}
@@ -118,7 +134,7 @@ units = {
 			name_order = 2
 		}
 		location = 2026
-		division_template = "Sarbâzân Piyâde-Nezâm"		
+		division_template = "Sarbâzân Piyâde-Nezâm"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
 	}
@@ -182,6 +198,154 @@ units = {
 			name_order = 8
 		}
 		location = 8123
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 68
+		}
+		location = 5005
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	
+	### ARMY OF ARABIA ###
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 69
+		}
+		location = 7960
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 70
+		}
+		location = 12702
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 71
+		}
+		location = 2103
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+	### ARMY OF PERSIA ###
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 72
+		}
+		location = 2026
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 73
+		}
+		location = 2026
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 74
+		}
+		location = 2026
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 75
+		}
+		location = 7982
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 76
+		}
+		location = 7982
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 77
+		}
+		location = 7982
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 78
+		}
+		location = 10385
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 79
+		}
+		location = 10385
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 80
+		}
+		location = 10385
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 81
+		}
+		location = 10385
 		division_template = "Sarbâzân Piyâde-Nezâm"		
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
@@ -324,7 +488,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 22
 		}
-		location = 12329
+		location = 1623
 		division_template = "Sarbâzân Piyâde-Nezâm"		
 		start_experience_factor = 0.33
 		start_equipment_factor = 0.7
@@ -648,6 +812,56 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
 	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 63
+		}
+		location = 2086
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 64
+		}
+		location = 11955
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 65
+		}
+		location = 1898
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 66
+		}
+		location = 10887
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 67
+		}
+		location = 10772
+		division_template = "Sarbâzân Piyâde-Nezâm"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
 	
 	### TURKESTANI FRONT ###
 	
@@ -857,6 +1071,41 @@ units = {
 		division_template = "Irâni Tofang Berīgād"		
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
+	}
+
+	###############################################
+	######## MADAGASKAR COLONIAL GARRISON #########
+	###############################################
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 5222
+		division_template = "Estemari Nezâm"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 5128
+		division_template = "Estemari Nezâm"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 2200
+		division_template = "Estemari Nezâm"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
 	}
 	
 }

@@ -92,7 +92,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 11586
+		location = 11580
 		division_template = "Kraljevska Garda"
 		start_experience_factor = 0.3
 
@@ -104,7 +104,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 3609
+		location = 11577
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -113,7 +113,7 @@ units = {
 
 	division = {
 		name = "1. Bataljon Bornih Kola"
-		location = 11586
+		location = 11580
 		division_template = "Tenkovski Bataljon"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.85
@@ -142,7 +142,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 8
 		}
-		location = 630
+		location = 11581
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -154,7 +154,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 9
 		}
-		location = 9756
+		location = 606
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -166,7 +166,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 9
 		}
-		location = 9756
+		location = 9611
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -178,7 +178,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 9602
+		location = 6799
 		division_template = "Konjička Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -192,7 +192,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 3
 		}
-		location = 11887
+		location = 11845
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -312,7 +312,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 13
 		}
-		location = 11858
+		location = 953
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -324,7 +324,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 15
 		}
-		location = 9809
+		location = 11901
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -336,7 +336,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 25
 		}
-		location = 3984
+		location = 11741
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -348,7 +348,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 25
 		}
-		location = 9874
+		location = 11564
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -362,7 +362,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 5
 		}
-		location = 3922
+		location = 982
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -374,7 +374,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 20
 		}
-		location = 6953
+		location = 6889
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -386,7 +386,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 22
 		}
-		location = 9849
+		location = 3592
 		division_template = "Pešadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3

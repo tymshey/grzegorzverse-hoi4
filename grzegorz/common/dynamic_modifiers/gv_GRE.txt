@@ -13,3 +13,23 @@ gv_GRE_imperial_industry_dynamic_modifier = {
 	production_speed_arms_factory_factor = gv_GRE_production_speed_arms_factory_factor
 	research_speed_factor = gv_GRE_research_speed_factor
 }
+
+gv_GRE_defending_the_empire_modifier = {
+
+	enable = { always = yes }
+	
+	icon = GFX_generic_women_in_the_army
+	
+	army_core_defence_factor = gv_GRE_defense_army_core_defence_factor
+	mobilization_speed = gv_GRE_defense_mobilization_speed
+	minimum_training_level = gv_GRE_defense_minimum_training_level
+	max_dig_in_factor = gv_GRE_defense_max_dig_in_factor
+	dig_in_speed_factor = gv_GRE_defense_dig_in_speed_factor
+	consumer_goods_factor = gv_GRE_defense_consumer_goods_factor
+	fuel_gain_factor = gv_GRE_defense_fuel_gain_factor
+	army_fuel_consumption_factor = gv_GRE_defense_army_fuel_consumption_factor
+	navy_fuel_consumption_factor = gv_GRE_defense_navy_fuel_consumption_factor
+	air_fuel_consumption_factor = gv_GRE_defense_air_fuel_consumption_factor
+	production_lack_of_resource_penalty_factor = gv_GRE_defense_production_lack_of_resource_penalty_factor
+	production_speed_arms_factory_factor = gv_GRE_defense_production_speed_arms_factory_factor
+}

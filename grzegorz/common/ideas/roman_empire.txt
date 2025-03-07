@@ -377,6 +377,47 @@ ideas = {
 			}
 		}
 		
+		gv_GRE_militaristic_society_idea = {
+			picture = generic_women_in_the_army
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				recruitable_population_factor = 0.01
+				training_time_army_factor = 0.05
+			}
+		}
+		
+		gv_GRE_militaristic_society_idea_2 = {
+			picture = generic_women_in_the_army
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+				recruitable_population_factor = 0.02
+				training_time_army_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+		
 		### Aethiopia
 		gv_unethical_mining_idea = {
 			picture = generic_exploit_mines

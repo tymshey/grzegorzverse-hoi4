@@ -1,6 +1,7 @@
 ﻿l_english:
 
  STATE_44:0 "Dyrrachium"
+ STATE_46:0 "Moesia Superior"
  STATE_48:0 "Dardania"
  STATE_211:0 "Mesambria"
  STATE_212:0 "Macedonian Thrace"
@@ -28,6 +29,7 @@
  STATE_984_RENAMING:0 "Trollograd"
  STATE_44_RENAMING:0 "Dyrrachium"
  STATE_48_RENAMING:0 "Dardania"
+ STATE_46_RENAMING:0 "Moesia Superior"
  STATE_211_RENAMING:0 "Mesambria"
  STATE_212_RENAMING:0 "Macedonian Thrace"
  STATE_339_RENAMING:0 "Thrakesion"

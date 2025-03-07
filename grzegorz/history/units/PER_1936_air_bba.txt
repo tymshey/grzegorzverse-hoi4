@@ -1,25 +1,114 @@
 ﻿air_wings = {
 	### Imperial Iranian Air Force ###
-	266 = {
+	266 = { # Tehran
+
+		### FIGHTERS
+
 		# Tiger Moths # mostly for training
 		small_plane_airframe_0 =  {
 			owner = "PER" 
 			amount = 100
 			version_name = "DH.82 Tiger Moth"
 		}
-		# Hawker Furys
+		# Parandeh-12 # TRVE GRZEGORZIAN AIRCRAFT !
 		small_plane_airframe_0 =  {
 			owner = "PER" 
-			amount = 24
-			creator = "ENG"
-			version_name = "Hawker Fury"
+			amount = 100
+			creator = "PER"
+			version_name = "Parandeh-12"
 		}
-		# Hawker Audaxes
+		small_plane_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Parandeh-12"
+		}
+		small_plane_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Parandeh-12"
+		}
+	}
+	
+	291 = { # Gównograd
+
+		### FIGHTERS
+
+		small_plane_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Parandeh-12"
+		}
+		small_plane_airframe_0 =  {
+			owner = "PER" 
+			amount = 53
+			creator = "PER"
+			version_name = "Parandeh-12"
+		}
+
+		### CAS
+
 		small_plane_cas_airframe_0 =  {
 			owner = "PER" 
-			amount = 66
-			creator = "ENG"
-			version_name = "Hawker Audax"
+			amount = 100
+			creator = "PER"
+			version_name = "Shaiin-5"
+		}
+		small_plane_cas_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Shaiin-5"
+		}
+		small_plane_cas_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Shaiin-5"
+		}
+		small_plane_cas_airframe_0 =  {
+			owner = "PER" 
+			amount = 29
+			creator = "PER"
+			version_name = "Shaiin-5"
+		}
+	}
+	
+	230 = { # Armenia
+
+		### FIGHTERS
+
+		small_plane_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Parandeh-12"
+		}
+		small_plane_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Parandeh-12"
+		}
+	}
+	
+	1045 = { # Basrah
+
+		### FIGHTERS
+		
+		small_plane_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Parandeh-12"
+		}
+		small_plane_airframe_0 =  {
+			owner = "PER" 
+			amount = 100
+			creator = "PER"
+			version_name = "Parandeh-12"
 		}
 	}
 }
